@@ -48,7 +48,7 @@ Stochastic Processes 1, Stochastic Processes 2
 Bachelors Coursework
 ======
 ### Math
-Real Analysis, Complex Analysis, Abstract Algebra [Group, Ring, Field Theory], Modules and Galois Theory, Measure Theoretic Probability, Topology, Linear Algebra, Differential Equations, Optimization Techniques, Game Theory
+Real Analysis, Complex Analysis, <abbr title="Group, Ring, Field Theory">Abstract Algebra</abbr> [Group, Ring, Field Theory], Modules and Galois Theory, Measure Theoretic Probability, Topology, Linear Algebra, Differential Equations, Optimization Techniques, Game Theory
 {: .notice}
 ### Computer Science
 Discrete Mathematics, Design and Analysis of Algorithms, Theory of Computation, Games on Graphs, Concurrency Theory, Computational Complexity Theory, LP and Combinatorial Optimization, Programming Language Concepts, Functional Programming (Haskell), Advanced Programming (Python)
