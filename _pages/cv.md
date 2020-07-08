@@ -11,49 +11,57 @@ redirect_from:
 
 Education
 ======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+* B.Sc.(Hons) in Math and Comp Sci, Chennai Mathematical Institute, 2019
+* M.Sc. in Computer Science, Chennai Mathematical Institute, 2021 (expected)
 
-Work experience
+Internships
 ======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* Summer 2020: Research Intern
+  * VSRP at Tata Institute of Fundamental Research
+  * Fair division of indivisible items
+  * Advisor: Umang Bhaskar
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Summer 2019: Intern
+  * Indian Statistical Institute, Chennai
+  * Stochastic Dynamic Programming
+  * Advisor: Ravindran G
 
-Publications
+* Summer 2018: Industry Intern
+  * Coriolis Technologies, Pune
+  * Identifying phishing sites using neural networks
+  * Advisors: Sudhir Kumar, Rohan Nanode
+
+* Summer 2018: Remote Intern
+  * Indian Institute of Technology, Madras
+  * Implementation of Dynamic Graph Algorithms
+  * Advisor: Rupesh Nasre
+
+Masters Coursework
 ======
-  <ul>{% for post in site.publications %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
+### Computer Science
+Mathematical Logic, Complexity Theory 2, Games on Graphs 2, Advanced Algorithms, Reinforcement Learning, Topics in Algorithms, Graph Theory
+{: .notice}
+### Math
+Stochastic Processes 1, Stochastic Processes 2
+{: .notice}
+
+Bachelors Coursework
 ======
-  <ul>{% for post in site.talks %}
-    {% include archive-single-talk-cv.html %}
-  {% endfor %}</ul>
-  
-Teaching
+### Math
+Real Analysis, Complex Analysis, Abstract Algebra [Group, Ring, Field Theory], Modules and Galois Theory, Measure Theoretic Probability, Topology, Linear Algebra, Differential Equations, Optimization Techniques, Game Theory
+{: .notice}
+### Computer Science
+Discrete Mathematics, Design and Analysis of Algorithms, Theory of Computation, Games on Graphs, Concurrency Theory, Computational Complexity Theory, LP and Combinatorial Optimization, Programming Language Concepts, Functional Programming (Haskell), Advanced Programming (Python)
+{: .notice}
+### Other
+English, The Art of Short Fiction, Classical Mechanics
+{: .notice}
+
+Teaching Experience
 ======
-  <ul>{% for post in site.teaching %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+### Teaching Assistant at CMI
+* Concurrency Theory (2019)
+* Complexity Theory (2020)
+* Linear Optimization (2020)
+
+#### Faculty at Cheenta Ganit Kendra (Dec 2016 - Present)
