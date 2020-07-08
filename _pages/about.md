@@ -1,6 +1,6 @@
 ---
 permalink: /
-title:
+title: Добро пожаловать на мою страницу
 excerpt: "About me"
 author_profile: true
 redirect_from:
