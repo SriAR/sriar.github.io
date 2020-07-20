@@ -48,17 +48,17 @@ So how do you choose between Garnett and P&V? Here is a quick rundown of what ea
 Now to list some articles which argue for either side:
 
 #### Pro P&V:
-[The translation wars](https://www.newyorker.com/magazine/2005/11/07/the-translation-wars)
+* [The translation wars](https://www.newyorker.com/magazine/2005/11/07/the-translation-wars)
 
 #### Anti P&V [Usually implies Pro Garnett]:
-[The Pevearsion of Russian Literature](https://www.commentarymagazine.com/articles/gary-morson/the-pevearsion-of-russian-literature) [Amazing title btw, you need to read it just for that title]
+* [The Pevearsion of Russian Literature](https://www.commentarymagazine.com/articles/gary-morson/the-pevearsion-of-russian-literature) [Amazing title btw, you need to read it just for that title]
 
-[The Pevear/Volokhonsky Hype Machine...](https://www.firstthings.com/blogs/firstthoughts/2013/01/the-pevearvolokhonsky-hype-machine-and-how-it-could-have-been-stopped-or-at-least-slowed-down)
+* [The Pevear/Volokhonsky Hype Machine...](https://www.firstthings.com/blogs/firstthoughts/2013/01/the-pevearvolokhonsky-hype-machine-and-how-it-could-have-been-stopped-or-at-least-slowed-down)
 
 #### I can't access these, so I'd like it if someone could send them to me.
-[Review of Avsey's translation](https://journals.sagepub.com/doi/abs/10.1177/004724419502500322) [Anti-Avsey]
+* [Review of Avsey's translation](https://journals.sagepub.com/doi/abs/10.1177/004724419502500322) [Anti-Avsey]
 
-[Raskolnikov says the darndest things](https://www.nytimes.com/1992/04/26/books/raskolnikov-says-the-darndest-things.html)
+* [Raskolnikov says the darndest things](https://www.nytimes.com/1992/04/26/books/raskolnikov-says-the-darndest-things.html)
 
 #### General translation comparisons (with extracts)
 
