@@ -20,45 +20,45 @@ Welcome! You, like many others (me), have decided to read Dostoyevsky, but do no
 *  Ignat Avsey (1994, as The Karamazov Brothers)
 *  Susan McReynolds Oddo (2011), revision of Garnett translation
 
-Oh well. Honestly, I feel like the choice of translation does not alter the experience of reading Dostoyevsky that much, and you should choose whichever one you like. However, choice fatigues you, and so I'd suggest you merely choose between Garnett and Pevear & Volokhnosky for a first read. Dostoyevsky's greatness lies in the fact that mere stylistic changes do not take away even an epsilon amount from the content of his work, unlike certain self-professed aesthetes who find joy in professing their hatred for Dostoyevsky, while managing to produce works that, while undeniably are a pleasure to the senses, manage to leave your soul neither shaken nor stirred.
+Oh well. Honestly, I feel like the choice of translation does not alter the experience of reading Dostoyevsky that much, and you should choose whichever one you like. However, choice fatigues you, and so I'd suggest you merely choose between Garnett and Pevear & Volokhonsky for a first read. Dostoyevsky's greatness lies in the fact that mere stylistic changes do not take away even an epsilon amount from the content of his work, unlike certain self-professed aesthetes who find joy in professing their hatred for Dostoyevsky, while managing to produce works that, while undeniably are a pleasure to the senses, manage to leave your soul neither shaken nor stirred.
 
 So how do you choose between Garnett and P&V? Here is a quick rundown of what each one appeals to me for:
 
-###Garnett translation
+### Garnett translation
 
-####Pros:
+#### Pros:
 - It's out of copyright, so it's free on Project Gutenberg
 - I like the dated English of this version
 
-####Cons:
+#### Cons:
 - She trudged through stacks of Russian novels and translated them at a blistering pace, and apparently skipped over sentences/paragraphs she did not understand.
 - Nabokov and some other Russians say that people do not read Dostoyevsky when they read the books, but merely a bastardized version authored by Garnett.
 
-###P&V translation
+### P&V translation
 
-####Pros:
+#### Pros:
 - Apparently stick to the rough prose that Dosto used, and do not smooth over the jarring original texts.
 
-####Pro/Con:
+#### Pro/Con:
 - They do this thing where V translates the book literally to English, then P makes it a novel while consulting V.
 
-####Cons:
+#### Cons:
 - Hard to say if the good reviews are marketing or actual fact, since this is the latest translation.
 
 Now to list some articles which argue for either side:
 
-####Pro P&V:
+#### Pro P&V:
 [The translation wars](https://www.newyorker.com/magazine/2005/11/07/the-translation-wars)
 
-####Anti P&V [Usually implies Pro Garnett]:
+#### Anti P&V [Usually implies Pro Garnett]:
 [The Pevearsion of Russian Literature](https://www.commentarymagazine.com/articles/gary-morson/the-pevearsion-of-russian-literature) [Amazing title btw, you need to read it just for that title]
 [The Pevear/Volokhonsky Hype Machine...](https://www.firstthings.com/blogs/firstthoughts/2013/01/the-pevearvolokhonsky-hype-machine-and-how-it-could-have-been-stopped-or-at-least-slowed-down)
 
-####I can't access these, so I'd like it if someone could send them to me.
+#### I can't access these, so I'd like it if someone could send them to me.
 [Review of Avsey's translation](https://journals.sagepub.com/doi/abs/10.1177/004724419502500322) [Anti-Avsey]
 [Raskolnikov says the darndest things](https://www.nytimes.com/1992/04/26/books/raskolnikov-says-the-darndest-things.html)
 
-####General translation comparisons (with extracts)
+#### General translation comparisons (with extracts)
 
 * [Garnett, P&V, MacAndrew, McDuff, Avsey](http://www.patrikbergman.com/2017/07/23/choosing-best-karamazov-translation)
 * [Garnett, P&V, MacAndrew](https://www.dartmouth.edu/~karamazo/translations.html)
