@@ -36,4 +36,4 @@ I currently have an Arch Linux installation on my laptop, with [these dotfiles](
 Dota2
 ======
 
-I have spent a small portion of my life playing Dota2, and a smaller portion of it watching the game. I have nothing more to say about it, but it just felt weird not having a section in my homepage not dedicated to this game. If you'd like an introduction to the game, look no further than Purge's [Welcome to Dota, you suck](https://purgegamers.true.io/g/dota-2-guide/#welcome-to-dota-you-suck). The title is amazing, and if I get the time to, I would like to write an article titled "Welcome to envy-free allocations, you suck".
+I have spent a small portion of my life playing Dota2, and a smaller portion of it watching the game. I have nothing more to say about it, but it just felt weird not having a section in my homepage not dedicated to this game. If you'd like an introduction to the game, look no further than Purge's [Welcome to Dota, you suck](https://purgegamers.true.io/g/dota-2-guide/#welcome-to-dota-you-suck). The title is amazing, and if I get the time to, I would like to write some CS articles with similar titles.
