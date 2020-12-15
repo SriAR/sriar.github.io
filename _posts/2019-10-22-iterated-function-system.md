@@ -14,4 +14,4 @@ Consider a finite set $S$ and finitely many functions $ \{ f_i : 1 \le i \le k \
 
 Conversely, show that given any transition matrix $P$ you can produce an IFS (i.e. finitely many functions) which give back your Markov chain with transition matrix $P$.
 
-The forward direction is fairly straightforward (pun intended), but how do you do the other direction? I'll write up my solution here eventually, but you can find [my approach here](http://cmi.ac.in/~arsricharan/sp1/57.pdf).
+The forward direction is fairly straightforward (pun intended), but how do you do the other direction? I'll write up my solution here eventually, but you can find [my approach here](https://sriar.github.io/files/SP1_IFS.pdf).
