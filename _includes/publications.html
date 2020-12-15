@@ -16,7 +16,7 @@
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     <b class="archive__item-title" itemprop="headline">
     <a href="{{ post.paperurl }}" rel="permalink">{{ title }}</a></b>
-    <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
+    <i class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</i>,
     <b>{{ post.venue }}</b>, {{ post.date | default: "1900-01-01" | date: "%Y" }}
   </article>
 </div>
