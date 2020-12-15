@@ -17,6 +17,6 @@
     <b class="archive__item-title" itemprop="headline">
     <a href="{{ post.paperurl }}" rel="permalink">{{ title }}</a></b>
     <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
-    <p> <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
+    <b>{{ post.venue }}</b>, {{ post.date | default: "1900-01-01" | date: "%Y" }}
   </article>
 </div>
