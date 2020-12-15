@@ -8,6 +8,6 @@
 <div class="{{ include.type | default: "list" }}__item">
   <article>
     <b><a href="{{ post.paperurl }}" rel="permalink">{{ title }}</a></b><br>
-    <i>{{ post.excerpt}}</i> [<b>{{ post.venue }}</b>, {{ post.date | default: "1900-01-01" | date: "%Y" }}]<br>
+    <i>{{ post.excerpt}}</i> [<b>{{ post.venue }}</b>, {{ post.date | default: "1900-01-01" | date: "%Y" }}]<br><br>
   </article>
 </div>
