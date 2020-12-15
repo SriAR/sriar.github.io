@@ -39,16 +39,16 @@ Internships
 Masters Coursework
 ======
 ### Computer Science
-Mathematical Logic, Complexity Theory 2, Games on Graphs 2, Advanced Algorithms, Reinforcement Learning, Topics in Algorithms, Graph Theory
+Mathematical Logic, Complexity Theory 2, Games on Graphs 2, <abbr title="Approximation and Randomized">Advanced Algorithms</abbr>, Reinforcement Learning, <abbr title="Matchings and Flows">Topics in Algorithms</abbr>, Quantum Computation, Metric Embeddings and Algorithmic Applications
 {: .notice}
 ### Math
-Stochastic Processes 1, Stochastic Processes 2
+Stochastic Processes 1, Stochastic Processes 2, Graph Theory, Coding Theory
 {: .notice}
 
 Bachelors Coursework
 ======
 ### Math
-Real Analysis, Complex Analysis, <abbr title="Group, Ring, Field Theory">Abstract Algebra</abbr> [Group, Ring, Field Theory], Modules and Galois Theory, Measure Theoretic Probability, Topology, Linear Algebra, Differential Equations, Optimization Techniques, Game Theory
+Real Analysis, Complex Analysis, <abbr title="Group, Ring, Field Theory">Abstract Algebra</abbr>, Modules and Galois Theory, Measure Theoretic Probability, Topology, Linear Algebra, Differential Equations, Optimization Techniques, Game Theory
 {: .notice}
 ### Computer Science
 Discrete Mathematics, Design and Analysis of Algorithms, Theory of Computation, Games on Graphs, Concurrency Theory, Computational Complexity Theory, LP and Combinatorial Optimization, Programming Language Concepts, Functional Programming (Haskell), Advanced Programming (Python)
@@ -63,5 +63,7 @@ Teaching Experience
 * Concurrency Theory (2019)
 * Complexity Theory (2020)
 * Linear Optimization (2020)
+* Design and Analysis of Algorithms (2020)
+* Stochastic Processes 1 (2020)
 
 #### Faculty at Cheenta Ganit Kendra (Dec 2016 - Present)
