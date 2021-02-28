@@ -13,7 +13,7 @@ Hey! I am Sricharan AR, a second year Masters in Computer Science student from C
 Academic interests
 ======
 
-I am primarily interested in topics in the intersection of Mathematics and Computer Science, specifically, in non-increasing order of familiarity, (Algorithmic +) Game Theory, Probability Theory, Algorithms, Complexity Theory, and Games on Graphs. I've mainly worked on fair allocation of indivisible items, and relating completely mixed bimatrix games to completely mixed matrix games, but I would love to explore other areas as well!
+I am primarily interested in topics in the intersection of mathematics and computer science, specifically, in non-increasing order of familiarity, (algorithmic +) game theory, algorithms, complexity theory, probability theory, and games on graphs. I've mainly worked on fair allocation of resources, and completely mixed strategies in two-player games. Feel free to email me about any clarifications you'd like wrt anything I post here.
 
 Books
 ======
@@ -31,9 +31,9 @@ I currently have an Arch Linux installation on my laptop, with [these dotfiles](
 
 * [vimrc](https://github.com/SriAR/dotfiles/blob/master/vim/vimrc) - with comments.
 * [zinc](https://github.com/SriAR/dotfiles/blob/master/bin/zinc) - a custom file syncer using rsync. I use my university-provided computer space as cloud space for my academic PDFs, and use **zinc** to keep them synced between my laptop, phone, iPad and the computer lab at CMI.
-* I also have some tex snippets from [this amazing blog post](https://castel.dev/post/lecture-notes-1) adapted to my use case, which I will add to my dotfiles when I get the time to.
+* I also have some tex snippets from [this amazing blog post](https://castel.dev/post/lecture-notes-1) adapted to my use case.
 
-Dota2
+DotA2
 ======
 
-I have spent a small portion of my life playing Dota2, and a smaller portion of it watching the game. I have nothing more to say about it, but it just felt weird not having a section in my homepage not dedicated to this game. If you'd like an introduction to the game, look no further than Purge's [Welcome to Dota, you suck](https://purgegamers.true.io/g/dota-2-guide/#welcome-to-dota-you-suck). In my unbounded queue of things I would like to do resides the wish to write CS articles with similar titles.
+I have spent a small portion of my life playing DotA2, and a smaller portion of it watching the game. I have nothing more to say about it, but it just felt weird not having a section in my homepage not dedicated to this game. If you'd like an introduction to the game, look no further than Purge's [Welcome to Dota, you suck](https://purgegamers.true.io/g/dota-2-guide/#welcome-to-dota-you-suck). In my unbounded queue of things I would like to do also resides the wish to write CS articles with similar titles.
