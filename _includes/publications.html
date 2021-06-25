@@ -4,10 +4,15 @@
 {% else %}
   {% assign title = post.title %}
 {% endif %}
+{% if post.conf %}
+  {% assign conf = post.conf %}
+{% endif %}
 
 <div class="{{ include.type | default: "list" }}__item">
   <article>
     <b>{{ title }}</b>[<a href="{{ post.paperurl }}" rel="permalink">{{ post.venue }}</a>]<br>
-    {{ post.excerpt}}<br><br>
+    {{ post.excerpt }}
+    {{ post.conf }}
+    <br><br>
   </article>
 </div>

@@ -6,4 +6,5 @@ excerpt: 'with Umang Bhaskar and Rohit Vaish'
 date: 2020-12-12
 venue: 'arXiv'
 paperurl: 'https://arxiv.org/abs/2012.06788'
+conf: 'APPROX 2021'
 ---

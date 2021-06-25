@@ -8,21 +8,21 @@ redirect_from:
   - /about.html
 ---
 
-Hey! I am Sricharan AR, a second year Masters in Computer Science student from Chennai Mathematical Institute. I did my Bachelors in Mathematics and Computer Science, also at CMI. Check out the next section for my academic interests, and the later ones for my non-academic interests.
+Hey! I've just finished my Masters in Computer Science from Chennai Mathematical Institute, and will soon be joining Monika Henzinger's group at the University of Vienna. Check out the next section for my academic interests, and the later ones for my non-academic interests.
 
 Academic interests
 ======
 
-I am primarily interested in topics in the intersection of mathematics and computer science, specifically, in non-increasing order of familiarity, (algorithmic +) game theory, algorithms, complexity theory, probability theory, and games on graphs. I've mainly worked on fair allocation of resources, and completely mixed strategies in two-player games. Feel free to email me about any clarifications you'd like wrt anything I post here.
+I am broadly interested in the intersection of mathematics and computer science, and will be working on differential privacy and dynamic algorithms. I am most familiar with (algorithmic+) game theory, and have worked on fair division and on completely mixed strategies for various classes of games.
 
 Books
 ======
 
-I, like other children who grew up without siblings and decided to make "I read books" a personality trait, have a [Goodreads account](https://www.goodreads.com/review/list/8544194?order=d&sort=date_read). I'm always looking for new recommendations, and if you'd like some fiction suggestions,
+I, like others who grew up without siblings and decided to make "I read books" a personality trait, have a [Goodreads account](https://www.goodreads.com/review/list/8544194?order=d&sort=date_read). I'm always looking for new recommendations, and if you'd like some fiction suggestions,
 
 * [The Brothers Karamazov](https://www.goodreads.com/book/show/4934.The_Brothers_Karamazov) by Fyodor Dostoyevsky
 * [The Melancholy of Resistance](https://www.goodreads.com/book/show/119512.The_Melancholy_of_Resistance) by László Krasznahorkai
-* [In Search of Lost Time](https://www.goodreads.com/book/show/18796.In_Search_of_Lost_Time) by Marcel Proust
+* [Catastrophe: And Other Stories](https://www.goodreads.com/book/show/35068838-catastrophe) by Dino Buzzati
 
 Linux
 ======
