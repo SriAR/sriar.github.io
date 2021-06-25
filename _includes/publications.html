@@ -4,9 +4,6 @@
 {% else %}
   {% assign title = post.title %}
 {% endif %}
-{% if post.conf %}
-  {% assign conf = post.conf %}
-{% endif %}
 
 <div class="{{ include.type | default: "list" }}__item">
   <article>
