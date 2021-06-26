@@ -8,12 +8,18 @@ redirect_from:
   - /about.html
 ---
 
-Hey! I've just finished my Masters in Computer Science from Chennai Mathematical Institute, and will soon be joining Monika Henzinger's group at the University of Vienna. Check out the next section for my academic interests, and the later ones for my non-academic interests.
+Hey! I've just finished my Masters in Computer Science from Chennai Mathematical Institute and will be joining the University of Vienna, working with Monika Henzinger. Check out the next section for my academic interests, and the later ones for my non-academic interests.
 
 Academic interests
 ======
 
 I am broadly interested in the intersection of mathematics and computer science, and will be working on differential privacy and dynamic algorithms. I am most familiar with (algorithmic+) game theory, and have worked on fair division and on completely mixed strategies for various classes of games.
+
+There are a few books nominally unrelated to my work that I'd like to read but haven't had a chance to yet, so let me know if you're interested in teaming up to read any of these:
+
+* [Using the Borsuk-Ulam Theorem](https://link.springer.com/book/10.1007/978-3-540-76649-0) by Jiří Matoušek
+* [Computers and Typesetting](https://www-cs-faculty.stanford.edu/~knuth/abcde.html) by Don Knuth
+* [Proofs from THE BOOK](https://link.springer.com/book/10.1007/978-3-662-57265-8) by Martin Aigner and Günter Ziegler
 
 Books
 ======

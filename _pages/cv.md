@@ -11,30 +11,31 @@ redirect_from:
 
 Education
 ======
+
+* M.Sc. in Computer Science, Chennai Mathematical Institute, 2021
 * B.Sc.(Hons) in Math and Comp Sci, Chennai Mathematical Institute, 2019
-* M.Sc. in Computer Science, Chennai Mathematical Institute, 2021 (expected)
 
 Internships
 ======
-* Summer 2020: Research Intern
-  * VSRP at Tata Institute of Fundamental Research
-  * Fair division of indivisible items
-  * Advisor: Umang Bhaskar
+* Summer 2020: Remote Intern
+  * on Fair division of indivisible items
+  * at Tata Institute of Fundamental Research
+  * under Umang Bhaskar
 
 * Summer 2019: Intern
-  * Indian Statistical Institute, Chennai
-  * Stochastic Dynamic Programming
-  * Advisor: Ravindran G
+  * on Stochastic Dynamic Programming
+  * at Indian Statistical Institute, Chennai
+  * under G Ravindran, T Parthasarathy
 
 * Summer 2018: Industry Intern
-  * Coriolis Technologies, Pune
-  * Identifying phishing sites using neural networks
-  * Advisors: Sudhir Kumar, Rohan Nanode
+  * on Identifying phishing sites using neural networks
+  * at Coriolis Technologies, Pune
+  * under Sudhir Kumar, Rohan Nanode
 
-* Summer 2018: Remote Intern
-  * Indian Institute of Technology, Madras
-  * Implementation of Dynamic Graph Algorithms
-  * Advisor: Rupesh Nasre
+<!-- * Summer 2018: Remote Intern -->
+<!--   * on Implementation of Dynamic Graph Algorithms -->
+<!--   * at Indian Institute of Technology, Madras -->
+<!--   * under Rupesh Nasre -->
 
 Masters Coursework
 ======
@@ -65,5 +66,6 @@ Teaching Experience
 * Linear Optimization (2020)
 * Design and Analysis of Algorithms (2020)
 * Stochastic Processes 1 (2020)
+* Linear Programming and Combinatorial Optimization (2021)
 
 #### Faculty at Cheenta Ganit Kendra (Dec 2016 - Present)
