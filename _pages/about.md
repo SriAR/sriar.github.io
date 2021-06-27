@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-Hey! I've just finished my Masters in Computer Science from Chennai Mathematical Institute and will be joining the University of Vienna, working with Monika Henzinger. Check out the next section for my academic interests, and the later ones for my non-academic interests.
+Hey! I am Sricharan AR, a second year Masters in Computer Science student from Chennai Mathematical Institute. I did my Bachelors in Mathematics and Computer Science, also at CMI. Check out the next section for my academic interests, and the later ones for my non-academic interests.
 
 Academic interests
 ======
