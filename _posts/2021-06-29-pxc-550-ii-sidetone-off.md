@@ -11,9 +11,7 @@ tags:
 
 The Sennheiser PXC 550 ii has a *"feature"* that turns on sidetone/transparent hearing when it detects the microphone being used, which for me basically means that I get to enjoy free (as in free beer) white noise without asking for it. Yay! Googling for fixes gave me lots of useless links, but there was one Reddit thread on the opposite fix (on how to boost sidetone). Thankfully it works to turn the goddamn thing off as well, so I wanted to put it up here and I pray that the SEO gods show this on your search front page.
 
-The Reddit thread is here if you'd like to follow it yourself: https://www.reddit.com/r/sennheiser/comments/jjy3hz/how_to_adjust_side_tone_effect_on_pxc550ii/
-
-Sadly I could not find any references on adjusting sidetone with pipewire (on 0.3.31 right now), but hey, at least it works on Windows so I'm not complaining. The following worked for me:
+[Here is a link](https://www.reddit.com/r/sennheiser/comments/jjy3hz/how_to_adjust_side_tone_effect_on_pxc550ii) to the Reddit thread if you'd like to follow it yourself. Sadly I could not find any references on adjusting sidetone with pipewire (on 0.3.31 right now), but hey, at least it works on Windows so I'm not complaining. The following worked for me:
 
 * Connect the headphones to a Windows PC using USB
 * Bottom bar: Right click on Sounds > Open Sound Settings
