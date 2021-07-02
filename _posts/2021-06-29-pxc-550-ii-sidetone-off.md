@@ -1,5 +1,5 @@
 ---
-title: 'Permanently turning off sidetone in the Sennheiser PXC 550 ii'
+title: 'Permanently turning off sidetone on the Sennheiser PXC 550 ii'
 date: 2021-06-29
 permalink: /posts/2021/06/pxc-550-ii-sidetone-off/
 tags:
