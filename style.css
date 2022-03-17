@@ -112,10 +112,13 @@ hr {
 	justify-content: space-around;
 	align-items: baseline;
 	align-content: stretch;
-    margin-bottom: 1.5em;
+    margin-bottom: 1.25em;
 }
 
-/* #navbar a, a:visited { */
+#navbar a, a:visited {
+    text-decoration: none;
+}
+
 a, a:visited {
     color: #00809c;
 }
