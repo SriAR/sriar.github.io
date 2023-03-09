@@ -1,0 +1,40 @@
+#+HTML_HEAD_EXTRA: <style>p {margin:0;}</style>
+#+title: Pubs
+
+* 2023
+
+*** Electrical Flows for Polylogarithmic Competitive Oblivious Routing
+with Gramoz Goranci, Monika Henzinger, Harald Räcke, and Sushant Sachdeva
+
+[[https://arxiv.org/abs/2303.02491][arXiv]] /
+[[https://arxiv.org/pdf/2303.02491.pdf][pdf]]
+
+*** Differentially Private Data Structures under Continual Observation for Histograms and Related Queries
+with Monika Henzinger and Teresa Anna Steiner
+
+[[https://arxiv.org/abs/2302.11341][arXiv]] /
+[[https://arxiv.org/pdf/2302.11341.pdf][pdf]]
+
+* 2022
+
+*** Fine-Grained Complexity Lower Bounds for Families of Dynamic Graphs
+with Monika Henzinger and Ami Paz
+
+[[https://drops.dagstuhl.de/opus/volltexte/2022/17003][ESA 2022]] /
+[[https://arxiv.org/abs/2208.07572][arXiv]] /
+[[https://arxiv.org/pdf/2208.07572.pdf][pdf]]
+
+* 2021
+
+*** On Approximate Envy-Freeness for Indivisible Chores and Mixed Resources
+with Umang Bhaskar and Rohit Vaish
+
+[[https://drops.dagstuhl.de/opus/volltexte/2021/14694/][APPROX 2021]] /
+[[https://arxiv.org/abs/2012.06788][arXiv]] /
+[[https://arxiv.org/pdf/2012.06788.pdf][pdf]] /
+[[https://www.youtube.com/watch?v=keJ6xrci40k][Video]]
+
+*** Completely Mixed Bimatrix Games
+with T Parthasarathy and Vasudha Sharma
+
+[[https://link.springer.com/article/10.1007/s12044-020-00585-5][Proceedings-Mathematical Sciences]]
