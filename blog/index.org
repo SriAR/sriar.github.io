@@ -3,6 +3,9 @@
 
 # * [[./citekey][Citekeys: what format do I choose?@@html:!&#8253;@@]]
 
+
+* [[./bst][Bibliographies and BSTs]]
+
 * [[./pxcii][Permanently turning off sidetone on the Sennheiser PXC 550 ii]]
 
 * [[./dosto][Different Dostoyevsky Translations]]

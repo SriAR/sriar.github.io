@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2023-03-11 -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bibliographies and BSTs</title>
+<meta name="generator" content="Org Mode" />
+<link rel="icon" type="image/x-icon" href="/favicon.ico"> <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+<div id="preamble" class="status">
+<div id="navbar">
+    <a href="/"><div class="navitem home">&heartsuit;</div></a>
+    <a href="/pubs"><div class="navitem">pubs</div></a>
+    <a href="/blog"><div class="navitem">blog</div></a>
+    <a href="/meta"><div class="navitem">meta</div></a>
+    <a href="/files/Sricharan_AR_CV.pdf"><div class="navitem">cv</div></a>
+</div> <hr>
+</div>
+<div id="content" class="content">
+<p>
+I&rsquo;ve been looking at customizing my bibliography lately, and ohmygod the <code>bst</code> file format is questionable. I do not know who thought using Reverse Polish Notation was a good idea. Also things write to <code>bbl</code> which then writes to <code>aux</code> and then it is displayed in the <code>pdf</code> somehow except I cannot find the command that I would need to redefine to get the margin to move only for <code>\​bibitem</code>​s and aaaaaaaaaaaaaaaaaaaaaaaaaaaa.
+</p>
+
+<p>
+One day I will Tame the BeaST.
+</p>
+
+<p>
+Until then, I am content with having figured out how to add <code>doi</code> links as hrefs to paper titles, and also how to add an <code>arXiv</code> link from the <code>bib</code> file when possible.
+</p>
+
+
+<div id="orgf7488b2" class="figure">
+<p><img src="../../files/bsthrefs.png" alt="bsthrefs.png">
+</p>
+</div>
+
+<p>
+I am also experimenting with moving the year over to the conference name and shortening &ldquo;pages&rdquo; to &ldquo;p.&rdquo;.
+Does one really need to know which<sup>th</sup> FOCS happened in 2007? Or worse, which citystatecountry it happened in? One of my co-authors doesn&rsquo;t like having such frivolous information in the bibliography, and I think I agree. After all, it&rsquo;s not like anyone has ever had to go to a library and find a book titled &ldquo;Proceedings of the n<sup>th</sup> Symposium on blah and blah&rdquo;.
+</p>
+
+<p>
+What I do all the time is highlight the name of the paper from the pdf so that I can google the paper and find the arxiv version. Maybe I can have my bib files better organized to help other people get this with just a single click. But I will talk about bib files separately later.
+</p>
+
+<p>
+It also looks terrible when not all entries have hyperlinked titles. Do I really want to reorganize all my bib files? Do I really want to spend the time fixing the references that my co-authors add in? Especially if they use their own citation systems that rewrite the bib file every time?
+</p>
+</div>
+</body>
+</html>
