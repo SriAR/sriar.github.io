@@ -66,7 +66,7 @@
     <span class="lemma_thmcaption">
     Lemma
     </span>
-    <span class="lemma_thmlabel">1</span>
+    <span class="lemma_thmlabel">1.1</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-proofOracleReturn.html#lem:Localization">#</a>
 
@@ -86,7 +86,7 @@
     <span class="lemma_thmcaption">
     Lemma
     </span>
-    <span class="lemma_thmlabel">2</span>
+    <span class="lemma_thmlabel">1.2</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-proofOracleReturn.html#lem:OracleReturn">#</a>
     <a class="icon proof" href="sec-proofOracleReturn.html#a0000000003"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
@@ -107,7 +107,7 @@
     <span class="expand-proof">▼</span>
   </div>
   <div class="proof_content">
-  <p>Setting \(\ell _e\) to \(\frac{1}{\sqrt{w_e}}\) and applying Lemma&#160;<a href="sec-proofOracleReturn.html#lem:Localization">1</a>, we get </p>
+  <p>Setting \(\ell _e\) to \(\frac{1}{\sqrt{w_e}}\) and applying Lemma&#160;<a href="sec-proofOracleReturn.html#lem:Localization">1.1</a>, we get </p>
 <div class="displaymath" id="a0000000004">
   \begin{align*}  \sum _e p_e \textrm{load}_w(e) & = \sum _e p_e \sum _{f} \textrm{load}_w(f\to e) \\ & = \sum _e p_e \cdot w_e \cdot \sum _{f} |b_e L^{\dagger }b_f^{\mkern -1.5mu\mathsf{T}}| \tag *{(by definition of load)}\\ & = \sum _e p_e \cdot \left( p_e + \frac{1}{m} \right)^{-1}\cdot \sum _{f} |b_e L^{\dagger }b_f^{\mkern -1.5mu\mathsf{T}}| \tag *{(by definition of $w_e$)}\\ & \le \sum _e \sum _{f} |b_e L^{\dagger }b_f^{\mkern -1.5mu\mathsf{T}}| \\ & = \sum _{e, f} \frac{1}{\sqrt{w_e w_f}} \cdot \sqrt{w_ew_f} \cdot |b_e L^{\dagger }b_f^{\mkern -1.5mu\mathsf{T}}| \\ & = \sum _{e, f} \ell _e \ell _f \cdot \sqrt{w_e w_f} \cdot |b_e L^{\dagger }b_f^{\mkern -1.5mu\mathsf{T}}| \tag *{(by choice of $\ell _e$)}\\ & \le \alpha _{\text{local}}\cdot \| \ell \| _2^2 \tag *{(by Lemma \ref{lem:Localization})} \\ & = \alpha _{\text{local}}\cdot \sum _e \frac{1}{w_e} \\ & = \alpha _{\text{local}}\cdot \sum _e \left( p_e + \frac{1}{m} \right) \\ & = 2 \alpha _{\text{local}}, \end{align*}
 </div>
