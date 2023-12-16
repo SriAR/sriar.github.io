@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+  MathJax = { 
+    tex: {
+		    inlineMath: [['$','$'], ['\\(','\\)']]
+	} }
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<meta name="generator" content="plasTeX" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Algorithm using approximate Laplacian solvers</title>
+<link rel="next" href="sec-lsolvex.html" title="Proof of correctness" />
+<link rel="prev" href="sec-proofWidthBound.html" title="Bounding the Width" />
+<link rel="up" href="index.html" title="Electrical Flows for Polylogarithmic Competitive Oblivious Routing" />
+<link rel="stylesheet" href="styles/theme-white.css" />
+<link rel="stylesheet" href="styles/amsthm.css" />
+<link rel="stylesheet" href="styles/showmore.css" />
+<link rel="stylesheet" href="styles/extra_styles.css" />
+</head>
+
+<body>
+<header>
+<svg  id="toc-toggle" class="icon icon-list-numbered "><use xlink:href="symbol-defs.svg#icon-list-numbered"></use></svg>
+<h1 id="doc_title"><a href="index.html">Electrical Flows for Polylogarithmic Competitive Oblivious Routing</a></h1>
+</header>
+
+<div class="wrapper">
+<nav class="toc">
+<ul class="sub-toc-0">
+<li class="">
+  <a href="sec-proofOracleReturn.html"><span class="toc_ref">1</span> <span class="toc_entry">Bound on Average Loads</span></a>
+ </li>
+<li class="">
+  <a href="sec-proofWidthBound.html"><span class="toc_ref">2</span> <span class="toc_entry">Bounding the Width</span></a>
+ </li>
+<li class=" active current">
+  <a href="sec-apxlsolve.html"><span class="toc_ref">3</span> <span class="toc_entry">Algorithm using approximate Laplacian solvers</span></a>
+  <span class="expand-toc">▼</span>
+  <ul class="sub-toc-1 active">
+     <li class="">
+  <a href="sec-apxlsolve.html#sec:changes"><span class="toc_ref">3.1</span> <span class="toc_entry">Changes in the algorithm</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sec-lsolvex.html"><span class="toc_ref">4</span> <span class="toc_entry">Proof of correctness</span></a>
+ </li>
+<li ><a href="dep_graph_document.html">Dependency graph</a></li>
+</ul>
+</nav>
+
+<div class="content">
+<div class="content-wrapper">
+
+
+<div class="main-text">
+<h1 id="sec:apxlsolve">3 Algorithm using approximate Laplacian solvers</h1>
+
+
+<p><div class="theorem_thmwrapper" id="thm:LapSolve">
+  <div class="theorem_thmheading">
+    <span class="theorem_thmcaption">
+    Theorem
+    </span>
+    <span class="theorem_thmlabel">6</span>
+    <div class="thm_icons">
+    <a class="icon proof" href="sec-apxlsolve.html#thm:LapSolve">#</a>
+
+  </div>
+  </div>
+  <div class="theorem_thmcontent">
+  <p> There is an algorithm \(\text{ApproxLapSolve}\) that gets as input a Laplacian \(L\) of an \(n\)-vertex \(m\)-edge graph, a vector \(y \in \mathbb {R}^n\), error bound \(\epsilon _L\), and returns a vector \(x \in \mathbb {R}^n\) such that the following holds with probability \(\ge 1 - \frac{1}{poly(n)}\). </p>
+<div class="displaymath" id="a0000000014">
+  \[  \| x - L^{\dagger }y\| _L \le \epsilon _L\cdot \| L^{\dagger }y\| _L  \]
+</div>
+<p> where \(\| x\| _L = \sqrt{x^{\mkern -1.5mu\mathsf{T}}L x} \) is the norm induced by the Laplacian. Further, the algorithm runs in time \(\widetilde{O}(m \log (1/\epsilon _L))\). </p>
+
+  </div>
+</div> </p>
+<p><div class="lemma_thmwrapper" id="thm:SketchApprox">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">7</span>
+    <div class="thm_icons">
+    <a class="icon proof" href="sec-apxlsolve.html#thm:SketchApprox">#</a>
+
+  </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p> Given \(m \in \mathbb {Z}_{\ge 1}\), \(\delta \in (0,1)\), and \(\epsilon \in (0, 1)\), there is a sketch matrix \(C = \text{SketchMatrix}(m, \delta , \epsilon ) \in \mathbb {R}^{\ell \times m}\) and an algorithm \(\text{RecoverNorm}(s)\) for \(s \in \mathbb {R}^{\ell }\) such that the following properties hold: </p>
+<ul class="itemize">
+  <li><p>(Approximation) For any \(v \in \mathbb {R}^m\), with probability at least \(1 - \delta \) over the randomness of SketchMatrix, the value of \(r = \text{RecoverNorm}(Cv)\) is </p>
+<div class="displaymath" id="a0000000015">
+  \[  (1-\epsilon ) \| v\| _1 \le r \le (1+\epsilon ) \| v\| _1  \]
+</div>
+</li>
+  <li><p>\(\ell = c/\epsilon ^2 \cdot \log (1/\delta )\) for some constant \(c{\gt}1\) </p>
+</li>
+  <li><p>(running time) SketchMatrix and RecoverNorm take time \(O(\ell m)\) and \(poly(\ell )\) respectively. </p>
+</li>
+</ul>
+
+  </div>
+</div> </p>
+<p>We assume without loss of generality that \(L^{\dagger }x \perp 1\) and \(y \perp 1\), where \(1\) is the the all-ones vector, \(x\) is the input to \(\text{ApproxLapSolve}\) and \(y\) is the output received. This is because shifting a vector of potentials by a constant vector does not affect the guarantees in the \(L\) norm. </p>
+<p>We will use the following two properties of \(\text{SketchMatrix}\) and \(\text{RecoverNorm}\) in our analysis: </p>
+<ul class="itemize">
+  <li><p>\(\text{RecoverNorm}(x_1, x_2, \ldots , x_{\ell }) = \text{median}(|x_1|, |x_2|, \ldots , |x_\ell |)\). </p>
+</li>
+  <li><p>\(\max _{i, j} C_{ij} \le poly(m)\). </p>
+</li>
+</ul>
+<p>We finally use a lower bound on the effective resistance to convert an additive approximation guarantee into a multiplicative one. This follows from Rayleigh’s monotonicity law and is shown, for example, by Spielman and Srivastava&#160;<span class="cite">
+	(
+	
+</span>. </p>
+<p><div class="lemma_thmwrapper" id="lem:LoadLB">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">8</span>
+    <div class="thm_icons">
+    <a class="icon proof" href="sec-apxlsolve.html#lem:LoadLB">#</a>
+
+  </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p> For any weighted graph \((G, w)\), the load on any edge \(e\) has the following lower bound. </p>
+<div class="displaymath" id="a0000000016">
+  \[  \textrm{load}_w(e) \ge \frac{2w_{e}}{nw_{\max }},  \]
+</div>
+<p> where \(w_{\max }\) is the maximum edge weight. </p>
+
+  </div>
+</div> </p>
+<p><div class="lemma_thmwrapper" id="lem:InftyLLB">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">9</span>
+    <div class="thm_icons">
+    <a class="icon proof" href="sec-apxlsolve.html#lem:InftyLLB">#</a>
+    <a class="icon proof" href="sec-apxlsolve.html#a0000000017"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+
+  </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p> For any \(x \in \mathbb {R}^n\) such that \(x \perp 1\), we have \(n^{-2}\cdot \| x\| _{\infty } \le \| x\| _L\). </p>
+
+  </div>
+</div> </p>
+<div class="proof_wrapper" id="a0000000017">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▼</span>
+  </div>
+  <div class="proof_content">
+  <p>Since \(\min _{x \in \mathbb {R}^n} \| x\| _L^2 / \| x\| _2^2 = 0\) which is attained by \(1\), by the variational characterization of eigenvalues of a symmetric matrix, the second smallest eigenvalue \(\lambda _2\) of \(L\) is given by </p>
+<div class="displaymath" id="a0000000018">
+  \[  \min _{x \in \mathbb {R}^n: x \perp 1} \frac{\| x\| _L^2}{\| x\| _2^2} = \lambda _2  \]
+</div>
+<p> By Cheeger’s inequality, \(\lambda _2 \ge h^2/2\Delta \), where \(h = \min _{S : |S| \le n/2} |E(S, \overline{S})|/|S|\) is the unnormalized Cheeger’s constant and \(\Delta \) is the maximum degree in the graph. Thus </p>
+<div class="displaymath" id="a0000000019">
+  \[  \lambda _2 \ge h^2 \cdot \frac{1}{2\Delta } \ge \frac{4}{n^2} \cdot \frac{1}{2n} \ge n^{-3}  \]
+</div>
+<p> Thus for any \(x \in \mathbb {R}^n\) such that \(x \perp 1\), \(\| x\| _L \ge n^{-3/2} \cdot \| x\| _2 \ge n^{-3/2} \cdot \| x\| _{\infty }\), and the lemma follows. </p>
+
+  </div>
+</div>
+<p><div class="lemma_thmwrapper" id="lem:InftyLUB">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">10</span>
+    <div class="thm_icons">
+    <a class="icon proof" href="sec-apxlsolve.html#lem:InftyLUB">#</a>
+    <a class="icon proof" href="sec-apxlsolve.html#a0000000020"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+
+  </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p> For any \(x \in \mathbb {R}^n\), \(\| x\| _L \le 2n\cdot \| x\| _{\infty }\). </p>
+
+  </div>
+</div> </p>
+<div class="proof_wrapper" id="a0000000020">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▼</span>
+  </div>
+  <div class="proof_content">
+  <p>Since \(\| x\| _{\infty }^2 \le 1\) implies \(|x_i|\le 1\) for all \(i \in [n]\), and since \(\| x\| _L^2 = x^{\mkern -1.5mu\mathsf{T}}L x\), we have </p>
+<div class="displaymath" id="a0000000021">
+  \begin{equation*}  \max _{x \in \mathbb {R}^n} \frac{\| x\| _L^2}{\| x\| _{\infty }^2} \le \max _{x \in \mathbb {R}^n: |x_i| \le 1} x^{\mkern -1.5mu\mathsf{T}}L x \end{equation*}
+</div>
+<p> Since \(x^{\mkern -1.5mu\mathsf{T}}L x = \sum _{(u,v) \in E} (x_u - x_v)^2\), and \(|x_i| \le 1,\) each term is bounded by 4. Thus, the sum is at most \(4m \le 4n^{2},\) giving the lemma. </p>
+
+  </div>
+</div>
+<p>The first lemma converts the guarantee we have on the \(L\) norm to a guarantee on the \(\ell _{\infty }\) norm. </p>
+<p><div class="lemma_thmwrapper" id="lem:InftyClose">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">11</span>
+    <div class="thm_icons">
+    <a class="icon proof" href="sec-apxlsolve.html#lem:InftyClose">#</a>
+    <a class="icon proof" href="sec-apxlsolve.html#a0000000022"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+
+  </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p> Suppose we have two vectors \(x, y \in \mathbb {R}^n\) such that \(x, y \perp 1\) and \(\| x - y\| _L \le \epsilon \| y\| _L\). Then \(\| x - y\| _{\infty } \le \epsilon \cdot 2n^3\cdot \| y\| _{\infty }\). </p>
+
+  </div>
+</div> </p>
+<div class="proof_wrapper" id="a0000000022">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▼</span>
+  </div>
+  <div class="proof_content">
+  <p>By Lemmas <a href="sec-apxlsolve.html#lem:InftyLUB">10</a> and <a href="sec-apxlsolve.html#lem:InftyLLB">9</a>, we have </p>
+<div class="displaymath" id="a0000000023">
+  \[  n^{-2}\cdot \| x-y\| _{\infty } \le \| x-y\| _L \qquad \text{and}\qquad \| y\| _L \le 2n\cdot \| y\| _{\infty }  \]
+</div>
+<p> Together with the assumption in our lemma, we get </p>
+<div class="displaymath" id="a0000000024">
+  \[  \| x - y\| _{\infty } \le n^{2}\cdot \| x - y\| _L \le \epsilon \cdot n^{2}\cdot \| y\| _L \le \epsilon \cdot 2n^3\cdot \| y\| _{\infty }  \]
+</div>
+<p> as claimed. </p>
+
+  </div>
+</div>
+<p>Once we have this \(\ell _{\infty }\) guarantee for the columns of our matrix \(\widetilde{U}\), we convert this to a guarantee on the rows of \(\widetilde{U}\) using the following lemma. </p>
+<p><div class="lemma_thmwrapper" id="lem:RowtoColumnInfty">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">12</span>
+    <div class="thm_icons">
+    <a class="icon proof" href="sec-apxlsolve.html#lem:RowtoColumnInfty">#</a>
+    <a class="icon proof" href="sec-apxlsolve.html#a0000000025"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+
+  </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p> Let \(U\) be an \(n \times \ell \) matrix, with \(K\) being the largest value present in the matrix. Let \(\widetilde{U}\) be an approximation of \(U\) such that for every \(j \in [\ell ]\), the \(j\)-th column \(\widetilde{C}_j\) of \(\widetilde{U}\) is \(\epsilon \)-close to the \(j\)-th column \(C_j\) of \(U\) in the following sense: \(\forall j \in [\ell ], \| \widetilde{C}_j - C_j\| _{\infty } \le \epsilon \cdot \| C_j\| _{\infty }\). Then for any \(i \in [n]\), and rows \(R_i\) of \(U\) and \(\widetilde{R}_i\) of \(\widetilde{U}\), </p>
+<div class="displaymath" id="a0000000026">
+  \[  \|  \widetilde{R}_i - R_i \| _{\infty } \le \epsilon \cdot K \]
+</div>
+
+  </div>
+</div> </p>
+<div class="proof_wrapper" id="a0000000025">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▼</span>
+  </div>
+  <div class="proof_content">
+  <p>For any \(i \in [n]\), </p>
+<div class="displaymath" id="a0000000027">
+  \begin{align*}  \| \widetilde{R}_i - R_i\| _{\infty } & \le \max _{i \in [n]} \| \widetilde{R}_i - R_i\| _{\infty } \\ & = \max _{i, j \in [n] \times [\ell ]} | \widetilde{U}_{ij} - U_{ij} | \\ & = \max _{j\in [\ell ]} \|  \widetilde{C}_{j} - C_{j} \| _{\infty } \\ & \le \epsilon \cdot \max _{j \in [\ell ]} \|  C_{j} \| _{\infty } \\ & \le \epsilon \cdot K\end{align*}
+</div>
+<p> as required. </p>
+
+  </div>
+</div>
+<p><div class="lemma_thmwrapper" id="lem:MedianApx">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">13</span>
+    <div class="thm_icons">
+    <a class="icon proof" href="sec-apxlsolve.html#lem:MedianApx">#</a>
+    <a class="icon proof" href="sec-apxlsolve.html#a0000000028"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+
+  </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p> Let \(x, y \in \mathbb {R}^\ell \) be such that \(\| x - y\| _{\infty } \le \epsilon \), where \(\ell \) is odd. Then </p>
+<div class="displaymath" id="a0000000029">
+  \[  \text{median}(|x_1|, |x_2|, \ldots , |x_\ell |)- \epsilon \le \text{median}(|y_1|, |y_2|, \ldots , |y_\ell |)\le \text{median}(|x_1|, |x_2|, \ldots , |x_\ell |)+ \epsilon  \]
+</div>
+
+  </div>
+</div> </p>
+<div class="proof_wrapper" id="a0000000028">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▼</span>
+  </div>
+  <div class="proof_content">
+  <p>Note that if \(|x_i - y_i| \le \epsilon \), then \(| |x_i| - |y_i| | \le \epsilon \) as well. Thus we can assume without loss of generality that \(x\) and \(y\) are non-negative. </p>
+<p>Relabel the indices such that \(x_1 \le x_2 \le \ldots \le x_\ell \) are in non-decreasing order. The assumption on \(\ell _{\infty }\) norm gives us that for all \(i \in [\ell ]\), </p>
+<div class="equation" id="eq:MedianApx">
+<p>
+  <div class="equation_content">
+    \begin{equation}  \label{eq:MedianApx} |x_i - y_i| \le \epsilon \end{equation}
+  </div>
+  <span class="equation_label">1</span>
+</p>
+</div>
+<p> Let \(\pi \) be a permutation such that \(y_{\pi (1)} \le y_{\pi (2)} \le \ldots \le y_{\pi (\ell )}\) is in non-decreasing order. Let \(m= \left\lceil \ell /2 \right\rceil \). We want to show that \(|y_{\pi (m)} - x_{m}| \le \epsilon \). If \(m= \pi (m)\), then the lemma follows from Lemma <a href="sec-apxlsolve.html#eq:MedianApx">1</a> with \(i = m\). So assume that \(m\neq \pi (m)\). </p>
+<p>Consider the case when \(m{\gt} \pi (m)\). Then since \(y_{m} \ge y_{\pi (m)}\), we have \(x_{m} \ge y_{m} - \epsilon \ge y_{\pi (m)} - \epsilon \). For the other direction, since \(m{\gt} \pi (m)\), there exists an index \(j\) such that \(x_j {\gt} x_{m}\) and \(y_j \le y_{\pi (m)}\). For this index, we have \(y_{\pi (m)} \ge y_j \ge x_j - \epsilon \ge x_m - \epsilon \) as required. The case when \(m{\lt} \pi (m)\) is symmetric. </p>
+
+  </div>
+</div>
+<p>We use the following lemma to show that \(\text{RecoverNorm}\) works well on approximate sketched vectors. </p>
+<p><div class="lemma_thmwrapper" id="lem:CombinedApx">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">14</span>
+    <div class="thm_icons">
+    <a class="icon proof" href="sec-apxlsolve.html#lem:CombinedApx">#</a>
+    <a class="icon proof" href="sec-apxlsolve.html#a0000000030"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+
+  </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p> Let \(a \in \mathbb {R}\) be a real number. Suppose \(x \in \mathbb {R}^\ell \) satisfies </p>
+<div class="displaymath" id="a0000000031">
+  \[  (1-\epsilon )\cdot a \le \text{median}(|x_1|, |x_2|, \ldots , |x_\ell |)\le (1+\epsilon )\cdot a  \]
+</div>
+<p> Suppose \(y \in \mathbb {R}^\ell \) is such that \(\| x - y\| _{\infty } \le \epsilon ’\), then \(y\) satisfies </p>
+<div class="displaymath" id="a0000000032">
+  \[  (1-\epsilon )\cdot a - \epsilon ’\le \text{median}(|y_1|, |y_2|, \ldots , |y_\ell |)\le (1+\epsilon )\cdot a + \epsilon ’ \]
+</div>
+
+  </div>
+</div> </p>
+<div class="proof_wrapper" id="a0000000030">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▼</span>
+  </div>
+  <div class="proof_content">
+  <p>Using Lemma <a href="sec-apxlsolve.html#lem:MedianApx">13</a> and the assumption on \(x\), </p>
+<div class="displaymath" id="a0000000033">
+  \begin{align*}  (1-\epsilon )\cdot a - \epsilon ’& \le \text{median}(|x_1|, |x_2|, \ldots , |x_\ell |)- \epsilon ’\\ & \le \text{median}(|y_1|, |y_2|, \ldots , |y_\ell |)\\ & \le \text{median}(|x_1|, |x_2|, \ldots , |x_\ell |)+ \epsilon ’\\ & \le (1+\epsilon )\cdot a + \epsilon ’\end{align*}
+</div>
+<p> as required. </p>
+
+  </div>
+</div>
+<p><div class="lemma_thmwrapper" id="lem:ApxSolveLoad">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">15</span>
+    <div class="thm_icons">
+    <a class="icon proof" href="sec-apxlsolve.html#lem:ApxSolveLoad">#</a>
+    <a class="icon proof" href="sec-apxlsolve.html#a0000000034"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+
+  </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p> For any approximation factor \(0 {\lt} \epsilon {\lt} 1\), and any weighted graph \((G,w)\), let \(\textrm{load}_w= \left( w_e \sum _f |b_e L^{\dagger }b_f^{\mkern -1.5mu\mathsf{T}}|\right)_{e \in E} \) be the true loads, and \(\textrm{aload}_w= \text{GetApproxLoad}(G, w, \epsilon )\) be the approximate loads computed by the algorithm when using an approximate Laplacian solver. Then with probability \(\ge 1-\frac{1}{poly(n)}\), </p>
+<div class="displaymath" id="a0000000035">
+  \[  (1 - \epsilon ) \cdot \textrm{load}_w(e) \le \textrm{aload}_w(e) \le (1 + \epsilon ) \cdot \textrm{load}_w(e) \qquad \text{for all $e \in E$}  \]
+</div>
+
+  </div>
+</div> </p>
+<div class="proof_wrapper" id="a0000000034">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▼</span>
+  </div>
+  <div class="proof_content">
+  <p>Let \(U = L^{\dagger }B^{\mkern -1.5mu\mathsf{T}}C^{\mkern -1.5mu\mathsf{T}}\), and \(\widetilde{U}= \text{ApproxLapSolve}(L, B^{\mkern -1.5mu\mathsf{T}}C^{\mkern -1.5mu\mathsf{T}}, \delta , \epsilon _L)\) where we abuse notation to mean that \(\text{ApproxLapSolve}\) runs on each column of \(B^{\mkern -1.5mu\mathsf{T}}C^{\mkern -1.5mu\mathsf{T}}\) and returns a column vector. Let \(R_i\) and \(\widetilde{R}_i\) denote the rows, and \(C_j\) and \(\widetilde{C}_j\) denote the columns of \(U\) and \(\widetilde{U}\) respectively. By guarantees of the approximate Laplacian solver, we have </p>
+<div class="displaymath" id="a0000000036">
+  \[  \| \widetilde{C}_j - C_j\| _L \le \epsilon _L\| C_j\| _L  \]
+</div>
+<p> Lemma <a href="sec-apxlsolve.html#lem:InftyClose">11</a> tells us that </p>
+<div class="displaymath" id="a0000000037">
+  \[  \| \widetilde{C}_j - C_j\| _{\infty } \le \epsilon _L\cdot 2n^3\cdot \| C_j\| _{\infty }  \]
+</div>
+<p> With \(K\) as an upper bound on the maximum entry in \(CBL^{\dagger }\), and using the above inequality in Lemma <a href="sec-apxlsolve.html#lem:RowtoColumnInfty">12</a>, we get that </p>
+<div class="displaymath" id="a0000000038">
+  \[  \| \widetilde{R}_i - R_i\| _{\infty } \le \epsilon _L\cdot 2n^3\cdot K \]
+</div>
+<p> Note that for any \(e = (u, v)\), \((U^{\mkern -1.5mu\mathsf{T}}b_e)^{\mkern -1.5mu\mathsf{T}}= R_u - R_v\), and \((\widetilde{U}^{\mkern -1.5mu\mathsf{T}}b_e)^{\mkern -1.5mu\mathsf{T}}= \widetilde{R}_u - \widetilde{R}_v\). Thus </p>
+<div class="displaymath" id="a0000000039">
+  \begin{align*}  \| (U^{\mkern -1.5mu\mathsf{T}}b_e) - (\widetilde{U}^{\mkern -1.5mu\mathsf{T}}b_e)\| _{\infty } & = \| (R_u - R_v) - (\widetilde{R}_u - \widetilde{R}_v)\| _{\infty } \\ & \le \| R_u - \widetilde{R}_u\| _{\infty } + \| R_v - \widetilde{R}_v\| _{\infty } \\ & \le 4\epsilon n^3 K\end{align*}
+</div>
+<p> By choice of \(\epsilon _L= \frac{\epsilon }{( 8m n^4 K)}\), the final expression is \(\frac{\epsilon }{2 mn}\). Since \(\text{RecoverNorm}(x_1, x_2, \ldots , x_\ell ) = \text{median}(|x_1|, |x_2|, \ldots , |x_\ell |)\), and since the guarantees of \(\text{RecoverNorm}\) from Theorem <a href="sec-apxlsolve.html#thm:SketchApprox">7</a> gives us </p>
+<div class="displaymath" id="a0000000040">
+  \[  \left(1-\frac{\epsilon }{2}\right)\cdot \sum _f |b_e L^{\dagger }b_f^{\mkern -1.5mu\mathsf{T}}|\le \text{RecoverNorm}(U^{\mkern -1.5mu\mathsf{T}}b_e) \le \left(1+\frac{\epsilon }{2}\right)\cdot \sum _f |b_e L^{\dagger }b_f^{\mkern -1.5mu\mathsf{T}}|,  \]
+</div>
+<p> using Lemma <a href="sec-apxlsolve.html#lem:CombinedApx">14</a> on \(U^{\mkern -1.5mu\mathsf{T}}b_e\) and \(\widetilde{U}^{\mkern -1.5mu\mathsf{T}}b_e\), we get </p>
+<div class="displaymath" id="a0000000041">
+  \[  \left(1-\frac{\epsilon }{2}\right)\cdot \sum _f |b_e L^{\dagger }b_f^{\mkern -1.5mu\mathsf{T}}|- \frac{\epsilon }{2 mn}\le \text{RecoverNorm}(\widetilde{U}^{\mkern -1.5mu\mathsf{T}}b_e) \le \left(1+\frac{\epsilon }{2}\right)\cdot \sum _f |b_e L^{\dagger }b_f^{\mkern -1.5mu\mathsf{T}}|+ \frac{\epsilon }{2 mn}.  \]
+</div>
+<p> Thus, </p>
+<div class="displaymath" id="a0000000042">
+  \[  \left(1-\frac{\epsilon }{2}\right)\cdot \textrm{load}_w(e) - \frac{\epsilon w_e}{2mn} \le \text{GetApproxLoad}(G, w) \le \left(1+\frac{\epsilon }{2}\right)\cdot \textrm{load}_w(e) + \frac{\epsilon w_e}{2mn}  \]
+</div>
+<p> Since for any edge \(f \in E,\) we have \(w_f = \left( p_f + \frac{1}{m} \right)^{-1} \le m\), we get \(w_{\max } \le m.\) Thus, Lemma <a href="sec-apxlsolve.html#lem:LoadLB">8</a> gives us that \(\textrm{load}_w(e) \ge \frac{w_e}{mn},\) which proves our lemma. </p>
+
+  </div>
+</div>
+<h1 id="sec:changes">3.1 Changes in the algorithm</h1>
+
+<p>The algorithm is very similar to the case with an exact Laplacian solver, with minor changes. We detail them for completeness. Since the maximum entry in \(C\) is upper bounded by \(poly(n, m)\), the maximum entry in \(CBL^{\dagger }\) is upper bounded by some \(poly(n,m)\) as well. We call this value as \(K = \max _{i,j} (CBL^{\dagger })_{ij}\). We use \(\epsilon _L= \frac{\epsilon }{( 8m n^4 K)}\). </p>
+<p>The only change in the running time from the earlier algorithm is the time taken by the approximate Laplacian solver. Recall that the running time of the approximate Laplacian solver is \(\widetilde{O}(m \log (1/\epsilon _L))\). Since the maximum entry in \(C\) is bounded by \(poly(m)\), the maximum entry in \(CBL^{\dagger }\) is bounded by \(poly(n,m)\) as well. We denote this upper bound as \(K\). Thus \(\epsilon _L\ge 1/poly(n)\), and the approximate Laplacian solver runs in time \(\widetilde{O}(m)\). </p>
+
+</div> <!--main-text -->
+</div> <!-- content-wrapper -->
+</div> <!-- content -->
+</div> <!-- wrapper -->
+
+<nav class="prev_up_next">
+  <svg  id="showmore-minus" class="icon icon-eye-minus showmore"><use xlink:href="symbol-defs.svg#icon-eye-minus"></use></svg>
+
+  <svg  id="showmore-plus" class="icon icon-eye-plus showmore"><use xlink:href="symbol-defs.svg#icon-eye-plus"></use></svg>
+
+  <a href="sec-proofWidthBound.html" title="Bounding the Width"><svg  class="icon icon-arrow-left "><use xlink:href="symbol-defs.svg#icon-arrow-left"></use></svg>
+</a>
+  <a href="index.html" title="Electrical Flows for Polylogarithmic Competitive Oblivious Routing"><svg  class="icon icon-arrow-up "><use xlink:href="symbol-defs.svg#icon-arrow-up"></use></svg>
+</a>
+  <a href="sec-lsolvex.html" title="Proof of correctness"><svg  class="icon icon-arrow-right "><use xlink:href="symbol-defs.svg#icon-arrow-right"></use></svg>
+</a>
+</nav>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/plastex.js"></script>
+<script type="text/javascript" src="js/svgxuse.js"></script>
+<script type="text/javascript" src="js/js.cookie.min.js"></script>
+<script type="text/javascript" src="js/showmore.js"></script>
+</body>
+</html>
