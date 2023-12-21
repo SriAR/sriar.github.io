@@ -74,7 +74,7 @@
   </div>
   <div class="lemma_thmcontent">
   <p> Let \(G\) be a graph with weights \(\{ w_e\} \). Then for any vector \(\ell \in \mathbb {R}_{\ge 0}^m\), </p>
-<div class="displaymath" id="a0000000002">
+<div class="displaymath" id="a0000000122">
   \[  \sum _{e, f \in E} \ell _e \ell _f \sqrt{w_e w_f} |b_e L_G^{\dagger }b_f^{\mkern -1.5mu\mathsf{T}}| \le \alpha _{\text{local}}\cdot \| \ell \| _2^2  \]
 </div>
 
@@ -89,7 +89,7 @@
     <span class="lemma_thmlabel">1.2</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-proofOracleReturn.html#lem:OracleReturn">#</a>
-    <a class="icon proof" href="sec-proofOracleReturn.html#a0000000003"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+    <a class="icon proof" href="sec-proofOracleReturn.html#a0000000193"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
 </a>
 
   </div>
@@ -99,7 +99,7 @@
 
   </div>
 </div> </p>
-<div class="proof_wrapper" id="a0000000003">
+<div class="proof_wrapper" id="a0000000193">
   <div class="proof_heading">
     <span class="proof_caption">
     Proof
@@ -107,8 +107,9 @@
     <span class="expand-proof">▼</span>
   </div>
   <div class="proof_content">
-  <p>Setting \(\ell _e\) to \(\frac{1}{\sqrt{w_e}}\) and applying Lemma&#160;<a href="sec-proofOracleReturn.html#lem:Localization">1.1</a>, we get </p>
-<div class="displaymath" id="a0000000004">
+  <p>Setting \(\ell _e\) to \(\frac{1}{\sqrt{w_e}}\) and applying Lemma&#160;<span style="margin-left: 0;" datatooltipref='lem:Localization' class="tooltip">1.1</span>
+, we get </p>
+<div class="displaymath" id="a0000000205">
   \begin{align*}  \sum _e p_e \textrm{load}_w(e) & = \sum _e p_e \sum _{f} \textrm{load}_w(f\to e) \\ & = \sum _e p_e \cdot w_e \cdot \sum _{f} |b_e L^{\dagger }b_f^{\mkern -1.5mu\mathsf{T}}| \tag *{(by definition of load)}\\ & = \sum _e p_e \cdot \left( p_e + \frac{1}{m} \right)^{-1}\cdot \sum _{f} |b_e L^{\dagger }b_f^{\mkern -1.5mu\mathsf{T}}| \tag *{(by definition of $w_e$)}\\ & \le \sum _e \sum _{f} |b_e L^{\dagger }b_f^{\mkern -1.5mu\mathsf{T}}| \\ & = \sum _{e, f} \frac{1}{\sqrt{w_e w_f}} \cdot \sqrt{w_ew_f} \cdot |b_e L^{\dagger }b_f^{\mkern -1.5mu\mathsf{T}}| \\ & = \sum _{e, f} \ell _e \ell _f \cdot \sqrt{w_e w_f} \cdot |b_e L^{\dagger }b_f^{\mkern -1.5mu\mathsf{T}}| \tag *{(by choice of $\ell _e$)}\\ & \le \alpha _{\text{local}}\cdot \| \ell \| _2^2 \tag *{(by Lemma \ref{lem:Localization})} \\ & = \alpha _{\text{local}}\cdot \sum _e \frac{1}{w_e} \\ & = \alpha _{\text{local}}\cdot \sum _e \left( p_e + \frac{1}{m} \right) \\ & = 2 \alpha _{\text{local}}, \end{align*}
 </div>
 <p> as required. </p>

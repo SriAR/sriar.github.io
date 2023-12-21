@@ -69,7 +69,7 @@
     <span class="lemma_thmlabel">2.1</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-proofWidthBound.html#lem:Pi_is_Projection">#</a>
-    <a class="icon proof" href="sec-proofWidthBound.html#a0000000005"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+    <a class="icon proof" href="sec-proofWidthBound.html#a0000000406"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
 </a>
 
   </div>
@@ -79,7 +79,7 @@
 
   </div>
 </div> </p>
-<div class="proof_wrapper" id="a0000000005">
+<div class="proof_wrapper" id="a0000000406">
   <div class="proof_heading">
     <span class="proof_caption">
     Proof
@@ -88,7 +88,7 @@
   </div>
   <div class="proof_content">
   <p>We show that \(\Pi ^2 = \Pi \). </p>
-<div class="displaymath" id="a0000000006">
+<div class="displaymath" id="a0000000413">
   \begin{align*}  \Pi ^2 & = \left( W^{\frac{1}{2}} B L^{\dagger }B^{\mkern -1.5mu\mathsf{T}}W^{\frac{1}{2}} \right) \cdot \left( W^{\frac{1}{2}} B L^{\dagger }B^{\mkern -1.5mu\mathsf{T}}W^{\frac{1}{2}} \right) \\ & = \left( W^{\frac{1}{2}} B \right) \cdot \left( L^{\dagger }B^{\mkern -1.5mu\mathsf{T}}W B L^{\dagger }\right) \cdot \left( B^{\mkern -1.5mu\mathsf{T}}W^{\frac{1}{2}} \right) \\ & = \left( W^{\frac{1}{2}} B \right) \cdot L^{\dagger }\cdot \left( B^{\mkern -1.5mu\mathsf{T}}W^{\frac{1}{2}} \right)= \Pi . \end{align*}
 </div>
 <p> as required. </p>
@@ -104,20 +104,20 @@
     <span class="lemma_thmlabel">2.2</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-proofWidthBound.html#lem:widthHelpfulLemma">#</a>
-    <a class="icon proof" href="sec-proofWidthBound.html#a0000000007"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+    <a class="icon proof" href="sec-proofWidthBound.html#a0000000526"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
 </a>
 
   </div>
   </div>
   <div class="lemma_thmcontent">
   <p> Let \(G\) be a graph with weights \(\{ w_e\} \) and let \(L\) be the Laplacian matrix associated with \(G\). For any edge \(e\), we have that </p>
-<div class="displaymath" id="a0000000008">
+<div class="displaymath" id="a0000000511">
   \[  \sum _f w_e w_f |b_e L^{\dagger }b_f ^{\mkern -1.5mu\mathsf{T}}|^2 \leq 1.  \]
 </div>
 
   </div>
 </div> </p>
-<div class="proof_wrapper" id="a0000000007">
+<div class="proof_wrapper" id="a0000000526">
   <div class="proof_heading">
     <span class="proof_caption">
     Proof
@@ -125,8 +125,9 @@
     <span class="expand-proof">▼</span>
   </div>
   <div class="proof_content">
-  <p>By Lemma&#160;<a href="sec-proofWidthBound.html#lem:Pi_is_Projection">2.1</a> we know that \(\Pi \) is a projection matrix. This in particular implies that the diagonal entries of \(\Pi \) (and hence \(\Pi ^2\)) are less then \(1\). Thus, </p>
-<div class="displaymath" id="a0000000009">
+  <p>By Lemma&#160;<span style="margin-left: 0;" datatooltipref='lem:Pi_is_Projection' class="tooltip">2.1</span>
+ we know that \(\Pi \) is a projection matrix. This in particular implies that the diagonal entries of \(\Pi \) (and hence \(\Pi ^2\)) are less then \(1\). Thus, </p>
+<div class="displaymath" id="a0000000539">
   \begin{align*}  \sum _f w_e w_f |b_e L^{\dagger }b_f ^{\mkern -1.5mu\mathsf{T}}|^2 & = \sum _f \left(\sqrt{w_e w_f} \cdot |b_e L^{\dagger }b_f ^{\mkern -1.5mu\mathsf{T}}|\right)^2 \\ & = \sum _f \Pi (e, f)^2 \\ & = \Pi ^2(e,e) \le 1, \end{align*}
 </div>
 <p> which was what we were after. </p>
@@ -142,7 +143,7 @@
     <span class="lemma_thmlabel">2.3</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-proofWidthBound.html#lem:WidthBound">#</a>
-    <a class="icon proof" href="sec-proofWidthBound.html#a0000000010"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+    <a class="icon proof" href="sec-proofWidthBound.html#a0000000624"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
 </a>
 
   </div>
@@ -152,7 +153,7 @@
 
   </div>
 </div> </p>
-<div class="proof_wrapper" id="a0000000010">
+<div class="proof_wrapper" id="a0000000624">
   <div class="proof_heading">
     <span class="proof_caption">
     Proof
@@ -161,15 +162,16 @@
   </div>
   <div class="proof_content">
   <p>Fixing an edge \(e\), </p>
-<div class="displaymath" id="a0000000011">
+<div class="displaymath" id="a0000000628">
   \begin{align*}  \textrm{load}_w(e) & = w_e \sum _f |b_e L^{\dagger }b_f^{\mkern -1.5mu\mathsf{T}}| \\ & \le \sum _f \sqrt{\frac{w_e}{w_f}} \cdot \sqrt{w_e w_f} |b_e L^{\dagger }b_f^{\mkern -1.5mu\mathsf{T}}| \\ & \le \sqrt{\sum _f \frac{w_e}{w_f}} \cdot \sqrt{\sum _f w_e w_f |b_e L^{\dagger }b_f^{\mkern -1.5mu\mathsf{T}}|^2} \tag *{(by Cauchy-Schwarz)} \end{align*}
 </div>
 <p>We now bound each of the two terms separately. For the first term, note that </p>
-<div class="displaymath" id="a0000000012">
+<div class="displaymath" id="a0000000697">
   \begin{align*}  w_e \cdot \sum _f \frac{1}{w_f} & = \left( p_e + \frac{1}{m} \right)^{-1}\cdot \sum _f \left( p_f + \frac{1}{m}\right) \\ & \le 2 \cdot \left( p_e + \frac{1}{m} \right)^{-1}\\ & \le 2 \cdot \frac{1}{\left(\frac{1}{m}\right)} = 2m. \end{align*}
 </div>
-<p>For the second term, by Lemma&#160;<a href="sec-proofWidthBound.html#lem:widthHelpfulLemma">2.2</a>, we know that </p>
-<div class="displaymath" id="a0000000013">
+<p>For the second term, by Lemma&#160;<span style="margin-left: 0;" datatooltipref='lem:widthHelpfulLemma' class="tooltip">2.2</span>
+, we know that </p>
+<div class="displaymath" id="a0000000750">
   \[  \sum _f w_e w_f |b_e L^{\dagger }b_f ^{\mkern -1.5mu\mathsf{T}}|^2 \leq 1.  \]
 </div>
 <p>Putting these two inequalities together, we get that \(\textrm{load}_w(e) \le \sqrt{2m}\) for any edge \(e\), which gives the desired bound of \(\sqrt{2m}\) on the width. </p>

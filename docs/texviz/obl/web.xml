@@ -1,0 +1,3723 @@
+<dom-document xmlns:plastex="http://plastex.sf.net/">
+<documentclass id="a0000000001">
+    <plastex:arg name="options"/>
+    <plastex:arg name="name">report</plastex:arg>
+</documentclass> <par id="a0000000002"/><usepackage id="a0000000003">
+    <plastex:arg name="options"/>
+    <plastex:arg name="names">['imports']</plastex:arg>
+</usepackage> <usepackage id="a0000000004">
+    <plastex:arg name="options">{'showmore': 'True', 'dep_graph': 'True', 'project': '../../'}</plastex:arg>
+    <plastex:arg name="names">['vizzer']</plastex:arg>
+</usepackage> <par id="a0000000005"/><usepackage id="a0000000006">
+    <plastex:arg name="options"/>
+    <plastex:arg name="names">['tikz-cd']</plastex:arg>
+</usepackage> <usepackage id="a0000000007">
+    <plastex:arg name="options"/>
+    <plastex:arg name="names">['tikz']</plastex:arg>
+</usepackage> <par id="a0000000008"/><par id="a0000000009"/><newenvironment id="a0000000010">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">restatable</plastex:arg>
+    <plastex:arg name="nargs">3</plastex:arg>
+    <plastex:arg name="opt">['N', 'o', 'n', 'e']</plastex:arg>
+    <plastex:arg name="begin">['begin', '{', '#', '2', '}']</plastex:arg>
+    <plastex:arg name="end">['end', '{', '#', '2', '}']</plastex:arg>
+</newenvironment> <newcommand id="a0000000011">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">textsc</plastex:arg>
+    <plastex:arg name="nargs">1</plastex:arg>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['#', '1']</plastex:arg>
+</newcommand> <newcommand id="a0000000012">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">normalfont</plastex:arg>
+    <plastex:arg name="nargs">1</plastex:arg>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['#', '1']</plastex:arg>
+</newcommand> <newcommand id="a0000000013">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">nicefrac</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['frac']</plastex:arg>
+</newcommand><newcommand id="a0000000014">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">poly</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['p', 'o', 'l', 'y']</plastex:arg>
+</newcommand> <newcommand id="a0000000015">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">mathds</plastex:arg>
+    <plastex:arg name="nargs">1</plastex:arg>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['#', '1']</plastex:arg>
+</newcommand>  <newcommand id="a0000000016">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">diag</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['textrm', '{', 'd', 'i', 'a', 'g', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000017">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">trace</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['textrm', '{', 't', 'r', 'a', 'c', 'e', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000018">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">constr</plastex:arg>
+    <plastex:arg name="nargs">1</plastex:arg>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', 'mathcal', '{', 'M', '}', '(', '#', '1', ')', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000019">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">tr</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', '(', 'theta', ',', ' ', 'rho', ')', '}', '-', 'o', 'r', 'a', 'c', 'l', 'e']</plastex:arg>
+</newcommand> <newcommand id="a0000000020">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">optval</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', 'alocal', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000021">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">alocal</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', 'alpha', '_', '{', 'text', '{', 'l', 'o', 'c', 'a', 'l', '}', '}', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000022">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">compratio</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', 'O', '(', 'optval', ')', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000023">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">tO</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', 'widetilde', '{', 'O', '}', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000024">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">weightinv</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', 'left', '(', ' ', 'p', '_', 'e', ' ', '+', ' ', 'nicefrac', '{', '1', '}', '{', 'm', '}', ' ', 'right', ')', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000025">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">weight</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', 'weightinv', '^', '{', '-', '1', '}', '}']</plastex:arg>
+</newcommand> <par id="a0000000026"/><newcommand id="a0000000027">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">stre</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['textrm', '{', 's', 't', 'r', 'e', 't', 'c', 'h', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000028">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">strew</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['stre', '_', 'w']</plastex:arg>
+</newcommand> <newcommand id="a0000000029">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">apxstre</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['textrm', '{', 'a', 's', 't', 'r', 'e', 't', 'c', 'h', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000030">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">apxstrew</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['apxstre', '_', 'w']</plastex:arg>
+</newcommand> <par id="a0000000031"/><newcommand id="a0000000032">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">load</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['textrm', '{', 'l', 'o', 'a', 'd', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000033">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">loadw</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['load', '_', 'w']</plastex:arg>
+</newcommand> <newcommand id="a0000000034">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">apxload</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['textrm', '{', 'a', 'l', 'o', 'a', 'd', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000035">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">apxloadw</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['apxload', '_', 'w']</plastex:arg>
+</newcommand> <newcommand id="a0000000036">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">apx</plastex:arg>
+    <plastex:arg name="nargs">1</plastex:arg>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['text', '{', 'a', 'p', 'p', 'r', 'o', 'x', '}', '(', '#', '1', ')']</plastex:arg>
+</newcommand> <newcommand id="a0000000037">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">R</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['mathbb', '{', 'R', '}']</plastex:arg>
+</newcommand> <par id="a0000000038"/><newcommand id="a0000000039">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">sketchmatrix</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['text', '{', 'S', 'k', 'e', 't', 'c', 'h', 'M', 'a', 't', 'r', 'i', 'x', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000040">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">lapsolve</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['text', '{', 'A', 'p', 'p', 'r', 'o', 'x', 'L', 'a', 'p', 'S', 'o', 'l', 'v', 'e', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000041">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">xlapsolve</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['text', '{', 'L', 'a', 'p', 'S', 'o', 'l', 'v', 'e', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000042">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">recovernorm</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['text', '{', 'R', 'e', 'c', 'o', 'v', 'e', 'r', 'N', 'o', 'r', 'm', '}']</plastex:arg>
+</newcommand> <par id="a0000000043"/><newcommand id="a0000000044">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">pe</plastex:arg>
+    <plastex:arg name="nargs">1</plastex:arg>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', 'p', '_', 'e', '^', '{', '(', '#', '1', ')', '}', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000045">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">xe</plastex:arg>
+    <plastex:arg name="nargs">1</plastex:arg>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', 'x', '_', 'e', '^', '{', '(', '#', '1', ')', '}', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000046">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">we</plastex:arg>
+    <plastex:arg name="nargs">1</plastex:arg>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', 'w', '_', 'e', '^', '{', '(', '#', '1', ')', '}', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000047">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">ye</plastex:arg>
+    <plastex:arg name="nargs">1</plastex:arg>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', 'y', '_', 'e', '^', '{', '(', '#', '1', ')', '}', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000048">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">xv</plastex:arg>
+    <plastex:arg name="nargs">1</plastex:arg>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', 'x', '^', '{', '(', '#', '1', ')', '}', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000049">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">XX</plastex:arg>
+    <plastex:arg name="nargs">1</plastex:arg>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', 'X', '^', '{', '(', '#', '1', ')', '}', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000050">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">WW</plastex:arg>
+    <plastex:arg name="nargs">1</plastex:arg>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', 'W', '^', '{', '(', '#', '1', ')', '}', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000051">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">MM</plastex:arg>
+    <plastex:arg name="nargs">1</plastex:arg>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', 'M', '^', '{', '(', '#', '1', ')', '}', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000052">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">potential</plastex:arg>
+    <plastex:arg name="nargs">1</plastex:arg>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', '|', ' ', 'xv', '{', '#', '1', '}', ' ', '|', '_', '1', '}']</plastex:arg>
+</newcommand> <par id="a0000000053"/><newcommand id="a0000000054">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">eLf</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', 'b', '_', 'e', ' ', 'L', 'pinv', 'b', '_', 'f', 'tp', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000055">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">aeLf</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', '|', 'eLf', '|', '}']</plastex:arg>
+</newcommand> <par id="a0000000056"/><newcommand id="a0000000057">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">tU</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', 'widetilde', '{', 'U', '}', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000058">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">tu</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', 'widetilde', '{', 'u', '}', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000059">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">sketchd</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', 'delta', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000060">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">sketche</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', 'epsilon', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000061">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">lsolved</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', 'delta', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000062">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">lsolvee</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', 'epsilon', '_', 'L', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000063">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">loade</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', 'epsilon', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000064">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">ComputeRouting</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['text', '{', 'C', 'o', 'm', 'p', 'u', 't', 'e', 'R', 'o', 'u', 't', 'i', 'n', 'g', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000065">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">GetApproxLoad</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['text', '{', 'G', 'e', 't', 'A', 'p', 'p', 'r', 'o', 'x', 'L', 'o', 'a', 'd', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000066">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">GetApproxStretch</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['text', '{', 'G', 'e', 't', 'A', 'p', 'p', 'r', 'o', 'x', 'S', 't', 'r', 'e', 't', 'c', 'h', '}']</plastex:arg>
+</newcommand> <par id="a0000000067"/><newcommand id="a0000000068">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">assumeexact</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['a', 's', 's', 'u', 'm', 'i', 'n', 'g', ' ', 'e', 'x', 'a', 'c', 't', ' ', 'L', 'a', 'p', 'l', 'a', 'c', 'i', 'a', 'n', ' ', 's', 'o', 'l', 'v', 'e', 'r']</plastex:arg>
+</newcommand> <par id="a0000000069"/><newcommand id="a0000000070">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">tx</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', 'widetilde', '{', 'x', '}', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000071">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">median</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['text', '{', 'm', 'e', 'd', 'i', 'a', 'n', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000072">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">edash</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', 'epsilon', "'", '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000073">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">medianx</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', 'median', '(', '|', 'x', '_', '1', '|', ',', ' ', '|', 'x', '_', '2', '|', ',', ' ', 'ldots', ',', ' ', '|', 'x', '_', 'ell', '|', ')', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000074">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">mediany</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', 'median', '(', '|', 'y', '_', '1', '|', ',', ' ', '|', 'y', '_', '2', '|', ',', ' ', 'ldots', ',', ' ', '|', 'y', '_', 'ell', '|', ')', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000075">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">apxdelta</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', 'delta', '_', '{', 'a', 'p', 'x', '}', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000076">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">alt</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', 'apxload', '_', '{', 'w', '^', '{', '(', 't', ')', '}', '}', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000077">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">lt</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', 'load', '_', '{', 'w', '^', '{', '(', 't', ')', '}', '}', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000078">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">ltub</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', ' ', '(', '1', '+', ' ', 'loade', ')', ' ', 'cdot', 'load', '_', '{', 'w', '^', '{', '(', 't', ')', '}', '}', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000079">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">ltlb</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', ' ', '(', '1', '-', ' ', 'loade', ')', ' ', 'cdot', 'load', '_', '{', 'w', '^', '{', '(', 't', ')', '}', '}', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000080">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">ls</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', 'load', '_', '{', 'M', '^', '*', '}', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000081">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">clocal</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', 'c', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000082">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">newbeta</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['beta']</plastex:arg>
+</newcommand> <newcommand id="a0000000083">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">oldbeta</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['2', 'optval']</plastex:arg>
+</newcommand> <newcommand id="a0000000084">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">ope</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', '(', '1', '+', 'epsilon', ')', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000085">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">ome</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', '(', '1', '-', 'epsilon', ')', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000086">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">opet</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', 'left', '(', '1', '+', 'frac', '{', 'epsilon', '}', '{', '2', '}', 'right', ')', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000087">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">omet</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', 'left', '(', '1', '-', 'frac', '{', 'epsilon', '}', '{', '2', '}', 'right', ')', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000088">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">lb</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', 'n', '^', '{', '-', '2', '}', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000089">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">lbnm</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', 'n', '^', '{', '2', '}', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000090">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">ub</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', '2', 'n', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000091">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">totalb</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', '2', 'n', '^', '3', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000092">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">dem</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['d']</plastex:arg>
+</newcommand> <par id="a0000000093"/><newcommand id="a0000000094">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">tR</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', 'widetilde', '{', 'R', '}', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000095">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">tC</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', 'widetilde', '{', 'C', '}', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000096">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">largest</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', 'K', '}']</plastex:arg>
+</newcommand>  <par id="a0000000097"/><title id="a0000000098">
+    <plastex:arg name="toc"/>
+    <plastex:arg name="self">Electrical Flows for Polylogarithmic Competitive Oblivious Routing</plastex:arg>
+</title> <author id="a0000000099">
+    <plastex:arg name="self"></plastex:arg>
+</author> <par id="a0000000100"/><document id="a0000000101">
+ <maketitle id="a0000000102"/><chapter ref="1" id="sec:proofOracleReturn">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="toc"/>
+    <plastex:arg name="title">Bound on Average Loads</plastex:arg>
+<par id="a0000000103">
+ <label id="a0000000104">
+    <plastex:arg name="label">sec:proofOracleReturn</plastex:arg>
+</label> </par><par id="a0000000105">
+<thmenv style="plain" ref="1.1" id="lem:Localization">
+    <plastex:arg name="title"/>
+<par id="a0000000106">
+<label id="a0000000107">
+    <plastex:arg name="label">lem:Localization</plastex:arg>
+</label> Let <math id="a0000000108">
+G</math> be a graph with weights <math id="a0000000109">
+<unknown modifier="{" id="a0000000110"/>w<active char="_" id="a0000000111">
+    <plastex:arg name="self">e</plastex:arg>
+</active><unknown modifier="}" id="a0000000112"/></math>. Then for any vector <math id="a0000000113">
+<ell id="a0000000114"/><in id="a0000000115"/><mathbb id="a0000000116"/><bgroup id="a0000000117">
+R</bgroup><active char="_" id="a0000000118">
+    <plastex:arg name="self"><ge id="a0000000119"/>0</plastex:arg>
+</active><active char="^" id="a0000000120">
+    <plastex:arg name="self">m</plastex:arg>
+</active></math>, </par><par id="a0000000121">
+<displaymath id="a0000000122">
+ <sum id="a0000000123"/><active char="_" id="a0000000124">
+    <plastex:arg name="self">e, f <in id="a0000000125"/>E</plastex:arg>
+</active> <ell id="a0000000126"/><active char="_" id="a0000000127">
+    <plastex:arg name="self">e</plastex:arg>
+</active> <ell id="a0000000128"/><active char="_" id="a0000000129">
+    <plastex:arg name="self">f</plastex:arg>
+</active> <sqrt id="a0000000130">
+    <plastex:arg name="n"/>
+    <plastex:arg name="self">w<active char="_" id="a0000000131">
+    <plastex:arg name="self">e</plastex:arg>
+</active> w<active char="_" id="a0000000132">
+    <plastex:arg name="self">f</plastex:arg>
+</active></plastex:arg>
+</sqrt> |b<active char="_" id="a0000000133">
+    <plastex:arg name="self">e</plastex:arg>
+</active> L<active char="_" id="a0000000134">
+    <plastex:arg name="self">G</plastex:arg>
+</active><active char="^" id="a0000000135">
+    <plastex:arg name="self"><dagger id="a0000000136"/></plastex:arg>
+</active>b<active char="_" id="a0000000137">
+    <plastex:arg name="self">f</plastex:arg>
+</active><active char="^" id="a0000000138">
+    <plastex:arg name="self"><mkern id="a0000000139"/>-1.5mu<mathsf id="a0000000140">
+    <plastex:arg name="self">T</plastex:arg>
+</mathsf></plastex:arg>
+</active>| <le id="a0000000141"/><ensuremath id="a0000000142">
+    <plastex:arg name="self"><alpha id="a0000000143"/><active char="_" id="a0000000144">
+    <plastex:arg name="self"><text id="a0000000145">
+    <plastex:arg name="self">local</plastex:arg>
+</text></plastex:arg>
+</active></plastex:arg>
+</ensuremath><cdot id="a0000000146"/><unknown modifier="|" id="a0000000147"/><ell id="a0000000148"/><unknown modifier="|" id="a0000000149"/><active char="_" id="a0000000150">
+    <plastex:arg name="self">2</plastex:arg>
+</active><active char="^" id="a0000000151">
+    <plastex:arg name="self">2</plastex:arg>
+</active> </displaymath></par></thmenv> </par><par id="a0000000152">
+The first lemma shows that the <emph id="a0000000153">
+    <plastex:arg name="self">(<math id="a0000000154">
+p<active char="_" id="a0000000155">
+    <plastex:arg name="self">e</plastex:arg>
+</active></math> weighted) average edge load</plastex:arg>
+</emph> is <math id="a0000000156">
+<ensuremath id="a0000000157">
+    <plastex:arg name="self">O(<ensuremath id="a0000000158">
+    <plastex:arg name="self"><ensuremath id="a0000000159">
+    <plastex:arg name="self"><alpha id="a0000000160"/><active char="_" id="a0000000161">
+    <plastex:arg name="self"><text id="a0000000162">
+    <plastex:arg name="self">local</plastex:arg>
+</text></plastex:arg>
+</active></plastex:arg>
+</ensuremath></plastex:arg>
+</ensuremath>)</plastex:arg>
+</ensuremath></math>. </par><par id="a0000000163">
+<thmenv style="plain" ref="1.2" id="lem:OracleReturn">
+    <plastex:arg name="title"/>
+<par id="a0000000164">
+<label id="a0000000165">
+    <plastex:arg name="label">lem:OracleReturn</plastex:arg>
+</label> For any probability distribution <math id="a0000000166">
+p <in id="a0000000167"/><Delta id="a0000000168"/><active char="^" id="a0000000169">
+    <plastex:arg name="self">m</plastex:arg>
+</active></math>, the oblivious routing <math id="a0000000170">
+M<active char="_" id="a0000000171">
+    <plastex:arg name="self">w</plastex:arg>
+</active></math> corresponding to the electrical network with weights <math id="a0000000172">
+w<active char="_" id="a0000000173">
+    <plastex:arg name="self">e</plastex:arg>
+</active> = <ensuremath id="a0000000174">
+    <plastex:arg name="self"><ensuremath id="a0000000175">
+    <plastex:arg name="self"><left id="a0000000176">
+    <plastex:arg name="char">(</plastex:arg>
+</left> p<active char="_" id="a0000000177">
+    <plastex:arg name="self">e</plastex:arg>
+</active> + <frac id="a0000000178">
+    <plastex:arg name="numer">1</plastex:arg>
+    <plastex:arg name="denom">m</plastex:arg>
+</frac> <right id="a0000000179">
+    <plastex:arg name="char">)</plastex:arg>
+</right></plastex:arg>
+</ensuremath><active char="^" id="a0000000180">
+    <plastex:arg name="self">-1</plastex:arg>
+</active></plastex:arg>
+</ensuremath></math> satisfies <math id="a0000000181">
+<sum id="a0000000182"/><active char="_" id="a0000000183">
+    <plastex:arg name="self">e</plastex:arg>
+</active> p<active char="_" id="a0000000184">
+    <plastex:arg name="self">e</plastex:arg>
+</active> <textrm id="a0000000185">
+    <plastex:arg name="self">load</plastex:arg>
+</textrm><active char="_" id="a0000000186">
+    <plastex:arg name="self">w</plastex:arg>
+</active>(e) <le id="a0000000187"/>2<ensuremath id="a0000000188">
+    <plastex:arg name="self"><alpha id="a0000000189"/><active char="_" id="a0000000190">
+    <plastex:arg name="self"><text id="a0000000191">
+    <plastex:arg name="self">local</plastex:arg>
+</text></plastex:arg>
+</active></plastex:arg>
+</ensuremath></math>. </par></thmenv> </par><par id="a0000000192">
+<proof id="a0000000193">
+    <plastex:arg name="caption"/>
+<par id="a0000000194">
+Setting <math id="a0000000195">
+<ell id="a0000000196"/><active char="_" id="a0000000197">
+    <plastex:arg name="self">e</plastex:arg>
+</active></math> to <math id="a0000000198">
+<frac id="a0000000199">
+    <plastex:arg name="numer">1</plastex:arg>
+    <plastex:arg name="denom"><sqrt id="a0000000200" xmlns:plastex="http://plastex.sf.net/">
+    <plastex:arg name="n"/>
+    <plastex:arg name="self">w<active char="_" id="a0000000201">
+    <plastex:arg name="self">e</plastex:arg>
+</active></plastex:arg>
+</sqrt></plastex:arg>
+</frac></math> and applying Lemma<active char="~" id="a0000000202"/><ref id="a0000000203">
+    <plastex:arg name="label">lem:Localization</plastex:arg>
+</ref>, we get </par><par id="a0000000204">
+<align modifier="*" id="a0000000205">
+<ArrayRow id="a0000000206">
+<ArrayCell id="a0000000207">
+<par id="a0000000208">
+ <sum id="a0000000209"/><active char="_" id="a0000000210">
+    <plastex:arg name="self">e</plastex:arg>
+</active> p<active char="_" id="a0000000211">
+    <plastex:arg name="self">e</plastex:arg>
+</active> <textrm id="a0000000212">
+    <plastex:arg name="self">load</plastex:arg>
+</textrm><active char="_" id="a0000000213">
+    <plastex:arg name="self">w</plastex:arg>
+</active>(e) </par></ArrayCell><ArrayCell id="a0000000214">
+<par id="a0000000215">
+= <sum id="a0000000216"/><active char="_" id="a0000000217">
+    <plastex:arg name="self">e</plastex:arg>
+</active> p<active char="_" id="a0000000218">
+    <plastex:arg name="self">e</plastex:arg>
+</active> <sum id="a0000000219"/><active char="_" id="a0000000220">
+    <plastex:arg name="self">f</plastex:arg>
+</active> <textrm id="a0000000221">
+    <plastex:arg name="self">load</plastex:arg>
+</textrm><active char="_" id="a0000000222">
+    <plastex:arg name="self">w</plastex:arg>
+</active>(f<to id="a0000000223"/>e) </par></ArrayCell></ArrayRow><ArrayRow id="a0000000224">
+<ArrayCell id="a0000000225">
+</ArrayCell><ArrayCell id="a0000000226">
+<par id="a0000000227">
+= <sum id="a0000000228"/><active char="_" id="a0000000229">
+    <plastex:arg name="self">e</plastex:arg>
+</active> p<active char="_" id="a0000000230">
+    <plastex:arg name="self">e</plastex:arg>
+</active> <cdot id="a0000000231"/>w<active char="_" id="a0000000232">
+    <plastex:arg name="self">e</plastex:arg>
+</active> <cdot id="a0000000233"/><sum id="a0000000234"/><active char="_" id="a0000000235">
+    <plastex:arg name="self">f</plastex:arg>
+</active> |b<active char="_" id="a0000000236">
+    <plastex:arg name="self">e</plastex:arg>
+</active> L<active char="^" id="a0000000237">
+    <plastex:arg name="self"><dagger id="a0000000238"/></plastex:arg>
+</active>b<active char="_" id="a0000000239">
+    <plastex:arg name="self">f</plastex:arg>
+</active><active char="^" id="a0000000240">
+    <plastex:arg name="self"><mkern id="a0000000241"/>-1.5mu<mathsf id="a0000000242">
+    <plastex:arg name="self">T</plastex:arg>
+</mathsf></plastex:arg>
+</active>| <tag id="a0000000243"/>*<bgroup id="a0000000244">
+(by definition of load)</bgroup></par></ArrayCell></ArrayRow><ArrayRow id="a0000000245">
+<ArrayCell id="a0000000246">
+</ArrayCell><ArrayCell id="a0000000247">
+<par id="a0000000248">
+= <sum id="a0000000249"/><active char="_" id="a0000000250">
+    <plastex:arg name="self">e</plastex:arg>
+</active> p<active char="_" id="a0000000251">
+    <plastex:arg name="self">e</plastex:arg>
+</active> <cdot id="a0000000252"/><ensuremath id="a0000000253">
+    <plastex:arg name="self"><ensuremath id="a0000000254">
+    <plastex:arg name="self"><left id="a0000000255">
+    <plastex:arg name="char">(</plastex:arg>
+</left> p<active char="_" id="a0000000256">
+    <plastex:arg name="self">e</plastex:arg>
+</active> + <frac id="a0000000257">
+    <plastex:arg name="numer">1</plastex:arg>
+    <plastex:arg name="denom">m</plastex:arg>
+</frac> <right id="a0000000258">
+    <plastex:arg name="char">)</plastex:arg>
+</right></plastex:arg>
+</ensuremath><active char="^" id="a0000000259">
+    <plastex:arg name="self">-1</plastex:arg>
+</active></plastex:arg>
+</ensuremath><cdot id="a0000000260"/><sum id="a0000000261"/><active char="_" id="a0000000262">
+    <plastex:arg name="self">f</plastex:arg>
+</active> |b<active char="_" id="a0000000263">
+    <plastex:arg name="self">e</plastex:arg>
+</active> L<active char="^" id="a0000000264">
+    <plastex:arg name="self"><dagger id="a0000000265"/></plastex:arg>
+</active>b<active char="_" id="a0000000266">
+    <plastex:arg name="self">f</plastex:arg>
+</active><active char="^" id="a0000000267">
+    <plastex:arg name="self"><mkern id="a0000000268"/>-1.5mu<mathsf id="a0000000269">
+    <plastex:arg name="self">T</plastex:arg>
+</mathsf></plastex:arg>
+</active>| <tag id="a0000000270"/>*<bgroup id="a0000000271">
+(by definition of <math id="a0000000272">
+w<active char="_" id="a0000000273">
+    <plastex:arg name="self">e</plastex:arg>
+</active></math>)</bgroup></par></ArrayCell></ArrayRow><ArrayRow id="a0000000274">
+<ArrayCell id="a0000000275">
+</ArrayCell><ArrayCell id="a0000000276">
+<par id="a0000000277">
+<le id="a0000000278"/><sum id="a0000000279"/><active char="_" id="a0000000280">
+    <plastex:arg name="self">e</plastex:arg>
+</active> <sum id="a0000000281"/><active char="_" id="a0000000282">
+    <plastex:arg name="self">f</plastex:arg>
+</active> |b<active char="_" id="a0000000283">
+    <plastex:arg name="self">e</plastex:arg>
+</active> L<active char="^" id="a0000000284">
+    <plastex:arg name="self"><dagger id="a0000000285"/></plastex:arg>
+</active>b<active char="_" id="a0000000286">
+    <plastex:arg name="self">f</plastex:arg>
+</active><active char="^" id="a0000000287">
+    <plastex:arg name="self"><mkern id="a0000000288"/>-1.5mu<mathsf id="a0000000289">
+    <plastex:arg name="self">T</plastex:arg>
+</mathsf></plastex:arg>
+</active>| </par></ArrayCell></ArrayRow><ArrayRow id="a0000000290">
+<ArrayCell id="a0000000291">
+</ArrayCell><ArrayCell id="a0000000292">
+<par id="a0000000293">
+= <sum id="a0000000294"/><active char="_" id="a0000000295">
+    <plastex:arg name="self">e, f</plastex:arg>
+</active> <frac id="a0000000296">
+    <plastex:arg name="numer">1</plastex:arg>
+    <plastex:arg name="denom"><sqrt id="a0000000297" xmlns:plastex="http://plastex.sf.net/">
+    <plastex:arg name="n"/>
+    <plastex:arg name="self">w<active char="_" id="a0000000298">
+    <plastex:arg name="self">e</plastex:arg>
+</active> w<active char="_" id="a0000000299">
+    <plastex:arg name="self">f</plastex:arg>
+</active></plastex:arg>
+</sqrt></plastex:arg>
+</frac> <cdot id="a0000000300"/><sqrt id="a0000000301">
+    <plastex:arg name="n"/>
+    <plastex:arg name="self">w<active char="_" id="a0000000302">
+    <plastex:arg name="self">e</plastex:arg>
+</active>w<active char="_" id="a0000000303">
+    <plastex:arg name="self">f</plastex:arg>
+</active></plastex:arg>
+</sqrt> <cdot id="a0000000304"/>|b<active char="_" id="a0000000305">
+    <plastex:arg name="self">e</plastex:arg>
+</active> L<active char="^" id="a0000000306">
+    <plastex:arg name="self"><dagger id="a0000000307"/></plastex:arg>
+</active>b<active char="_" id="a0000000308">
+    <plastex:arg name="self">f</plastex:arg>
+</active><active char="^" id="a0000000309">
+    <plastex:arg name="self"><mkern id="a0000000310"/>-1.5mu<mathsf id="a0000000311">
+    <plastex:arg name="self">T</plastex:arg>
+</mathsf></plastex:arg>
+</active>| </par></ArrayCell></ArrayRow><ArrayRow id="a0000000312">
+<ArrayCell id="a0000000313">
+</ArrayCell><ArrayCell id="a0000000314">
+<par id="a0000000315">
+= <sum id="a0000000316"/><active char="_" id="a0000000317">
+    <plastex:arg name="self">e, f</plastex:arg>
+</active> <ell id="a0000000318"/><active char="_" id="a0000000319">
+    <plastex:arg name="self">e</plastex:arg>
+</active> <ell id="a0000000320"/><active char="_" id="a0000000321">
+    <plastex:arg name="self">f</plastex:arg>
+</active> <cdot id="a0000000322"/><sqrt id="a0000000323">
+    <plastex:arg name="n"/>
+    <plastex:arg name="self">w<active char="_" id="a0000000324">
+    <plastex:arg name="self">e</plastex:arg>
+</active> w<active char="_" id="a0000000325">
+    <plastex:arg name="self">f</plastex:arg>
+</active></plastex:arg>
+</sqrt> <cdot id="a0000000326"/>|b<active char="_" id="a0000000327">
+    <plastex:arg name="self">e</plastex:arg>
+</active> L<active char="^" id="a0000000328">
+    <plastex:arg name="self"><dagger id="a0000000329"/></plastex:arg>
+</active>b<active char="_" id="a0000000330">
+    <plastex:arg name="self">f</plastex:arg>
+</active><active char="^" id="a0000000331">
+    <plastex:arg name="self"><mkern id="a0000000332"/>-1.5mu<mathsf id="a0000000333">
+    <plastex:arg name="self">T</plastex:arg>
+</mathsf></plastex:arg>
+</active>| <tag id="a0000000334"/>*<bgroup id="a0000000335">
+(by choice of <math id="a0000000336">
+<ell id="a0000000337"/><active char="_" id="a0000000338">
+    <plastex:arg name="self">e</plastex:arg>
+</active></math>)</bgroup></par></ArrayCell></ArrayRow><ArrayRow id="a0000000339">
+<ArrayCell id="a0000000340">
+</ArrayCell><ArrayCell id="a0000000341">
+<par id="a0000000342">
+<le id="a0000000343"/><ensuremath id="a0000000344">
+    <plastex:arg name="self"><alpha id="a0000000345"/><active char="_" id="a0000000346">
+    <plastex:arg name="self"><text id="a0000000347">
+    <plastex:arg name="self">local</plastex:arg>
+</text></plastex:arg>
+</active></plastex:arg>
+</ensuremath><cdot id="a0000000348"/><unknown modifier="|" id="a0000000349"/><ell id="a0000000350"/><unknown modifier="|" id="a0000000351"/><active char="_" id="a0000000352">
+    <plastex:arg name="self">2</plastex:arg>
+</active><active char="^" id="a0000000353">
+    <plastex:arg name="self">2</plastex:arg>
+</active> <tag id="a0000000354"/>*<bgroup id="a0000000355">
+(by Lemma <ref id="a0000000356">
+    <plastex:arg name="label">lem:Localization</plastex:arg>
+</ref>)</bgroup> </par></ArrayCell></ArrayRow><ArrayRow id="a0000000357">
+<ArrayCell id="a0000000358">
+</ArrayCell><ArrayCell id="a0000000359">
+<par id="a0000000360">
+= <ensuremath id="a0000000361">
+    <plastex:arg name="self"><alpha id="a0000000362"/><active char="_" id="a0000000363">
+    <plastex:arg name="self"><text id="a0000000364">
+    <plastex:arg name="self">local</plastex:arg>
+</text></plastex:arg>
+</active></plastex:arg>
+</ensuremath><cdot id="a0000000365"/><sum id="a0000000366"/><active char="_" id="a0000000367">
+    <plastex:arg name="self">e</plastex:arg>
+</active> <frac id="a0000000368">
+    <plastex:arg name="numer">1</plastex:arg>
+    <plastex:arg name="denom">w<active char="_" id="a0000000369" xmlns:plastex="http://plastex.sf.net/">
+    <plastex:arg name="self">e</plastex:arg>
+</active></plastex:arg>
+</frac> </par></ArrayCell></ArrayRow><ArrayRow id="a0000000370">
+<ArrayCell id="a0000000371">
+</ArrayCell><ArrayCell id="a0000000372">
+<par id="a0000000373">
+= <ensuremath id="a0000000374">
+    <plastex:arg name="self"><alpha id="a0000000375"/><active char="_" id="a0000000376">
+    <plastex:arg name="self"><text id="a0000000377">
+    <plastex:arg name="self">local</plastex:arg>
+</text></plastex:arg>
+</active></plastex:arg>
+</ensuremath><cdot id="a0000000378"/><sum id="a0000000379"/><active char="_" id="a0000000380">
+    <plastex:arg name="self">e</plastex:arg>
+</active> <left id="a0000000381">
+    <plastex:arg name="char">(</plastex:arg>
+</left> p<active char="_" id="a0000000382">
+    <plastex:arg name="self">e</plastex:arg>
+</active> + <frac id="a0000000383">
+    <plastex:arg name="numer">1</plastex:arg>
+    <plastex:arg name="denom">m</plastex:arg>
+</frac> <right id="a0000000384">
+    <plastex:arg name="char">)</plastex:arg>
+</right> </par></ArrayCell></ArrayRow><ArrayRow id="a0000000385">
+<ArrayCell id="a0000000386">
+</ArrayCell><ArrayCell id="a0000000387">
+<par id="a0000000388">
+= 2 <ensuremath id="a0000000389">
+    <plastex:arg name="self"><alpha id="a0000000390"/><active char="_" id="a0000000391">
+    <plastex:arg name="self"><text id="a0000000392">
+    <plastex:arg name="self">local</plastex:arg>
+</text></plastex:arg>
+</active></plastex:arg>
+</ensuremath>, </par></ArrayCell></ArrayRow></align></par><par id="a0000000393">
+ as required. </par></proof></par></chapter><chapter ref="2" id="sec:proofWidthBound">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="toc"/>
+    <plastex:arg name="title">Bounding the Width</plastex:arg>
+<par id="a0000000394">
+ <label id="a0000000395">
+    <plastex:arg name="label">sec:proofWidthBound</plastex:arg>
+</label> Next we show that the width is bounded above by <math id="a0000000396">
+O(<sqrt id="a0000000397">
+    <plastex:arg name="n"/>
+    <plastex:arg name="self">m</plastex:arg>
+</sqrt>)</math>. We first prove a couple of properties of the <math id="a0000000398">
+<Pi id="a0000000399"/></math> matrix that we will use in our analysis. </par><par id="a0000000400">
+<thmenv style="plain" ref="2.1" id="lem:Pi_is_Projection">
+    <plastex:arg name="title"/>
+<par id="a0000000401">
+<label id="a0000000402">
+    <plastex:arg name="label">lem:Pi_is_Projection</plastex:arg>
+</label> The matrix <math id="a0000000403">
+<Pi id="a0000000404"/></math> is a projection matrix. </par></thmenv> </par><par id="a0000000405">
+<proof id="a0000000406">
+    <plastex:arg name="caption"/>
+<par id="a0000000407">
+We show that <math id="a0000000408">
+<Pi id="a0000000409"/><active char="^" id="a0000000410">
+    <plastex:arg name="self">2</plastex:arg>
+</active> = <Pi id="a0000000411"/></math>. </par><par id="a0000000412">
+<align modifier="*" id="a0000000413">
+<ArrayRow id="a0000000414">
+<ArrayCell id="a0000000415">
+<par id="a0000000416">
+ <Pi id="a0000000417"/><active char="^" id="a0000000418">
+    <plastex:arg name="self">2</plastex:arg>
+</active> </par></ArrayCell><ArrayCell id="a0000000419">
+<par id="a0000000420">
+= <left id="a0000000421">
+    <plastex:arg name="char">(</plastex:arg>
+</left> W<active char="^" id="a0000000422">
+    <plastex:arg name="self"><frac id="a0000000423">
+    <plastex:arg name="numer">1</plastex:arg>
+    <plastex:arg name="denom">2</plastex:arg>
+</frac></plastex:arg>
+</active> B L<active char="^" id="a0000000424">
+    <plastex:arg name="self"><dagger id="a0000000425"/></plastex:arg>
+</active>B<active char="^" id="a0000000426">
+    <plastex:arg name="self"><mkern id="a0000000427"/>-1.5mu<mathsf id="a0000000428">
+    <plastex:arg name="self">T</plastex:arg>
+</mathsf></plastex:arg>
+</active>W<active char="^" id="a0000000429">
+    <plastex:arg name="self"><frac id="a0000000430">
+    <plastex:arg name="numer">1</plastex:arg>
+    <plastex:arg name="denom">2</plastex:arg>
+</frac></plastex:arg>
+</active> <right id="a0000000431">
+    <plastex:arg name="char">)</plastex:arg>
+</right> <cdot id="a0000000432"/><left id="a0000000433">
+    <plastex:arg name="char">(</plastex:arg>
+</left> W<active char="^" id="a0000000434">
+    <plastex:arg name="self"><frac id="a0000000435">
+    <plastex:arg name="numer">1</plastex:arg>
+    <plastex:arg name="denom">2</plastex:arg>
+</frac></plastex:arg>
+</active> B L<active char="^" id="a0000000436">
+    <plastex:arg name="self"><dagger id="a0000000437"/></plastex:arg>
+</active>B<active char="^" id="a0000000438">
+    <plastex:arg name="self"><mkern id="a0000000439"/>-1.5mu<mathsf id="a0000000440">
+    <plastex:arg name="self">T</plastex:arg>
+</mathsf></plastex:arg>
+</active>W<active char="^" id="a0000000441">
+    <plastex:arg name="self"><frac id="a0000000442">
+    <plastex:arg name="numer">1</plastex:arg>
+    <plastex:arg name="denom">2</plastex:arg>
+</frac></plastex:arg>
+</active> <right id="a0000000443">
+    <plastex:arg name="char">)</plastex:arg>
+</right> </par></ArrayCell></ArrayRow><ArrayRow id="a0000000444">
+<ArrayCell id="a0000000445">
+</ArrayCell><ArrayCell id="a0000000446">
+<par id="a0000000447">
+= <left id="a0000000448">
+    <plastex:arg name="char">(</plastex:arg>
+</left> W<active char="^" id="a0000000449">
+    <plastex:arg name="self"><frac id="a0000000450">
+    <plastex:arg name="numer">1</plastex:arg>
+    <plastex:arg name="denom">2</plastex:arg>
+</frac></plastex:arg>
+</active> B <right id="a0000000451">
+    <plastex:arg name="char">)</plastex:arg>
+</right> <cdot id="a0000000452"/><left id="a0000000453">
+    <plastex:arg name="char">(</plastex:arg>
+</left> L<active char="^" id="a0000000454">
+    <plastex:arg name="self"><dagger id="a0000000455"/></plastex:arg>
+</active>B<active char="^" id="a0000000456">
+    <plastex:arg name="self"><mkern id="a0000000457"/>-1.5mu<mathsf id="a0000000458">
+    <plastex:arg name="self">T</plastex:arg>
+</mathsf></plastex:arg>
+</active>W B L<active char="^" id="a0000000459">
+    <plastex:arg name="self"><dagger id="a0000000460"/></plastex:arg>
+</active><right id="a0000000461">
+    <plastex:arg name="char">)</plastex:arg>
+</right> <cdot id="a0000000462"/><left id="a0000000463">
+    <plastex:arg name="char">(</plastex:arg>
+</left> B<active char="^" id="a0000000464">
+    <plastex:arg name="self"><mkern id="a0000000465"/>-1.5mu<mathsf id="a0000000466">
+    <plastex:arg name="self">T</plastex:arg>
+</mathsf></plastex:arg>
+</active>W<active char="^" id="a0000000467">
+    <plastex:arg name="self"><frac id="a0000000468">
+    <plastex:arg name="numer">1</plastex:arg>
+    <plastex:arg name="denom">2</plastex:arg>
+</frac></plastex:arg>
+</active> <right id="a0000000469">
+    <plastex:arg name="char">)</plastex:arg>
+</right> </par></ArrayCell></ArrayRow><ArrayRow id="a0000000470">
+<ArrayCell id="a0000000471">
+</ArrayCell><ArrayCell id="a0000000472">
+<par id="a0000000473">
+= <left id="a0000000474">
+    <plastex:arg name="char">(</plastex:arg>
+</left> W<active char="^" id="a0000000475">
+    <plastex:arg name="self"><frac id="a0000000476">
+    <plastex:arg name="numer">1</plastex:arg>
+    <plastex:arg name="denom">2</plastex:arg>
+</frac></plastex:arg>
+</active> B <right id="a0000000477">
+    <plastex:arg name="char">)</plastex:arg>
+</right> <cdot id="a0000000478"/>L<active char="^" id="a0000000479">
+    <plastex:arg name="self"><dagger id="a0000000480"/></plastex:arg>
+</active><cdot id="a0000000481"/><left id="a0000000482">
+    <plastex:arg name="char">(</plastex:arg>
+</left> B<active char="^" id="a0000000483">
+    <plastex:arg name="self"><mkern id="a0000000484"/>-1.5mu<mathsf id="a0000000485">
+    <plastex:arg name="self">T</plastex:arg>
+</mathsf></plastex:arg>
+</active>W<active char="^" id="a0000000486">
+    <plastex:arg name="self"><frac id="a0000000487">
+    <plastex:arg name="numer">1</plastex:arg>
+    <plastex:arg name="denom">2</plastex:arg>
+</frac></plastex:arg>
+</active> <right id="a0000000488">
+    <plastex:arg name="char">)</plastex:arg>
+</right>= <Pi id="a0000000489"/>. </par></ArrayCell></ArrayRow></align></par><par id="a0000000490">
+ as required. </par></proof></par><par id="a0000000491">
+We will use the next lemma to bound the width for both the <math id="a0000000492">
+<ell id="a0000000493"/><active char="_" id="a0000000494">
+    <plastex:arg name="self"><infty id="a0000000495"/></plastex:arg>
+</active></math> and the <math id="a0000000496">
+<ell id="a0000000497"/><active char="_" id="a0000000498">
+    <plastex:arg name="self">1</plastex:arg>
+</active></math> case. </par><par id="a0000000499">
+<thmenv style="plain" ref="2.2" id="lem:widthHelpfulLemma">
+    <plastex:arg name="title"/>
+<par id="a0000000500">
+<label id="a0000000501">
+    <plastex:arg name="label">lem:widthHelpfulLemma</plastex:arg>
+</label> Let <math id="a0000000502">
+G</math> be a graph with weights <math id="a0000000503">
+<unknown modifier="{" id="a0000000504"/>w<active char="_" id="a0000000505">
+    <plastex:arg name="self">e</plastex:arg>
+</active><unknown modifier="}" id="a0000000506"/></math> and let <math id="a0000000507">
+L</math> be the Laplacian matrix associated with <math id="a0000000508">
+G</math>. For any edge <math id="a0000000509">
+e</math>, we have that </par><par id="a0000000510">
+<displaymath id="a0000000511">
+ <sum id="a0000000512"/><active char="_" id="a0000000513">
+    <plastex:arg name="self">f</plastex:arg>
+</active> w<active char="_" id="a0000000514">
+    <plastex:arg name="self">e</plastex:arg>
+</active> w<active char="_" id="a0000000515">
+    <plastex:arg name="self">f</plastex:arg>
+</active> |b<active char="_" id="a0000000516">
+    <plastex:arg name="self">e</plastex:arg>
+</active> L<active char="^" id="a0000000517">
+    <plastex:arg name="self"><dagger id="a0000000518"/></plastex:arg>
+</active>b<active char="_" id="a0000000519">
+    <plastex:arg name="self">f</plastex:arg>
+</active> <active char="^" id="a0000000520">
+    <plastex:arg name="self"><mkern id="a0000000521"/>-1.5mu<mathsf id="a0000000522">
+    <plastex:arg name="self">T</plastex:arg>
+</mathsf></plastex:arg>
+</active>|<active char="^" id="a0000000523">
+    <plastex:arg name="self">2</plastex:arg>
+</active> <leq id="a0000000524"/>1. </displaymath></par></thmenv> </par><par id="a0000000525">
+<proof id="a0000000526">
+    <plastex:arg name="caption"/>
+<par id="a0000000527">
+By Lemma<active char="~" id="a0000000528"/><ref id="a0000000529">
+    <plastex:arg name="label">lem:Pi_is_Projection</plastex:arg>
+</ref> we know that <math id="a0000000530">
+<Pi id="a0000000531"/></math> is a projection matrix. This in particular implies that the diagonal entries of <math id="a0000000532">
+<Pi id="a0000000533"/></math> (and hence <math id="a0000000534">
+<Pi id="a0000000535"/><active char="^" id="a0000000536">
+    <plastex:arg name="self">2</plastex:arg>
+</active></math>) are less then <math id="a0000000537">
+1</math>. Thus, </par><par id="a0000000538">
+<align modifier="*" id="a0000000539">
+<ArrayRow id="a0000000540">
+<ArrayCell id="a0000000541">
+<par id="a0000000542">
+ <sum id="a0000000543"/><active char="_" id="a0000000544">
+    <plastex:arg name="self">f</plastex:arg>
+</active> w<active char="_" id="a0000000545">
+    <plastex:arg name="self">e</plastex:arg>
+</active> w<active char="_" id="a0000000546">
+    <plastex:arg name="self">f</plastex:arg>
+</active> |b<active char="_" id="a0000000547">
+    <plastex:arg name="self">e</plastex:arg>
+</active> L<active char="^" id="a0000000548">
+    <plastex:arg name="self"><dagger id="a0000000549"/></plastex:arg>
+</active>b<active char="_" id="a0000000550">
+    <plastex:arg name="self">f</plastex:arg>
+</active> <active char="^" id="a0000000551">
+    <plastex:arg name="self"><mkern id="a0000000552"/>-1.5mu<mathsf id="a0000000553">
+    <plastex:arg name="self">T</plastex:arg>
+</mathsf></plastex:arg>
+</active>|<active char="^" id="a0000000554">
+    <plastex:arg name="self">2</plastex:arg>
+</active> </par></ArrayCell><ArrayCell id="a0000000555">
+<par id="a0000000556">
+= <sum id="a0000000557"/><active char="_" id="a0000000558">
+    <plastex:arg name="self">f</plastex:arg>
+</active> <left id="a0000000559">
+    <plastex:arg name="char">(</plastex:arg>
+</left><sqrt id="a0000000560">
+    <plastex:arg name="n"/>
+    <plastex:arg name="self">w<active char="_" id="a0000000561">
+    <plastex:arg name="self">e</plastex:arg>
+</active> w<active char="_" id="a0000000562">
+    <plastex:arg name="self">f</plastex:arg>
+</active></plastex:arg>
+</sqrt> <cdot id="a0000000563"/>|b<active char="_" id="a0000000564">
+    <plastex:arg name="self">e</plastex:arg>
+</active> L<active char="^" id="a0000000565">
+    <plastex:arg name="self"><dagger id="a0000000566"/></plastex:arg>
+</active>b<active char="_" id="a0000000567">
+    <plastex:arg name="self">f</plastex:arg>
+</active> <active char="^" id="a0000000568">
+    <plastex:arg name="self"><mkern id="a0000000569"/>-1.5mu<mathsf id="a0000000570">
+    <plastex:arg name="self">T</plastex:arg>
+</mathsf></plastex:arg>
+</active>|<right id="a0000000571">
+    <plastex:arg name="char">)</plastex:arg>
+</right><active char="^" id="a0000000572">
+    <plastex:arg name="self">2</plastex:arg>
+</active> </par></ArrayCell></ArrayRow><ArrayRow id="a0000000573">
+<ArrayCell id="a0000000574">
+</ArrayCell><ArrayCell id="a0000000575">
+<par id="a0000000576">
+= <sum id="a0000000577"/><active char="_" id="a0000000578">
+    <plastex:arg name="self">f</plastex:arg>
+</active> <Pi id="a0000000579"/>(e, f)<active char="^" id="a0000000580">
+    <plastex:arg name="self">2</plastex:arg>
+</active> </par></ArrayCell></ArrayRow><ArrayRow id="a0000000581">
+<ArrayCell id="a0000000582">
+</ArrayCell><ArrayCell id="a0000000583">
+<par id="a0000000584">
+= <Pi id="a0000000585"/><active char="^" id="a0000000586">
+    <plastex:arg name="self">2</plastex:arg>
+</active>(e,e) <le id="a0000000587"/>1, </par></ArrayCell></ArrayRow></align></par><par id="a0000000588">
+ which was what we were after. </par></proof></par><par id="a0000000589">
+We use the second lemma to show that in each iteration of <text id="a0000000590">
+    <plastex:arg name="self">ComputeRouting</plastex:arg>
+</text><unknown modifier="," id="a0000000591"/> the true loads on each edge are <math id="a0000000592">
+O(<sqrt id="a0000000593">
+    <plastex:arg name="n"/>
+    <plastex:arg name="self">m</plastex:arg>
+</sqrt>)</math> away from <math id="a0000000594">
+<ensuremath id="a0000000595">
+    <plastex:arg name="self"><alpha id="a0000000596"/><active char="_" id="a0000000597">
+    <plastex:arg name="self"><text id="a0000000598">
+    <plastex:arg name="self">local</plastex:arg>
+</text></plastex:arg>
+</active></plastex:arg>
+</ensuremath></math>. </par><par id="a0000000599">
+<thmenv style="plain" ref="2.3" id="lem:WidthBound">
+    <plastex:arg name="title"/>
+<par id="a0000000600">
+<label id="a0000000601">
+    <plastex:arg name="label">lem:WidthBound</plastex:arg>
+</label> For any probability distribution <math id="a0000000602">
+p <in id="a0000000603"/><Delta id="a0000000604"/><active char="^" id="a0000000605">
+    <plastex:arg name="self">m</plastex:arg>
+</active></math>, the oblivious routing <math id="a0000000606">
+M<active char="_" id="a0000000607">
+    <plastex:arg name="self">w</plastex:arg>
+</active></math> corresponding to the electrical network with weights <math id="a0000000608">
+w<active char="_" id="a0000000609">
+    <plastex:arg name="self">e</plastex:arg>
+</active> = <ensuremath id="a0000000610">
+    <plastex:arg name="self"><ensuremath id="a0000000611">
+    <plastex:arg name="self"><left id="a0000000612">
+    <plastex:arg name="char">(</plastex:arg>
+</left> p<active char="_" id="a0000000613">
+    <plastex:arg name="self">e</plastex:arg>
+</active> + <frac id="a0000000614">
+    <plastex:arg name="numer">1</plastex:arg>
+    <plastex:arg name="denom">m</plastex:arg>
+</frac> <right id="a0000000615">
+    <plastex:arg name="char">)</plastex:arg>
+</right></plastex:arg>
+</ensuremath><active char="^" id="a0000000616">
+    <plastex:arg name="self">-1</plastex:arg>
+</active></plastex:arg>
+</ensuremath></math> satisfies <math id="a0000000617">
+<textrm id="a0000000618">
+    <plastex:arg name="self">load</plastex:arg>
+</textrm><active char="_" id="a0000000619">
+    <plastex:arg name="self">w</plastex:arg>
+</active>(e) <le id="a0000000620"/><sqrt id="a0000000621">
+    <plastex:arg name="n"/>
+    <plastex:arg name="self">2m</plastex:arg>
+</sqrt></math> for every edge <math id="a0000000622">
+e</math>. </par></thmenv> </par><par id="a0000000623">
+<proof id="a0000000624">
+    <plastex:arg name="caption"/>
+<par id="a0000000625">
+Fixing an edge <math id="a0000000626">
+e</math>, </par><par id="a0000000627">
+<align modifier="*" id="a0000000628">
+<ArrayRow id="a0000000629">
+<ArrayCell id="a0000000630">
+<par id="a0000000631">
+ <textrm id="a0000000632">
+    <plastex:arg name="self">load</plastex:arg>
+</textrm><active char="_" id="a0000000633">
+    <plastex:arg name="self">w</plastex:arg>
+</active>(e) </par></ArrayCell><ArrayCell id="a0000000634">
+<par id="a0000000635">
+= w<active char="_" id="a0000000636">
+    <plastex:arg name="self">e</plastex:arg>
+</active> <sum id="a0000000637"/><active char="_" id="a0000000638">
+    <plastex:arg name="self">f</plastex:arg>
+</active> |b<active char="_" id="a0000000639">
+    <plastex:arg name="self">e</plastex:arg>
+</active> L<active char="^" id="a0000000640">
+    <plastex:arg name="self"><dagger id="a0000000641"/></plastex:arg>
+</active>b<active char="_" id="a0000000642">
+    <plastex:arg name="self">f</plastex:arg>
+</active><active char="^" id="a0000000643">
+    <plastex:arg name="self"><mkern id="a0000000644"/>-1.5mu<mathsf id="a0000000645">
+    <plastex:arg name="self">T</plastex:arg>
+</mathsf></plastex:arg>
+</active>| </par></ArrayCell></ArrayRow><ArrayRow id="a0000000646">
+<ArrayCell id="a0000000647">
+</ArrayCell><ArrayCell id="a0000000648">
+<par id="a0000000649">
+<le id="a0000000650"/><sum id="a0000000651"/><active char="_" id="a0000000652">
+    <plastex:arg name="self">f</plastex:arg>
+</active> <sqrt id="a0000000653">
+    <plastex:arg name="n"/>
+    <plastex:arg name="self"><frac id="a0000000654">
+    <plastex:arg name="numer">w<active char="_" id="a0000000655" xmlns:plastex="http://plastex.sf.net/">
+    <plastex:arg name="self">e</plastex:arg>
+</active></plastex:arg>
+    <plastex:arg name="denom">w<active char="_" id="a0000000656" xmlns:plastex="http://plastex.sf.net/">
+    <plastex:arg name="self">f</plastex:arg>
+</active></plastex:arg>
+</frac></plastex:arg>
+</sqrt> <cdot id="a0000000657"/><sqrt id="a0000000658">
+    <plastex:arg name="n"/>
+    <plastex:arg name="self">w<active char="_" id="a0000000659">
+    <plastex:arg name="self">e</plastex:arg>
+</active> w<active char="_" id="a0000000660">
+    <plastex:arg name="self">f</plastex:arg>
+</active></plastex:arg>
+</sqrt> |b<active char="_" id="a0000000661">
+    <plastex:arg name="self">e</plastex:arg>
+</active> L<active char="^" id="a0000000662">
+    <plastex:arg name="self"><dagger id="a0000000663"/></plastex:arg>
+</active>b<active char="_" id="a0000000664">
+    <plastex:arg name="self">f</plastex:arg>
+</active><active char="^" id="a0000000665">
+    <plastex:arg name="self"><mkern id="a0000000666"/>-1.5mu<mathsf id="a0000000667">
+    <plastex:arg name="self">T</plastex:arg>
+</mathsf></plastex:arg>
+</active>| </par></ArrayCell></ArrayRow><ArrayRow id="a0000000668">
+<ArrayCell id="a0000000669">
+</ArrayCell><ArrayCell id="a0000000670">
+<par id="a0000000671">
+<le id="a0000000672"/><sqrt id="a0000000673">
+    <plastex:arg name="n"/>
+    <plastex:arg name="self"><sum id="a0000000674"/><active char="_" id="a0000000675">
+    <plastex:arg name="self">f</plastex:arg>
+</active> <frac id="a0000000676">
+    <plastex:arg name="numer">w<active char="_" id="a0000000677" xmlns:plastex="http://plastex.sf.net/">
+    <plastex:arg name="self">e</plastex:arg>
+</active></plastex:arg>
+    <plastex:arg name="denom">w<active char="_" id="a0000000678" xmlns:plastex="http://plastex.sf.net/">
+    <plastex:arg name="self">f</plastex:arg>
+</active></plastex:arg>
+</frac></plastex:arg>
+</sqrt> <cdot id="a0000000679"/><sqrt id="a0000000680">
+    <plastex:arg name="n"/>
+    <plastex:arg name="self"><sum id="a0000000681"/><active char="_" id="a0000000682">
+    <plastex:arg name="self">f</plastex:arg>
+</active> w<active char="_" id="a0000000683">
+    <plastex:arg name="self">e</plastex:arg>
+</active> w<active char="_" id="a0000000684">
+    <plastex:arg name="self">f</plastex:arg>
+</active> |b<active char="_" id="a0000000685">
+    <plastex:arg name="self">e</plastex:arg>
+</active> L<active char="^" id="a0000000686">
+    <plastex:arg name="self"><dagger id="a0000000687"/></plastex:arg>
+</active>b<active char="_" id="a0000000688">
+    <plastex:arg name="self">f</plastex:arg>
+</active><active char="^" id="a0000000689">
+    <plastex:arg name="self"><mkern id="a0000000690"/>-1.5mu<mathsf id="a0000000691">
+    <plastex:arg name="self">T</plastex:arg>
+</mathsf></plastex:arg>
+</active>|<active char="^" id="a0000000692">
+    <plastex:arg name="self">2</plastex:arg>
+</active></plastex:arg>
+</sqrt> <tag id="a0000000693"/>*<bgroup id="a0000000694">
+(by Cauchy-Schwarz)</bgroup> </par></ArrayCell></ArrayRow></align></par><par id="a0000000695">
+We now bound each of the two terms separately. For the first term, note that </par><par id="a0000000696">
+<align modifier="*" id="a0000000697">
+<ArrayRow id="a0000000698">
+<ArrayCell id="a0000000699">
+<par id="a0000000700">
+ w<active char="_" id="a0000000701">
+    <plastex:arg name="self">e</plastex:arg>
+</active> <cdot id="a0000000702"/><sum id="a0000000703"/><active char="_" id="a0000000704">
+    <plastex:arg name="self">f</plastex:arg>
+</active> <frac id="a0000000705">
+    <plastex:arg name="numer">1</plastex:arg>
+    <plastex:arg name="denom">w<active char="_" id="a0000000706" xmlns:plastex="http://plastex.sf.net/">
+    <plastex:arg name="self">f</plastex:arg>
+</active></plastex:arg>
+</frac> </par></ArrayCell><ArrayCell id="a0000000707">
+<par id="a0000000708">
+= <ensuremath id="a0000000709">
+    <plastex:arg name="self"><ensuremath id="a0000000710">
+    <plastex:arg name="self"><left id="a0000000711">
+    <plastex:arg name="char">(</plastex:arg>
+</left> p<active char="_" id="a0000000712">
+    <plastex:arg name="self">e</plastex:arg>
+</active> + <frac id="a0000000713">
+    <plastex:arg name="numer">1</plastex:arg>
+    <plastex:arg name="denom">m</plastex:arg>
+</frac> <right id="a0000000714">
+    <plastex:arg name="char">)</plastex:arg>
+</right></plastex:arg>
+</ensuremath><active char="^" id="a0000000715">
+    <plastex:arg name="self">-1</plastex:arg>
+</active></plastex:arg>
+</ensuremath><cdot id="a0000000716"/><sum id="a0000000717"/><active char="_" id="a0000000718">
+    <plastex:arg name="self">f</plastex:arg>
+</active> <left id="a0000000719">
+    <plastex:arg name="char">(</plastex:arg>
+</left> p<active char="_" id="a0000000720">
+    <plastex:arg name="self">f</plastex:arg>
+</active> + <frac id="a0000000721">
+    <plastex:arg name="numer">1</plastex:arg>
+    <plastex:arg name="denom">m</plastex:arg>
+</frac><right id="a0000000722">
+    <plastex:arg name="char">)</plastex:arg>
+</right> </par></ArrayCell></ArrayRow><ArrayRow id="a0000000723">
+<ArrayCell id="a0000000724">
+</ArrayCell><ArrayCell id="a0000000725">
+<par id="a0000000726">
+<le id="a0000000727"/>2 <cdot id="a0000000728"/><ensuremath id="a0000000729">
+    <plastex:arg name="self"><ensuremath id="a0000000730">
+    <plastex:arg name="self"><left id="a0000000731">
+    <plastex:arg name="char">(</plastex:arg>
+</left> p<active char="_" id="a0000000732">
+    <plastex:arg name="self">e</plastex:arg>
+</active> + <frac id="a0000000733">
+    <plastex:arg name="numer">1</plastex:arg>
+    <plastex:arg name="denom">m</plastex:arg>
+</frac> <right id="a0000000734">
+    <plastex:arg name="char">)</plastex:arg>
+</right></plastex:arg>
+</ensuremath><active char="^" id="a0000000735">
+    <plastex:arg name="self">-1</plastex:arg>
+</active></plastex:arg>
+</ensuremath></par></ArrayCell></ArrayRow><ArrayRow id="a0000000736">
+<ArrayCell id="a0000000737">
+</ArrayCell><ArrayCell id="a0000000738">
+<par id="a0000000739">
+<le id="a0000000740"/>2 <cdot id="a0000000741"/><frac id="a0000000742">
+    <plastex:arg name="numer">1</plastex:arg>
+    <plastex:arg name="denom"><left id="a0000000743" xmlns:plastex="http://plastex.sf.net/">
+    <plastex:arg name="char">(</plastex:arg>
+</left><frac id="a0000000744" xmlns:plastex="http://plastex.sf.net/">
+    <plastex:arg name="numer">1</plastex:arg>
+    <plastex:arg name="denom">m</plastex:arg>
+</frac><right id="a0000000745" xmlns:plastex="http://plastex.sf.net/">
+    <plastex:arg name="char">)</plastex:arg>
+</right></plastex:arg>
+</frac> = 2m. </par></ArrayCell></ArrayRow></align></par><par id="a0000000746">
+For the second term, by Lemma<active char="~" id="a0000000747"/><ref id="a0000000748">
+    <plastex:arg name="label">lem:widthHelpfulLemma</plastex:arg>
+</ref>, we know that </par><par id="a0000000749">
+<displaymath id="a0000000750">
+ <sum id="a0000000751"/><active char="_" id="a0000000752">
+    <plastex:arg name="self">f</plastex:arg>
+</active> w<active char="_" id="a0000000753">
+    <plastex:arg name="self">e</plastex:arg>
+</active> w<active char="_" id="a0000000754">
+    <plastex:arg name="self">f</plastex:arg>
+</active> |b<active char="_" id="a0000000755">
+    <plastex:arg name="self">e</plastex:arg>
+</active> L<active char="^" id="a0000000756">
+    <plastex:arg name="self"><dagger id="a0000000757"/></plastex:arg>
+</active>b<active char="_" id="a0000000758">
+    <plastex:arg name="self">f</plastex:arg>
+</active> <active char="^" id="a0000000759">
+    <plastex:arg name="self"><mkern id="a0000000760"/>-1.5mu<mathsf id="a0000000761">
+    <plastex:arg name="self">T</plastex:arg>
+</mathsf></plastex:arg>
+</active>|<active char="^" id="a0000000762">
+    <plastex:arg name="self">2</plastex:arg>
+</active> <leq id="a0000000763"/>1. </displaymath></par><par id="a0000000764">
+Putting these two inequalities together, we get that <math id="a0000000765">
+<textrm id="a0000000766">
+    <plastex:arg name="self">load</plastex:arg>
+</textrm><active char="_" id="a0000000767">
+    <plastex:arg name="self">w</plastex:arg>
+</active>(e) <le id="a0000000768"/><sqrt id="a0000000769">
+    <plastex:arg name="n"/>
+    <plastex:arg name="self">2m</plastex:arg>
+</sqrt></math> for any edge <math id="a0000000770">
+e</math>, which gives the desired bound of <math id="a0000000771">
+<sqrt id="a0000000772">
+    <plastex:arg name="n"/>
+    <plastex:arg name="self">2m</plastex:arg>
+</sqrt></math> on the width. </par></proof></par></chapter><chapter ref="3" id="sec:apxlsolve">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="toc"/>
+    <plastex:arg name="title">Algorithm using approximate Laplacian solvers</plastex:arg>
+<par id="a0000000773">
+ <label id="a0000000774">
+    <plastex:arg name="label">sec:apxlsolve</plastex:arg>
+</label> </par><par id="a0000000775">
+<newcommand id="a0000000776">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">allones</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', 'mathds', '{', '1', '}', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000777">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">med</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', 'm', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000778">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">epschoice</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', 'nicefrac', '{', 'epsilon', '}', '{', '(', ' ', '8', 'm', ' ', 'n', '^', '4', ' ', 'K', ')', '}', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000779">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">adde</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', 'nicefrac', '{', 'epsilon', '}', '{', '2', ' ', 'm', 'n', '}', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000780">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">addeload</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', 'nicefrac', '{', '2', '}', '{', 'm', '}', '}']</plastex:arg>
+</newcommand> <newcommand id="a0000000781">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">ubound</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['ensuremath', '{', '4', 'loade', 'n', '^', '3', ' ', 'K', '}']</plastex:arg>
+</newcommand> </par><par id="a0000000782">
+<thmenv style="plain" ref="3.1" id="thm:LapSolve">
+    <plastex:arg name="title"/>
+<par id="a0000000783">
+<label id="a0000000784">
+    <plastex:arg name="label">thm:LapSolve</plastex:arg>
+</label> There is an algorithm <math id="a0000000785">
+<text id="a0000000786">
+    <plastex:arg name="self">ApproxLapSolve</plastex:arg>
+</text></math> that gets as input a Laplacian <math id="a0000000787">
+L</math> of an <math id="a0000000788">
+n</math>-vertex <math id="a0000000789">
+m</math>-edge graph, a vector <math id="a0000000790">
+y <in id="a0000000791"/><mathbb id="a0000000792"/><bgroup id="a0000000793">
+R</bgroup><active char="^" id="a0000000794">
+    <plastex:arg name="self">n</plastex:arg>
+</active></math>, error bound <math id="a0000000795">
+<ensuremath id="a0000000796">
+    <plastex:arg name="self"><epsilon id="a0000000797"/><active char="_" id="a0000000798">
+    <plastex:arg name="self">L</plastex:arg>
+</active></plastex:arg>
+</ensuremath></math>, and returns a vector <math id="a0000000799">
+x <in id="a0000000800"/><mathbb id="a0000000801"/><bgroup id="a0000000802">
+R</bgroup><active char="^" id="a0000000803">
+    <plastex:arg name="self">n</plastex:arg>
+</active></math> such that the following holds with probability <math id="a0000000804">
+<ge id="a0000000805"/>1 - <frac id="a0000000806">
+    <plastex:arg name="numer">1</plastex:arg>
+    <plastex:arg name="denom">poly(n)</plastex:arg>
+</frac></math>. </par><par id="a0000000807">
+<displaymath id="a0000000808">
+ <unknown modifier="|" id="a0000000809"/>x - L<active char="^" id="a0000000810">
+    <plastex:arg name="self"><dagger id="a0000000811"/></plastex:arg>
+</active>y<unknown modifier="|" id="a0000000812"/><active char="_" id="a0000000813">
+    <plastex:arg name="self">L</plastex:arg>
+</active> <le id="a0000000814"/><ensuremath id="a0000000815">
+    <plastex:arg name="self"><epsilon id="a0000000816"/><active char="_" id="a0000000817">
+    <plastex:arg name="self">L</plastex:arg>
+</active></plastex:arg>
+</ensuremath><cdot id="a0000000818"/><unknown modifier="|" id="a0000000819"/>L<active char="^" id="a0000000820">
+    <plastex:arg name="self"><dagger id="a0000000821"/></plastex:arg>
+</active>y<unknown modifier="|" id="a0000000822"/><active char="_" id="a0000000823">
+    <plastex:arg name="self">L</plastex:arg>
+</active> </displaymath></par><par id="a0000000824">
+ where <math id="a0000000825">
+<unknown modifier="|" id="a0000000826"/>x<unknown modifier="|" id="a0000000827"/><active char="_" id="a0000000828">
+    <plastex:arg name="self">L</plastex:arg>
+</active> = <sqrt id="a0000000829">
+    <plastex:arg name="n"/>
+    <plastex:arg name="self">x<active char="^" id="a0000000830">
+    <plastex:arg name="self"><mkern id="a0000000831"/>-1.5mu<mathsf id="a0000000832">
+    <plastex:arg name="self">T</plastex:arg>
+</mathsf></plastex:arg>
+</active>L x</plastex:arg>
+</sqrt> </math> is the norm induced by the Laplacian. Further, the algorithm runs in time <math id="a0000000833">
+<ensuremath id="a0000000834">
+    <plastex:arg name="self"><widetilde id="a0000000835">
+    <plastex:arg name="self">O</plastex:arg>
+</widetilde></plastex:arg>
+</ensuremath>(m <log id="a0000000836"/>(1/<ensuremath id="a0000000837">
+    <plastex:arg name="self"><epsilon id="a0000000838"/><active char="_" id="a0000000839">
+    <plastex:arg name="self">L</plastex:arg>
+</active></plastex:arg>
+</ensuremath>))</math>. </par></thmenv> </par><par id="a0000000840">
+<thmenv style="plain" ref="3.2" id="thm:SketchApprox">
+    <plastex:arg name="title"/>
+<par id="a0000000841">
+<label id="a0000000842">
+    <plastex:arg name="label">thm:SketchApprox</plastex:arg>
+</label> Given <math id="a0000000843">
+m <in id="a0000000844"/><mathbb id="a0000000845"/><bgroup id="a0000000846">
+Z</bgroup><active char="_" id="a0000000847">
+    <plastex:arg name="self"><ge id="a0000000848"/>1</plastex:arg>
+</active></math>, <math id="a0000000849">
+<ensuremath id="a0000000850">
+    <plastex:arg name="self"><delta id="a0000000851"/></plastex:arg>
+</ensuremath><in id="a0000000852"/>(0,1)</math>, and <math id="a0000000853">
+<ensuremath id="a0000000854">
+    <plastex:arg name="self"><epsilon id="a0000000855"/></plastex:arg>
+</ensuremath><in id="a0000000856"/>(0, 1)</math>, there is a sketch matrix <math id="a0000000857">
+C = <text id="a0000000858">
+    <plastex:arg name="self">SketchMatrix</plastex:arg>
+</text>(m, <ensuremath id="a0000000859">
+    <plastex:arg name="self"><delta id="a0000000860"/></plastex:arg>
+</ensuremath>, <ensuremath id="a0000000861">
+    <plastex:arg name="self"><epsilon id="a0000000862"/></plastex:arg>
+</ensuremath>) <in id="a0000000863"/><mathbb id="a0000000864"/><bgroup id="a0000000865">
+R</bgroup><active char="^" id="a0000000866">
+    <plastex:arg name="self"><ell id="a0000000867"/><times id="a0000000868"/>m</plastex:arg>
+</active></math> and an algorithm <math id="a0000000869">
+<text id="a0000000870">
+    <plastex:arg name="self">RecoverNorm</plastex:arg>
+</text>(s)</math> for <math id="a0000000871">
+s <in id="a0000000872"/><mathbb id="a0000000873"/><bgroup id="a0000000874">
+R</bgroup><active char="^" id="a0000000875">
+    <plastex:arg name="self"><ell id="a0000000876"/></plastex:arg>
+</active></math> such that the following properties hold: </par><par id="a0000000877">
+<itemize id="a0000000878">
+<item ref="1" id="a0000000879">
+    <plastex:arg name="term"/>
+<par id="a0000000880">
+(Approximation) For any <math id="a0000000881">
+v <in id="a0000000882"/><mathbb id="a0000000883"/><bgroup id="a0000000884">
+R</bgroup><active char="^" id="a0000000885">
+    <plastex:arg name="self">m</plastex:arg>
+</active></math>, with probability at least <math id="a0000000886">
+1 - <ensuremath id="a0000000887">
+    <plastex:arg name="self"><delta id="a0000000888"/></plastex:arg>
+</ensuremath></math> over the randomness of <text id="a0000000889">
+    <plastex:arg name="self">SketchMatrix</plastex:arg>
+</text>, the value of <math id="a0000000890">
+r = <text id="a0000000891">
+    <plastex:arg name="self">RecoverNorm</plastex:arg>
+</text>(Cv)</math> is </par><par id="a0000000892">
+<displaymath id="a0000000893">
+ (1-<ensuremath id="a0000000894">
+    <plastex:arg name="self"><epsilon id="a0000000895"/></plastex:arg>
+</ensuremath>) <unknown modifier="|" id="a0000000896"/>v<unknown modifier="|" id="a0000000897"/><active char="_" id="a0000000898">
+    <plastex:arg name="self">1</plastex:arg>
+</active> <le id="a0000000899"/>r <le id="a0000000900"/>(1+<ensuremath id="a0000000901">
+    <plastex:arg name="self"><epsilon id="a0000000902"/></plastex:arg>
+</ensuremath>) <unknown modifier="|" id="a0000000903"/>v<unknown modifier="|" id="a0000000904"/><active char="_" id="a0000000905">
+    <plastex:arg name="self">1</plastex:arg>
+</active> </displaymath></par></item><item ref="2" id="a0000000906">
+    <plastex:arg name="term"/>
+<par id="a0000000907">
+<math id="a0000000908">
+<ell id="a0000000909"/>= c/<ensuremath id="a0000000910">
+    <plastex:arg name="self"><epsilon id="a0000000911"/></plastex:arg>
+</ensuremath><active char="^" id="a0000000912">
+    <plastex:arg name="self">2</plastex:arg>
+</active> <cdot id="a0000000913"/><log id="a0000000914"/>(1/<ensuremath id="a0000000915">
+    <plastex:arg name="self"><delta id="a0000000916"/></plastex:arg>
+</ensuremath>)</math> for some constant <math id="a0000000917">
+c&gt;1</math> </par></item><item ref="3" id="a0000000918">
+    <plastex:arg name="term"/>
+<par id="a0000000919">
+(running time) <text id="a0000000920">
+    <plastex:arg name="self">SketchMatrix</plastex:arg>
+</text><unknown modifier=" " id="a0000000921"/>and <text id="a0000000922">
+    <plastex:arg name="self">RecoverNorm</plastex:arg>
+</text><unknown modifier=" " id="a0000000923"/>take time <math id="a0000000924">
+O(<ell id="a0000000925"/>m)</math> and <math id="a0000000926">
+poly(<ell id="a0000000927"/>)</math> respectively. </par></item></itemize></par></thmenv> </par><par id="a0000000928">
+We assume without loss of generality that <math id="a0000000929">
+L<active char="^" id="a0000000930">
+    <plastex:arg name="self"><dagger id="a0000000931"/></plastex:arg>
+</active>x <perp id="a0000000932"/><ensuremath id="a0000000933">
+    <plastex:arg name="self">1</plastex:arg>
+</ensuremath></math> and <math id="a0000000934">
+y <perp id="a0000000935"/><ensuremath id="a0000000936">
+    <plastex:arg name="self">1</plastex:arg>
+</ensuremath></math>, where <math id="a0000000937">
+<ensuremath id="a0000000938">
+    <plastex:arg name="self">1</plastex:arg>
+</ensuremath></math> is the the all-ones vector, <math id="a0000000939">
+x</math> is the input to <math id="a0000000940">
+<text id="a0000000941">
+    <plastex:arg name="self">ApproxLapSolve</plastex:arg>
+</text></math> and <math id="a0000000942">
+y</math> is the output received. This is because shifting a vector of potentials by a constant vector does not affect the guarantees in the <math id="a0000000943">
+L</math> norm. </par><par id="a0000000944">
+We will use the following two properties of <math id="a0000000945">
+<text id="a0000000946">
+    <plastex:arg name="self">SketchMatrix</plastex:arg>
+</text></math> and <math id="a0000000947">
+<text id="a0000000948">
+    <plastex:arg name="self">RecoverNorm</plastex:arg>
+</text></math> in our analysis: </par><par id="a0000000949">
+<itemize id="a0000000950">
+<item ref="1" id="a0000000951">
+    <plastex:arg name="term"/>
+<par id="a0000000952">
+<math id="a0000000953">
+<text id="a0000000954">
+    <plastex:arg name="self">RecoverNorm</plastex:arg>
+</text>(x<active char="_" id="a0000000955">
+    <plastex:arg name="self">1</plastex:arg>
+</active>, x<active char="_" id="a0000000956">
+    <plastex:arg name="self">2</plastex:arg>
+</active>, <ldots id="a0000000957"/>, x<active char="_" id="a0000000958">
+    <plastex:arg name="self"><ell id="a0000000959"/></plastex:arg>
+</active>) = <ensuremath id="a0000000960">
+    <plastex:arg name="self"><text id="a0000000961">
+    <plastex:arg name="self">median</plastex:arg>
+</text>(|x<active char="_" id="a0000000962">
+    <plastex:arg name="self">1</plastex:arg>
+</active>|, |x<active char="_" id="a0000000963">
+    <plastex:arg name="self">2</plastex:arg>
+</active>|, <ldots id="a0000000964"/>, |x<active char="_" id="a0000000965">
+    <plastex:arg name="self"><ell id="a0000000966"/></plastex:arg>
+</active>|)</plastex:arg>
+</ensuremath></math>. </par></item><item ref="2" id="a0000000967">
+    <plastex:arg name="term"/>
+<par id="a0000000968">
+<math id="a0000000969">
+<max id="a0000000970"/><active char="_" id="a0000000971">
+    <plastex:arg name="self">i, j</plastex:arg>
+</active> C<active char="_" id="a0000000972">
+    <plastex:arg name="self">ij</plastex:arg>
+</active> <le id="a0000000973"/>poly(m)</math>. </par></item></itemize></par><par id="a0000000974">
+We finally use a lower bound on the effective resistance to convert an additive approximation guarantee into a multiplicative one. This follows from Rayleigh’s monotonicity law and is shown, for example, by Spielman and Srivastava<active char="~" id="a0000000975"/><cite id="a0000000976">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="text">Proposition 10</plastex:arg>
+    <plastex:arg name="text2"/>
+    <plastex:arg name="bibkeys">['SS11sparse']</plastex:arg>
+</cite>. </par><par id="a0000000977">
+<thmenv style="plain" ref="3.3" id="lem:LoadLB">
+    <plastex:arg name="title"/>
+<par id="a0000000978">
+<label id="a0000000979">
+    <plastex:arg name="label">lem:LoadLB</plastex:arg>
+</label> For any weighted graph <math id="a0000000980">
+(G, w)</math>, the load on any edge <math id="a0000000981">
+e</math> has the following lower bound. </par><par id="a0000000982">
+<displaymath id="a0000000983">
+ <textrm id="a0000000984">
+    <plastex:arg name="self">load</plastex:arg>
+</textrm><active char="_" id="a0000000985">
+    <plastex:arg name="self">w</plastex:arg>
+</active>(e) <ge id="a0000000986"/><frac id="a0000000987">
+    <plastex:arg name="numer">2w<active char="_" id="a0000000988" xmlns:plastex="http://plastex.sf.net/">
+    <plastex:arg name="self">e</plastex:arg>
+</active></plastex:arg>
+    <plastex:arg name="denom">nw<active char="_" id="a0000000989" xmlns:plastex="http://plastex.sf.net/">
+    <plastex:arg name="self"><max id="a0000000990"/></plastex:arg>
+</active></plastex:arg>
+</frac>, </displaymath></par><par id="a0000000991">
+ where <math id="a0000000992">
+w<active char="_" id="a0000000993">
+    <plastex:arg name="self"><max id="a0000000994"/></plastex:arg>
+</active></math> is the maximum edge weight. </par></thmenv> </par><par id="a0000000995">
+<thmenv style="plain" ref="3.4" id="lem:InftyLLB">
+    <plastex:arg name="title"/>
+<par id="a0000000996">
+<label id="a0000000997">
+    <plastex:arg name="label">lem:InftyLLB</plastex:arg>
+</label> For any <math id="a0000000998">
+x <in id="a0000000999"/><mathbb id="a0000001000"/><bgroup id="a0000001001">
+R</bgroup><active char="^" id="a0000001002">
+    <plastex:arg name="self">n</plastex:arg>
+</active></math> such that <math id="a0000001003">
+x <perp id="a0000001004"/><ensuremath id="a0000001005">
+    <plastex:arg name="self">1</plastex:arg>
+</ensuremath></math>, we have <math id="a0000001006">
+<ensuremath id="a0000001007">
+    <plastex:arg name="self">n<active char="^" id="a0000001008">
+    <plastex:arg name="self">-2</plastex:arg>
+</active></plastex:arg>
+</ensuremath><cdot id="a0000001009"/><unknown modifier="|" id="a0000001010"/>x<unknown modifier="|" id="a0000001011"/><active char="_" id="a0000001012">
+    <plastex:arg name="self"><infty id="a0000001013"/></plastex:arg>
+</active> <le id="a0000001014"/><unknown modifier="|" id="a0000001015"/>x<unknown modifier="|" id="a0000001016"/><active char="_" id="a0000001017">
+    <plastex:arg name="self">L</plastex:arg>
+</active></math>. </par></thmenv> </par><par id="a0000001018">
+<proof id="a0000001019">
+    <plastex:arg name="caption"/>
+<par id="a0000001020">
+Since <math id="a0000001021">
+<min id="a0000001022"/><active char="_" id="a0000001023">
+    <plastex:arg name="self">x <in id="a0000001024"/><mathbb id="a0000001025"/><bgroup id="a0000001026">
+R</bgroup><active char="^" id="a0000001027">
+    <plastex:arg name="self">n</plastex:arg>
+</active></plastex:arg>
+</active> <unknown modifier="|" id="a0000001028"/>x<unknown modifier="|" id="a0000001029"/><active char="_" id="a0000001030">
+    <plastex:arg name="self">L</plastex:arg>
+</active><active char="^" id="a0000001031">
+    <plastex:arg name="self">2</plastex:arg>
+</active> / <unknown modifier="|" id="a0000001032"/>x<unknown modifier="|" id="a0000001033"/><active char="_" id="a0000001034">
+    <plastex:arg name="self">2</plastex:arg>
+</active><active char="^" id="a0000001035">
+    <plastex:arg name="self">2</plastex:arg>
+</active> = 0</math> which is attained by <math id="a0000001036">
+<ensuremath id="a0000001037">
+    <plastex:arg name="self">1</plastex:arg>
+</ensuremath></math>, by the variational characterization of eigenvalues of a symmetric matrix, the second smallest eigenvalue <math id="a0000001038">
+<lambda id="a0000001039"/><active char="_" id="a0000001040">
+    <plastex:arg name="self">2</plastex:arg>
+</active></math> of <math id="a0000001041">
+L</math> is given by </par><par id="a0000001042">
+<displaymath id="a0000001043">
+ <min id="a0000001044"/><active char="_" id="a0000001045">
+    <plastex:arg name="self">x <in id="a0000001046"/><mathbb id="a0000001047"/><bgroup id="a0000001048">
+R</bgroup><active char="^" id="a0000001049">
+    <plastex:arg name="self">n</plastex:arg>
+</active>: x <perp id="a0000001050"/><ensuremath id="a0000001051">
+    <plastex:arg name="self">1</plastex:arg>
+</ensuremath></plastex:arg>
+</active> <frac id="a0000001052">
+    <plastex:arg name="numer"><unknown modifier="|" id="a0000001053" xmlns:plastex="http://plastex.sf.net/"/>x<unknown modifier="|" id="a0000001054" xmlns:plastex="http://plastex.sf.net/"/><active char="_" id="a0000001055" xmlns:plastex="http://plastex.sf.net/">
+    <plastex:arg name="self">L</plastex:arg>
+</active><active char="^" id="a0000001056" xmlns:plastex="http://plastex.sf.net/">
+    <plastex:arg name="self">2</plastex:arg>
+</active></plastex:arg>
+    <plastex:arg name="denom"><unknown modifier="|" id="a0000001057" xmlns:plastex="http://plastex.sf.net/"/>x<unknown modifier="|" id="a0000001058" xmlns:plastex="http://plastex.sf.net/"/><active char="_" id="a0000001059" xmlns:plastex="http://plastex.sf.net/">
+    <plastex:arg name="self">2</plastex:arg>
+</active><active char="^" id="a0000001060" xmlns:plastex="http://plastex.sf.net/">
+    <plastex:arg name="self">2</plastex:arg>
+</active></plastex:arg>
+</frac> = <lambda id="a0000001061"/><active char="_" id="a0000001062">
+    <plastex:arg name="self">2</plastex:arg>
+</active> </displaymath></par><par id="a0000001063">
+ By Cheeger’s inequality, <math id="a0000001064">
+<lambda id="a0000001065"/><active char="_" id="a0000001066">
+    <plastex:arg name="self">2</plastex:arg>
+</active> <ge id="a0000001067"/>h<active char="^" id="a0000001068">
+    <plastex:arg name="self">2</plastex:arg>
+</active>/2<Delta id="a0000001069"/></math>, where <math id="a0000001070">
+h = <min id="a0000001071"/><active char="_" id="a0000001072">
+    <plastex:arg name="self">S : |S| <le id="a0000001073"/>n/2</plastex:arg>
+</active> |E(S, <overline id="a0000001074">
+    <plastex:arg name="self">S</plastex:arg>
+</overline>)|/|S|</math> is the unnormalized Cheeger’s constant and <math id="a0000001075">
+<Delta id="a0000001076"/></math> is the maximum degree in the graph. Thus </par><par id="a0000001077">
+<displaymath id="a0000001078">
+ <lambda id="a0000001079"/><active char="_" id="a0000001080">
+    <plastex:arg name="self">2</plastex:arg>
+</active> <ge id="a0000001081"/>h<active char="^" id="a0000001082">
+    <plastex:arg name="self">2</plastex:arg>
+</active> <cdot id="a0000001083"/><frac id="a0000001084">
+    <plastex:arg name="numer">1</plastex:arg>
+    <plastex:arg name="denom">2<Delta id="a0000001085" xmlns:plastex="http://plastex.sf.net/"/></plastex:arg>
+</frac> <ge id="a0000001086"/><frac id="a0000001087">
+    <plastex:arg name="numer">4</plastex:arg>
+    <plastex:arg name="denom">n<active char="^" id="a0000001088" xmlns:plastex="http://plastex.sf.net/">
+    <plastex:arg name="self">2</plastex:arg>
+</active></plastex:arg>
+</frac> <cdot id="a0000001089"/><frac id="a0000001090">
+    <plastex:arg name="numer">1</plastex:arg>
+    <plastex:arg name="denom">2n</plastex:arg>
+</frac> <ge id="a0000001091"/>n<active char="^" id="a0000001092">
+    <plastex:arg name="self">-3</plastex:arg>
+</active> </displaymath></par><par id="a0000001093">
+ Thus for any <math id="a0000001094">
+x <in id="a0000001095"/><mathbb id="a0000001096"/><bgroup id="a0000001097">
+R</bgroup><active char="^" id="a0000001098">
+    <plastex:arg name="self">n</plastex:arg>
+</active></math> such that <math id="a0000001099">
+x <perp id="a0000001100"/><ensuremath id="a0000001101">
+    <plastex:arg name="self">1</plastex:arg>
+</ensuremath></math>, <math id="a0000001102">
+<unknown modifier="|" id="a0000001103"/>x<unknown modifier="|" id="a0000001104"/><active char="_" id="a0000001105">
+    <plastex:arg name="self">L</plastex:arg>
+</active> <ge id="a0000001106"/>n<active char="^" id="a0000001107">
+    <plastex:arg name="self">-3/2</plastex:arg>
+</active> <cdot id="a0000001108"/><unknown modifier="|" id="a0000001109"/>x<unknown modifier="|" id="a0000001110"/><active char="_" id="a0000001111">
+    <plastex:arg name="self">2</plastex:arg>
+</active> <ge id="a0000001112"/>n<active char="^" id="a0000001113">
+    <plastex:arg name="self">-3/2</plastex:arg>
+</active> <cdot id="a0000001114"/><unknown modifier="|" id="a0000001115"/>x<unknown modifier="|" id="a0000001116"/><active char="_" id="a0000001117">
+    <plastex:arg name="self"><infty id="a0000001118"/></plastex:arg>
+</active></math>, and the lemma follows. </par></proof></par><par id="a0000001119">
+<thmenv style="plain" ref="3.5" id="lem:InftyLUB">
+    <plastex:arg name="title"/>
+<par id="a0000001120">
+<label id="a0000001121">
+    <plastex:arg name="label">lem:InftyLUB</plastex:arg>
+</label> For any <math id="a0000001122">
+x <in id="a0000001123"/><mathbb id="a0000001124"/><bgroup id="a0000001125">
+R</bgroup><active char="^" id="a0000001126">
+    <plastex:arg name="self">n</plastex:arg>
+</active></math>, <math id="a0000001127">
+<unknown modifier="|" id="a0000001128"/>x<unknown modifier="|" id="a0000001129"/><active char="_" id="a0000001130">
+    <plastex:arg name="self">L</plastex:arg>
+</active> <le id="a0000001131"/><ensuremath id="a0000001132">
+    <plastex:arg name="self">2n</plastex:arg>
+</ensuremath><cdot id="a0000001133"/><unknown modifier="|" id="a0000001134"/>x<unknown modifier="|" id="a0000001135"/><active char="_" id="a0000001136">
+    <plastex:arg name="self"><infty id="a0000001137"/></plastex:arg>
+</active></math>. </par></thmenv> </par><par id="a0000001138">
+<proof id="a0000001139">
+    <plastex:arg name="caption"/>
+<par id="a0000001140">
+Since <math id="a0000001141">
+<unknown modifier="|" id="a0000001142"/>x<unknown modifier="|" id="a0000001143"/><active char="_" id="a0000001144">
+    <plastex:arg name="self"><infty id="a0000001145"/></plastex:arg>
+</active><active char="^" id="a0000001146">
+    <plastex:arg name="self">2</plastex:arg>
+</active> <le id="a0000001147"/>1</math> implies <math id="a0000001148">
+|x<active char="_" id="a0000001149">
+    <plastex:arg name="self">i</plastex:arg>
+</active>|<le id="a0000001150"/>1</math> for all <math id="a0000001151">
+i <in id="a0000001152"/>[n]</math>, and since <math id="a0000001153">
+<unknown modifier="|" id="a0000001154"/>x<unknown modifier="|" id="a0000001155"/><active char="_" id="a0000001156">
+    <plastex:arg name="self">L</plastex:arg>
+</active><active char="^" id="a0000001157">
+    <plastex:arg name="self">2</plastex:arg>
+</active> = x<active char="^" id="a0000001158">
+    <plastex:arg name="self"><mkern id="a0000001159"/>-1.5mu<mathsf id="a0000001160">
+    <plastex:arg name="self">T</plastex:arg>
+</mathsf></plastex:arg>
+</active>L x</math>, we have </par><par id="a0000001161">
+<equation modifier="*" id="a0000001162">
+<ArrayRow id="a0000001163">
+<ArrayCell id="a0000001164">
+<par id="a0000001165">
+ <max id="a0000001166"/><active char="_" id="a0000001167">
+    <plastex:arg name="self">x <in id="a0000001168"/><mathbb id="a0000001169"/><bgroup id="a0000001170">
+R</bgroup><active char="^" id="a0000001171">
+    <plastex:arg name="self">n</plastex:arg>
+</active></plastex:arg>
+</active> <frac id="a0000001172">
+    <plastex:arg name="numer"><unknown modifier="|" id="a0000001173" xmlns:plastex="http://plastex.sf.net/"/>x<unknown modifier="|" id="a0000001174" xmlns:plastex="http://plastex.sf.net/"/><active char="_" id="a0000001175" xmlns:plastex="http://plastex.sf.net/">
+    <plastex:arg name="self">L</plastex:arg>
+</active><active char="^" id="a0000001176" xmlns:plastex="http://plastex.sf.net/">
+    <plastex:arg name="self">2</plastex:arg>
+</active></plastex:arg>
+    <plastex:arg name="denom"><unknown modifier="|" id="a0000001177" xmlns:plastex="http://plastex.sf.net/"/>x<unknown modifier="|" id="a0000001178" xmlns:plastex="http://plastex.sf.net/"/><active char="_" id="a0000001179" xmlns:plastex="http://plastex.sf.net/">
+    <plastex:arg name="self"><infty id="a0000001180"/></plastex:arg>
+</active><active char="^" id="a0000001181" xmlns:plastex="http://plastex.sf.net/">
+    <plastex:arg name="self">2</plastex:arg>
+</active></plastex:arg>
+</frac> <le id="a0000001182"/><max id="a0000001183"/><active char="_" id="a0000001184">
+    <plastex:arg name="self">x <in id="a0000001185"/><mathbb id="a0000001186"/><bgroup id="a0000001187">
+R</bgroup><active char="^" id="a0000001188">
+    <plastex:arg name="self">n</plastex:arg>
+</active>: |x<active char="_" id="a0000001189">
+    <plastex:arg name="self">i</plastex:arg>
+</active>| <le id="a0000001190"/>1</plastex:arg>
+</active> x<active char="^" id="a0000001191">
+    <plastex:arg name="self"><mkern id="a0000001192"/>-1.5mu<mathsf id="a0000001193">
+    <plastex:arg name="self">T</plastex:arg>
+</mathsf></plastex:arg>
+</active>L x </par></ArrayCell></ArrayRow></equation></par><par id="a0000001194">
+ Since <math id="a0000001195">
+x<active char="^" id="a0000001196">
+    <plastex:arg name="self"><mkern id="a0000001197"/>-1.5mu<mathsf id="a0000001198">
+    <plastex:arg name="self">T</plastex:arg>
+</mathsf></plastex:arg>
+</active>L x = <sum id="a0000001199"/><active char="_" id="a0000001200">
+    <plastex:arg name="self">(u,v) <in id="a0000001201"/>E</plastex:arg>
+</active> (x<active char="_" id="a0000001202">
+    <plastex:arg name="self">u</plastex:arg>
+</active> - x<active char="_" id="a0000001203">
+    <plastex:arg name="self">v</plastex:arg>
+</active>)<active char="^" id="a0000001204">
+    <plastex:arg name="self">2</plastex:arg>
+</active></math>, and <math id="a0000001205">
+|x<active char="_" id="a0000001206">
+    <plastex:arg name="self">i</plastex:arg>
+</active>| <le id="a0000001207"/>1,</math> each term is bounded by 4. Thus, the sum is at most <math id="a0000001208">
+4m <le id="a0000001209"/>4n<active char="^" id="a0000001210">
+    <plastex:arg name="self">2</plastex:arg>
+</active>,</math> giving the lemma. </par></proof></par><par id="a0000001211">
+The first lemma converts the guarantee we have on the <math id="a0000001212">
+L</math> norm to a guarantee on the <math id="a0000001213">
+<ell id="a0000001214"/><active char="_" id="a0000001215">
+    <plastex:arg name="self"><infty id="a0000001216"/></plastex:arg>
+</active></math> norm. </par><par id="a0000001217">
+<thmenv style="plain" ref="3.6" id="lem:InftyClose">
+    <plastex:arg name="title"/>
+<par id="a0000001218">
+<label id="a0000001219">
+    <plastex:arg name="label">lem:InftyClose</plastex:arg>
+</label> Suppose we have two vectors <math id="a0000001220">
+x, y <in id="a0000001221"/><mathbb id="a0000001222"/><bgroup id="a0000001223">
+R</bgroup><active char="^" id="a0000001224">
+    <plastex:arg name="self">n</plastex:arg>
+</active></math> such that <math id="a0000001225">
+x, y <perp id="a0000001226"/><ensuremath id="a0000001227">
+    <plastex:arg name="self">1</plastex:arg>
+</ensuremath></math> and <math id="a0000001228">
+<unknown modifier="|" id="a0000001229"/>x - y<unknown modifier="|" id="a0000001230"/><active char="_" id="a0000001231">
+    <plastex:arg name="self">L</plastex:arg>
+</active> <le id="a0000001232"/><epsilon id="a0000001233"/><unknown modifier="|" id="a0000001234"/>y<unknown modifier="|" id="a0000001235"/><active char="_" id="a0000001236">
+    <plastex:arg name="self">L</plastex:arg>
+</active></math>. Then <math id="a0000001237">
+<unknown modifier="|" id="a0000001238"/>x - y<unknown modifier="|" id="a0000001239"/><active char="_" id="a0000001240">
+    <plastex:arg name="self"><infty id="a0000001241"/></plastex:arg>
+</active> <le id="a0000001242"/><epsilon id="a0000001243"/><cdot id="a0000001244"/><ensuremath id="a0000001245">
+    <plastex:arg name="self">2n<active char="^" id="a0000001246">
+    <plastex:arg name="self">3</plastex:arg>
+</active></plastex:arg>
+</ensuremath><cdot id="a0000001247"/><unknown modifier="|" id="a0000001248"/>y<unknown modifier="|" id="a0000001249"/><active char="_" id="a0000001250">
+    <plastex:arg name="self"><infty id="a0000001251"/></plastex:arg>
+</active></math>. </par></thmenv> </par><par id="a0000001252">
+<proof id="a0000001253">
+    <plastex:arg name="caption"/>
+<par id="a0000001254">
+By Lemmas <ref id="a0000001255">
+    <plastex:arg name="label">lem:InftyLUB</plastex:arg>
+</ref> and <ref id="a0000001256">
+    <plastex:arg name="label">lem:InftyLLB</plastex:arg>
+</ref>, we have </par><par id="a0000001257">
+<displaymath id="a0000001258">
+ <ensuremath id="a0000001259">
+    <plastex:arg name="self">n<active char="^" id="a0000001260">
+    <plastex:arg name="self">-2</plastex:arg>
+</active></plastex:arg>
+</ensuremath><cdot id="a0000001261"/><unknown modifier="|" id="a0000001262"/>x-y<unknown modifier="|" id="a0000001263"/><active char="_" id="a0000001264">
+    <plastex:arg name="self"><infty id="a0000001265"/></plastex:arg>
+</active> <le id="a0000001266"/><unknown modifier="|" id="a0000001267"/>x-y<unknown modifier="|" id="a0000001268"/><active char="_" id="a0000001269">
+    <plastex:arg name="self">L</plastex:arg>
+</active> <qquad id="a0000001270"/><text id="a0000001271">
+    <plastex:arg name="self">and</plastex:arg>
+</text><qquad id="a0000001272"/><unknown modifier="|" id="a0000001273"/>y<unknown modifier="|" id="a0000001274"/><active char="_" id="a0000001275">
+    <plastex:arg name="self">L</plastex:arg>
+</active> <le id="a0000001276"/><ensuremath id="a0000001277">
+    <plastex:arg name="self">2n</plastex:arg>
+</ensuremath><cdot id="a0000001278"/><unknown modifier="|" id="a0000001279"/>y<unknown modifier="|" id="a0000001280"/><active char="_" id="a0000001281">
+    <plastex:arg name="self"><infty id="a0000001282"/></plastex:arg>
+</active> </displaymath></par><par id="a0000001283">
+ Together with the assumption in our lemma, we get </par><par id="a0000001284">
+<displaymath id="a0000001285">
+ <unknown modifier="|" id="a0000001286"/>x - y<unknown modifier="|" id="a0000001287"/><active char="_" id="a0000001288">
+    <plastex:arg name="self"><infty id="a0000001289"/></plastex:arg>
+</active> <le id="a0000001290"/><ensuremath id="a0000001291">
+    <plastex:arg name="self">n<active char="^" id="a0000001292">
+    <plastex:arg name="self">2</plastex:arg>
+</active></plastex:arg>
+</ensuremath><cdot id="a0000001293"/><unknown modifier="|" id="a0000001294"/>x - y<unknown modifier="|" id="a0000001295"/><active char="_" id="a0000001296">
+    <plastex:arg name="self">L</plastex:arg>
+</active> <le id="a0000001297"/><epsilon id="a0000001298"/><cdot id="a0000001299"/><ensuremath id="a0000001300">
+    <plastex:arg name="self">n<active char="^" id="a0000001301">
+    <plastex:arg name="self">2</plastex:arg>
+</active></plastex:arg>
+</ensuremath><cdot id="a0000001302"/><unknown modifier="|" id="a0000001303"/>y<unknown modifier="|" id="a0000001304"/><active char="_" id="a0000001305">
+    <plastex:arg name="self">L</plastex:arg>
+</active> <le id="a0000001306"/><epsilon id="a0000001307"/><cdot id="a0000001308"/><ensuremath id="a0000001309">
+    <plastex:arg name="self">2n<active char="^" id="a0000001310">
+    <plastex:arg name="self">3</plastex:arg>
+</active></plastex:arg>
+</ensuremath><cdot id="a0000001311"/><unknown modifier="|" id="a0000001312"/>y<unknown modifier="|" id="a0000001313"/><active char="_" id="a0000001314">
+    <plastex:arg name="self"><infty id="a0000001315"/></plastex:arg>
+</active> </displaymath></par><par id="a0000001316">
+ as claimed. </par></proof></par><par id="a0000001317">
+Once we have this <math id="a0000001318">
+<ell id="a0000001319"/><active char="_" id="a0000001320">
+    <plastex:arg name="self"><infty id="a0000001321"/></plastex:arg>
+</active></math> guarantee for the columns of our matrix <math id="a0000001322">
+<ensuremath id="a0000001323">
+    <plastex:arg name="self"><widetilde id="a0000001324">
+    <plastex:arg name="self">U</plastex:arg>
+</widetilde></plastex:arg>
+</ensuremath></math>, we convert this to a guarantee on the rows of <math id="a0000001325">
+<ensuremath id="a0000001326">
+    <plastex:arg name="self"><widetilde id="a0000001327">
+    <plastex:arg name="self">U</plastex:arg>
+</widetilde></plastex:arg>
+</ensuremath></math> using the following lemma. </par><par id="a0000001328">
+<thmenv style="plain" ref="3.7" id="lem:RowtoColumnInfty">
+    <plastex:arg name="title"/>
+<par id="a0000001329">
+<label id="a0000001330">
+    <plastex:arg name="label">lem:RowtoColumnInfty</plastex:arg>
+</label> Let <math id="a0000001331">
+U</math> be an <math id="a0000001332">
+n <times id="a0000001333"/><ell id="a0000001334"/></math> matrix, with <math id="a0000001335">
+<ensuremath id="a0000001336">
+    <plastex:arg name="self">K</plastex:arg>
+</ensuremath></math> being the largest value present in the matrix. Let <math id="a0000001337">
+<ensuremath id="a0000001338">
+    <plastex:arg name="self"><widetilde id="a0000001339">
+    <plastex:arg name="self">U</plastex:arg>
+</widetilde></plastex:arg>
+</ensuremath></math> be an approximation of <math id="a0000001340">
+U</math> such that for every <math id="a0000001341">
+j <in id="a0000001342"/>[<ell id="a0000001343"/>]</math>, the <math id="a0000001344">
+j</math>-th column <math id="a0000001345">
+<ensuremath id="a0000001346">
+    <plastex:arg name="self"><widetilde id="a0000001347">
+    <plastex:arg name="self">C</plastex:arg>
+</widetilde></plastex:arg>
+</ensuremath><active char="_" id="a0000001348">
+    <plastex:arg name="self">j</plastex:arg>
+</active></math> of <math id="a0000001349">
+<ensuremath id="a0000001350">
+    <plastex:arg name="self"><widetilde id="a0000001351">
+    <plastex:arg name="self">U</plastex:arg>
+</widetilde></plastex:arg>
+</ensuremath></math> is <math id="a0000001352">
+<epsilon id="a0000001353"/></math>-close to the <math id="a0000001354">
+j</math>-th column <math id="a0000001355">
+C<active char="_" id="a0000001356">
+    <plastex:arg name="self">j</plastex:arg>
+</active></math> of <math id="a0000001357">
+U</math> in the following sense: <math id="a0000001358">
+<forall id="a0000001359"/>j <in id="a0000001360"/>[<ell id="a0000001361"/>], <unknown modifier="|" id="a0000001362"/><ensuremath id="a0000001363">
+    <plastex:arg name="self"><widetilde id="a0000001364">
+    <plastex:arg name="self">C</plastex:arg>
+</widetilde></plastex:arg>
+</ensuremath><active char="_" id="a0000001365">
+    <plastex:arg name="self">j</plastex:arg>
+</active> - C<active char="_" id="a0000001366">
+    <plastex:arg name="self">j</plastex:arg>
+</active><unknown modifier="|" id="a0000001367"/><active char="_" id="a0000001368">
+    <plastex:arg name="self"><infty id="a0000001369"/></plastex:arg>
+</active> <le id="a0000001370"/><epsilon id="a0000001371"/><cdot id="a0000001372"/><unknown modifier="|" id="a0000001373"/>C<active char="_" id="a0000001374">
+    <plastex:arg name="self">j</plastex:arg>
+</active><unknown modifier="|" id="a0000001375"/><active char="_" id="a0000001376">
+    <plastex:arg name="self"><infty id="a0000001377"/></plastex:arg>
+</active></math>. Then for any <math id="a0000001378">
+i <in id="a0000001379"/>[n]</math>, and rows <math id="a0000001380">
+R<active char="_" id="a0000001381">
+    <plastex:arg name="self">i</plastex:arg>
+</active></math> of <math id="a0000001382">
+U</math> and <math id="a0000001383">
+<ensuremath id="a0000001384">
+    <plastex:arg name="self"><widetilde id="a0000001385">
+    <plastex:arg name="self">R</plastex:arg>
+</widetilde></plastex:arg>
+</ensuremath><active char="_" id="a0000001386">
+    <plastex:arg name="self">i</plastex:arg>
+</active></math> of <math id="a0000001387">
+<ensuremath id="a0000001388">
+    <plastex:arg name="self"><widetilde id="a0000001389">
+    <plastex:arg name="self">U</plastex:arg>
+</widetilde></plastex:arg>
+</ensuremath></math>, </par><par id="a0000001390">
+<displaymath id="a0000001391">
+ <unknown modifier="|" id="a0000001392"/> <ensuremath id="a0000001393">
+    <plastex:arg name="self"><widetilde id="a0000001394">
+    <plastex:arg name="self">R</plastex:arg>
+</widetilde></plastex:arg>
+</ensuremath><active char="_" id="a0000001395">
+    <plastex:arg name="self">i</plastex:arg>
+</active> - R<active char="_" id="a0000001396">
+    <plastex:arg name="self">i</plastex:arg>
+</active> <unknown modifier="|" id="a0000001397"/><active char="_" id="a0000001398">
+    <plastex:arg name="self"><infty id="a0000001399"/></plastex:arg>
+</active> <le id="a0000001400"/><epsilon id="a0000001401"/><cdot id="a0000001402"/><ensuremath id="a0000001403">
+    <plastex:arg name="self">K</plastex:arg>
+</ensuremath></displaymath></par></thmenv> </par><par id="a0000001404">
+<proof id="a0000001405">
+    <plastex:arg name="caption"/>
+<par id="a0000001406">
+For any <math id="a0000001407">
+i <in id="a0000001408"/>[n]</math>, </par><par id="a0000001409">
+<align modifier="*" id="a0000001410">
+<ArrayRow id="a0000001411">
+<ArrayCell id="a0000001412">
+<par id="a0000001413">
+ <unknown modifier="|" id="a0000001414"/><ensuremath id="a0000001415">
+    <plastex:arg name="self"><widetilde id="a0000001416">
+    <plastex:arg name="self">R</plastex:arg>
+</widetilde></plastex:arg>
+</ensuremath><active char="_" id="a0000001417">
+    <plastex:arg name="self">i</plastex:arg>
+</active> - R<active char="_" id="a0000001418">
+    <plastex:arg name="self">i</plastex:arg>
+</active><unknown modifier="|" id="a0000001419"/><active char="_" id="a0000001420">
+    <plastex:arg name="self"><infty id="a0000001421"/></plastex:arg>
+</active> </par></ArrayCell><ArrayCell id="a0000001422">
+<par id="a0000001423">
+<le id="a0000001424"/><max id="a0000001425"/><active char="_" id="a0000001426">
+    <plastex:arg name="self">i <in id="a0000001427"/>[n]</plastex:arg>
+</active> <unknown modifier="|" id="a0000001428"/><ensuremath id="a0000001429">
+    <plastex:arg name="self"><widetilde id="a0000001430">
+    <plastex:arg name="self">R</plastex:arg>
+</widetilde></plastex:arg>
+</ensuremath><active char="_" id="a0000001431">
+    <plastex:arg name="self">i</plastex:arg>
+</active> - R<active char="_" id="a0000001432">
+    <plastex:arg name="self">i</plastex:arg>
+</active><unknown modifier="|" id="a0000001433"/><active char="_" id="a0000001434">
+    <plastex:arg name="self"><infty id="a0000001435"/></plastex:arg>
+</active> </par></ArrayCell></ArrayRow><ArrayRow id="a0000001436">
+<ArrayCell id="a0000001437">
+</ArrayCell><ArrayCell id="a0000001438">
+<par id="a0000001439">
+= <max id="a0000001440"/><active char="_" id="a0000001441">
+    <plastex:arg name="self">i, j <in id="a0000001442"/>[n] <times id="a0000001443"/>[<ell id="a0000001444"/>]</plastex:arg>
+</active> | <ensuremath id="a0000001445">
+    <plastex:arg name="self"><widetilde id="a0000001446">
+    <plastex:arg name="self">U</plastex:arg>
+</widetilde></plastex:arg>
+</ensuremath><active char="_" id="a0000001447">
+    <plastex:arg name="self">ij</plastex:arg>
+</active> - U<active char="_" id="a0000001448">
+    <plastex:arg name="self">ij</plastex:arg>
+</active> | </par></ArrayCell></ArrayRow><ArrayRow id="a0000001449">
+<ArrayCell id="a0000001450">
+</ArrayCell><ArrayCell id="a0000001451">
+<par id="a0000001452">
+= <max id="a0000001453"/><active char="_" id="a0000001454">
+    <plastex:arg name="self">j<in id="a0000001455"/>[<ell id="a0000001456"/>]</plastex:arg>
+</active> <unknown modifier="|" id="a0000001457"/> <ensuremath id="a0000001458">
+    <plastex:arg name="self"><widetilde id="a0000001459">
+    <plastex:arg name="self">C</plastex:arg>
+</widetilde></plastex:arg>
+</ensuremath><active char="_" id="a0000001460">
+    <plastex:arg name="self">j</plastex:arg>
+</active> - C<active char="_" id="a0000001461">
+    <plastex:arg name="self">j</plastex:arg>
+</active> <unknown modifier="|" id="a0000001462"/><active char="_" id="a0000001463">
+    <plastex:arg name="self"><infty id="a0000001464"/></plastex:arg>
+</active> </par></ArrayCell></ArrayRow><ArrayRow id="a0000001465">
+<ArrayCell id="a0000001466">
+</ArrayCell><ArrayCell id="a0000001467">
+<par id="a0000001468">
+<le id="a0000001469"/><epsilon id="a0000001470"/><cdot id="a0000001471"/><max id="a0000001472"/><active char="_" id="a0000001473">
+    <plastex:arg name="self">j <in id="a0000001474"/>[<ell id="a0000001475"/>]</plastex:arg>
+</active> <unknown modifier="|" id="a0000001476"/> C<active char="_" id="a0000001477">
+    <plastex:arg name="self">j</plastex:arg>
+</active> <unknown modifier="|" id="a0000001478"/><active char="_" id="a0000001479">
+    <plastex:arg name="self"><infty id="a0000001480"/></plastex:arg>
+</active> </par></ArrayCell></ArrayRow><ArrayRow id="a0000001481">
+<ArrayCell id="a0000001482">
+</ArrayCell><ArrayCell id="a0000001483">
+<par id="a0000001484">
+<le id="a0000001485"/><epsilon id="a0000001486"/><cdot id="a0000001487"/><ensuremath id="a0000001488">
+    <plastex:arg name="self">K</plastex:arg>
+</ensuremath></par></ArrayCell></ArrayRow></align></par><par id="a0000001489">
+ as required. </par></proof></par><par id="a0000001490">
+<thmenv style="plain" ref="3.8" id="lem:MedianApx">
+    <plastex:arg name="title"/>
+<par id="a0000001491">
+<label id="a0000001492">
+    <plastex:arg name="label">lem:MedianApx</plastex:arg>
+</label> Let <math id="a0000001493">
+x, y <in id="a0000001494"/><mathbb id="a0000001495"/><bgroup id="a0000001496">
+R</bgroup><active char="^" id="a0000001497">
+    <plastex:arg name="self"><ell id="a0000001498"/></plastex:arg>
+</active></math> be such that <math id="a0000001499">
+<unknown modifier="|" id="a0000001500"/>x - y<unknown modifier="|" id="a0000001501"/><active char="_" id="a0000001502">
+    <plastex:arg name="self"><infty id="a0000001503"/></plastex:arg>
+</active> <le id="a0000001504"/><epsilon id="a0000001505"/></math>, where <math id="a0000001506">
+<ell id="a0000001507"/></math> is odd. Then </par><par id="a0000001508">
+<displaymath id="a0000001509">
+ <ensuremath id="a0000001510">
+    <plastex:arg name="self"><text id="a0000001511">
+    <plastex:arg name="self">median</plastex:arg>
+</text>(|x<active char="_" id="a0000001512">
+    <plastex:arg name="self">1</plastex:arg>
+</active>|, |x<active char="_" id="a0000001513">
+    <plastex:arg name="self">2</plastex:arg>
+</active>|, <ldots id="a0000001514"/>, |x<active char="_" id="a0000001515">
+    <plastex:arg name="self"><ell id="a0000001516"/></plastex:arg>
+</active>|)</plastex:arg>
+</ensuremath>- <epsilon id="a0000001517"/><le id="a0000001518"/><ensuremath id="a0000001519">
+    <plastex:arg name="self"><text id="a0000001520">
+    <plastex:arg name="self">median</plastex:arg>
+</text>(|y<active char="_" id="a0000001521">
+    <plastex:arg name="self">1</plastex:arg>
+</active>|, |y<active char="_" id="a0000001522">
+    <plastex:arg name="self">2</plastex:arg>
+</active>|, <ldots id="a0000001523"/>, |y<active char="_" id="a0000001524">
+    <plastex:arg name="self"><ell id="a0000001525"/></plastex:arg>
+</active>|)</plastex:arg>
+</ensuremath><le id="a0000001526"/><ensuremath id="a0000001527">
+    <plastex:arg name="self"><text id="a0000001528">
+    <plastex:arg name="self">median</plastex:arg>
+</text>(|x<active char="_" id="a0000001529">
+    <plastex:arg name="self">1</plastex:arg>
+</active>|, |x<active char="_" id="a0000001530">
+    <plastex:arg name="self">2</plastex:arg>
+</active>|, <ldots id="a0000001531"/>, |x<active char="_" id="a0000001532">
+    <plastex:arg name="self"><ell id="a0000001533"/></plastex:arg>
+</active>|)</plastex:arg>
+</ensuremath>+ <epsilon id="a0000001534"/></displaymath></par></thmenv> </par><par id="a0000001535">
+<proof id="a0000001536">
+    <plastex:arg name="caption"/>
+<par id="a0000001537">
+Note that if <math id="a0000001538">
+|x<active char="_" id="a0000001539">
+    <plastex:arg name="self">i</plastex:arg>
+</active> - y<active char="_" id="a0000001540">
+    <plastex:arg name="self">i</plastex:arg>
+</active>| <le id="a0000001541"/><epsilon id="a0000001542"/></math>, then <math id="a0000001543">
+| |x<active char="_" id="a0000001544">
+    <plastex:arg name="self">i</plastex:arg>
+</active>| - |y<active char="_" id="a0000001545">
+    <plastex:arg name="self">i</plastex:arg>
+</active>| | <le id="a0000001546"/><epsilon id="a0000001547"/></math> as well. Thus we can assume without loss of generality that <math id="a0000001548">
+x</math> and <math id="a0000001549">
+y</math> are non-negative. </par><par id="a0000001550">
+Relabel the indices such that <math id="a0000001551">
+x<active char="_" id="a0000001552">
+    <plastex:arg name="self">1</plastex:arg>
+</active> <le id="a0000001553"/>x<active char="_" id="a0000001554">
+    <plastex:arg name="self">2</plastex:arg>
+</active> <le id="a0000001555"/><ldots id="a0000001556"/><le id="a0000001557"/>x<active char="_" id="a0000001558">
+    <plastex:arg name="self"><ell id="a0000001559"/></plastex:arg>
+</active></math> are in non-decreasing order. The assumption on <math id="a0000001560">
+<ell id="a0000001561"/><active char="_" id="a0000001562">
+    <plastex:arg name="self"><infty id="a0000001563"/></plastex:arg>
+</active></math> norm gives us that for all <math id="a0000001564">
+i <in id="a0000001565"/>[<ell id="a0000001566"/>]</math>, </par><par id="a0000001567">
+<equation ref="1" id="eq:MedianApx">
+ <label id="a0000001568">
+    <plastex:arg name="label">eq:MedianApx</plastex:arg>
+</label> |x<active char="_" id="a0000001569">
+    <plastex:arg name="self">i</plastex:arg>
+</active> - y<active char="_" id="a0000001570">
+    <plastex:arg name="self">i</plastex:arg>
+</active>| <le id="a0000001571"/><epsilon id="a0000001572"/></equation></par><par id="a0000001573">
+ Let <math id="a0000001574">
+<pi id="a0000001575"/></math> be a permutation such that <math id="a0000001576">
+y<active char="_" id="a0000001577">
+    <plastex:arg name="self"><pi id="a0000001578"/>(1)</plastex:arg>
+</active> <le id="a0000001579"/>y<active char="_" id="a0000001580">
+    <plastex:arg name="self"><pi id="a0000001581"/>(2)</plastex:arg>
+</active> <le id="a0000001582"/><ldots id="a0000001583"/><le id="a0000001584"/>y<active char="_" id="a0000001585">
+    <plastex:arg name="self"><pi id="a0000001586"/>(<ell id="a0000001587"/>)</plastex:arg>
+</active></math> is in non-decreasing order. Let <math id="a0000001588">
+<ensuremath id="a0000001589">
+    <plastex:arg name="self">m</plastex:arg>
+</ensuremath>= <left id="a0000001590">
+    <plastex:arg name="char"><lceil id="a0000001591" xmlns:plastex="http://plastex.sf.net/"/></plastex:arg>
+</left><ell id="a0000001592"/>/2 <right id="a0000001593">
+    <plastex:arg name="char"><rceil id="a0000001594" xmlns:plastex="http://plastex.sf.net/"/></plastex:arg>
+</right></math>. We want to show that <math id="a0000001595">
+|y<active char="_" id="a0000001596">
+    <plastex:arg name="self"><pi id="a0000001597"/>(<ensuremath id="a0000001598">
+    <plastex:arg name="self">m</plastex:arg>
+</ensuremath>)</plastex:arg>
+</active> - x<active char="_" id="a0000001599">
+    <plastex:arg name="self"><ensuremath id="a0000001600">
+    <plastex:arg name="self">m</plastex:arg>
+</ensuremath></plastex:arg>
+</active>| <le id="a0000001601"/><epsilon id="a0000001602"/></math>. If <math id="a0000001603">
+<ensuremath id="a0000001604">
+    <plastex:arg name="self">m</plastex:arg>
+</ensuremath>= <pi id="a0000001605"/>(<ensuremath id="a0000001606">
+    <plastex:arg name="self">m</plastex:arg>
+</ensuremath>)</math>, then the lemma follows from Equation <ref id="a0000001607">
+    <plastex:arg name="label">eq:MedianApx</plastex:arg>
+</ref> with <math id="a0000001608">
+i = <ensuremath id="a0000001609">
+    <plastex:arg name="self">m</plastex:arg>
+</ensuremath></math>. So assume that <math id="a0000001610">
+<ensuremath id="a0000001611">
+    <plastex:arg name="self">m</plastex:arg>
+</ensuremath><neq id="a0000001612"/><pi id="a0000001613"/>(<ensuremath id="a0000001614">
+    <plastex:arg name="self">m</plastex:arg>
+</ensuremath>)</math>. </par><par id="a0000001615">
+Consider the case when <math id="a0000001616">
+<ensuremath id="a0000001617">
+    <plastex:arg name="self">m</plastex:arg>
+</ensuremath>&gt; <pi id="a0000001618"/>(<ensuremath id="a0000001619">
+    <plastex:arg name="self">m</plastex:arg>
+</ensuremath>)</math>. Then since <math id="a0000001620">
+y<active char="_" id="a0000001621">
+    <plastex:arg name="self"><ensuremath id="a0000001622">
+    <plastex:arg name="self">m</plastex:arg>
+</ensuremath></plastex:arg>
+</active> <ge id="a0000001623"/>y<active char="_" id="a0000001624">
+    <plastex:arg name="self"><pi id="a0000001625"/>(<ensuremath id="a0000001626">
+    <plastex:arg name="self">m</plastex:arg>
+</ensuremath>)</plastex:arg>
+</active></math>, we have <math id="a0000001627">
+x<active char="_" id="a0000001628">
+    <plastex:arg name="self"><ensuremath id="a0000001629">
+    <plastex:arg name="self">m</plastex:arg>
+</ensuremath></plastex:arg>
+</active> <ge id="a0000001630"/>y<active char="_" id="a0000001631">
+    <plastex:arg name="self"><ensuremath id="a0000001632">
+    <plastex:arg name="self">m</plastex:arg>
+</ensuremath></plastex:arg>
+</active> - <epsilon id="a0000001633"/><ge id="a0000001634"/>y<active char="_" id="a0000001635">
+    <plastex:arg name="self"><pi id="a0000001636"/>(<ensuremath id="a0000001637">
+    <plastex:arg name="self">m</plastex:arg>
+</ensuremath>)</plastex:arg>
+</active> - <epsilon id="a0000001638"/></math>. For the other direction, since <math id="a0000001639">
+<ensuremath id="a0000001640">
+    <plastex:arg name="self">m</plastex:arg>
+</ensuremath>&gt; <pi id="a0000001641"/>(<ensuremath id="a0000001642">
+    <plastex:arg name="self">m</plastex:arg>
+</ensuremath>)</math>, there exists an index <math id="a0000001643">
+j</math> such that <math id="a0000001644">
+x<active char="_" id="a0000001645">
+    <plastex:arg name="self">j</plastex:arg>
+</active> &gt; x<active char="_" id="a0000001646">
+    <plastex:arg name="self"><ensuremath id="a0000001647">
+    <plastex:arg name="self">m</plastex:arg>
+</ensuremath></plastex:arg>
+</active></math> and <math id="a0000001648">
+y<active char="_" id="a0000001649">
+    <plastex:arg name="self">j</plastex:arg>
+</active> <le id="a0000001650"/>y<active char="_" id="a0000001651">
+    <plastex:arg name="self"><pi id="a0000001652"/>(<ensuremath id="a0000001653">
+    <plastex:arg name="self">m</plastex:arg>
+</ensuremath>)</plastex:arg>
+</active></math>. For this index, we have <math id="a0000001654">
+y<active char="_" id="a0000001655">
+    <plastex:arg name="self"><pi id="a0000001656"/>(<ensuremath id="a0000001657">
+    <plastex:arg name="self">m</plastex:arg>
+</ensuremath>)</plastex:arg>
+</active> <ge id="a0000001658"/>y<active char="_" id="a0000001659">
+    <plastex:arg name="self">j</plastex:arg>
+</active> <ge id="a0000001660"/>x<active char="_" id="a0000001661">
+    <plastex:arg name="self">j</plastex:arg>
+</active> - <epsilon id="a0000001662"/><ge id="a0000001663"/>x<active char="_" id="a0000001664">
+    <plastex:arg name="self">m</plastex:arg>
+</active> - <epsilon id="a0000001665"/></math> as required. The case when <math id="a0000001666">
+<ensuremath id="a0000001667">
+    <plastex:arg name="self">m</plastex:arg>
+</ensuremath>&lt; <pi id="a0000001668"/>(<ensuremath id="a0000001669">
+    <plastex:arg name="self">m</plastex:arg>
+</ensuremath>)</math> is symmetric. </par></proof></par><par id="a0000001670">
+We use the following lemma to show that <math id="a0000001671">
+<text id="a0000001672">
+    <plastex:arg name="self">RecoverNorm</plastex:arg>
+</text></math> works well on approximate sketched vectors. </par><par id="a0000001673">
+<thmenv style="plain" ref="3.9" id="lem:CombinedApx">
+    <plastex:arg name="title"/>
+<par id="a0000001674">
+<label id="a0000001675">
+    <plastex:arg name="label">lem:CombinedApx</plastex:arg>
+</label> Let <math id="a0000001676">
+a <in id="a0000001677"/><mathbb id="a0000001678"/><bgroup id="a0000001679">
+R</bgroup></math> be a real number. Suppose <math id="a0000001680">
+x <in id="a0000001681"/><mathbb id="a0000001682"/><bgroup id="a0000001683">
+R</bgroup><active char="^" id="a0000001684">
+    <plastex:arg name="self"><ell id="a0000001685"/></plastex:arg>
+</active></math> satisfies </par><par id="a0000001686">
+<displaymath id="a0000001687">
+ <ensuremath id="a0000001688">
+    <plastex:arg name="self">(1-<epsilon id="a0000001689"/>)</plastex:arg>
+</ensuremath><cdot id="a0000001690"/>a <le id="a0000001691"/><ensuremath id="a0000001692">
+    <plastex:arg name="self"><text id="a0000001693">
+    <plastex:arg name="self">median</plastex:arg>
+</text>(|x<active char="_" id="a0000001694">
+    <plastex:arg name="self">1</plastex:arg>
+</active>|, |x<active char="_" id="a0000001695">
+    <plastex:arg name="self">2</plastex:arg>
+</active>|, <ldots id="a0000001696"/>, |x<active char="_" id="a0000001697">
+    <plastex:arg name="self"><ell id="a0000001698"/></plastex:arg>
+</active>|)</plastex:arg>
+</ensuremath><le id="a0000001699"/><ensuremath id="a0000001700">
+    <plastex:arg name="self">(1+<epsilon id="a0000001701"/>)</plastex:arg>
+</ensuremath><cdot id="a0000001702"/>a </displaymath></par><par id="a0000001703">
+ Suppose <math id="a0000001704">
+y <in id="a0000001705"/><mathbb id="a0000001706"/><bgroup id="a0000001707">
+R</bgroup><active char="^" id="a0000001708">
+    <plastex:arg name="self"><ell id="a0000001709"/></plastex:arg>
+</active></math> is such that <math id="a0000001710">
+<unknown modifier="|" id="a0000001711"/>x - y<unknown modifier="|" id="a0000001712"/><active char="_" id="a0000001713">
+    <plastex:arg name="self"><infty id="a0000001714"/></plastex:arg>
+</active> <le id="a0000001715"/><ensuremath id="a0000001716">
+    <plastex:arg name="self"><epsilon id="a0000001717"/>’</plastex:arg>
+</ensuremath></math>, then <math id="a0000001718">
+y</math> satisfies </par><par id="a0000001719">
+<displaymath id="a0000001720">
+ <ensuremath id="a0000001721">
+    <plastex:arg name="self">(1-<epsilon id="a0000001722"/>)</plastex:arg>
+</ensuremath><cdot id="a0000001723"/>a - <ensuremath id="a0000001724">
+    <plastex:arg name="self"><epsilon id="a0000001725"/>’</plastex:arg>
+</ensuremath><le id="a0000001726"/><ensuremath id="a0000001727">
+    <plastex:arg name="self"><text id="a0000001728">
+    <plastex:arg name="self">median</plastex:arg>
+</text>(|y<active char="_" id="a0000001729">
+    <plastex:arg name="self">1</plastex:arg>
+</active>|, |y<active char="_" id="a0000001730">
+    <plastex:arg name="self">2</plastex:arg>
+</active>|, <ldots id="a0000001731"/>, |y<active char="_" id="a0000001732">
+    <plastex:arg name="self"><ell id="a0000001733"/></plastex:arg>
+</active>|)</plastex:arg>
+</ensuremath><le id="a0000001734"/><ensuremath id="a0000001735">
+    <plastex:arg name="self">(1+<epsilon id="a0000001736"/>)</plastex:arg>
+</ensuremath><cdot id="a0000001737"/>a + <ensuremath id="a0000001738">
+    <plastex:arg name="self"><epsilon id="a0000001739"/>’</plastex:arg>
+</ensuremath></displaymath></par></thmenv> </par><par id="a0000001740">
+<proof id="a0000001741">
+    <plastex:arg name="caption"/>
+<par id="a0000001742">
+Using Lemma <ref id="a0000001743">
+    <plastex:arg name="label">lem:MedianApx</plastex:arg>
+</ref> and the assumption on <math id="a0000001744">
+x</math>, </par><par id="a0000001745">
+<align modifier="*" id="a0000001746">
+<ArrayRow id="a0000001747">
+<ArrayCell id="a0000001748">
+<par id="a0000001749">
+ <ensuremath id="a0000001750">
+    <plastex:arg name="self">(1-<epsilon id="a0000001751"/>)</plastex:arg>
+</ensuremath><cdot id="a0000001752"/>a - <ensuremath id="a0000001753">
+    <plastex:arg name="self"><epsilon id="a0000001754"/>’</plastex:arg>
+</ensuremath></par></ArrayCell><ArrayCell id="a0000001755">
+<par id="a0000001756">
+<le id="a0000001757"/><ensuremath id="a0000001758">
+    <plastex:arg name="self"><text id="a0000001759">
+    <plastex:arg name="self">median</plastex:arg>
+</text>(|x<active char="_" id="a0000001760">
+    <plastex:arg name="self">1</plastex:arg>
+</active>|, |x<active char="_" id="a0000001761">
+    <plastex:arg name="self">2</plastex:arg>
+</active>|, <ldots id="a0000001762"/>, |x<active char="_" id="a0000001763">
+    <plastex:arg name="self"><ell id="a0000001764"/></plastex:arg>
+</active>|)</plastex:arg>
+</ensuremath>- <ensuremath id="a0000001765">
+    <plastex:arg name="self"><epsilon id="a0000001766"/>’</plastex:arg>
+</ensuremath></par></ArrayCell></ArrayRow><ArrayRow id="a0000001767">
+<ArrayCell id="a0000001768">
+</ArrayCell><ArrayCell id="a0000001769">
+<par id="a0000001770">
+<le id="a0000001771"/><ensuremath id="a0000001772">
+    <plastex:arg name="self"><text id="a0000001773">
+    <plastex:arg name="self">median</plastex:arg>
+</text>(|y<active char="_" id="a0000001774">
+    <plastex:arg name="self">1</plastex:arg>
+</active>|, |y<active char="_" id="a0000001775">
+    <plastex:arg name="self">2</plastex:arg>
+</active>|, <ldots id="a0000001776"/>, |y<active char="_" id="a0000001777">
+    <plastex:arg name="self"><ell id="a0000001778"/></plastex:arg>
+</active>|)</plastex:arg>
+</ensuremath></par></ArrayCell></ArrayRow><ArrayRow id="a0000001779">
+<ArrayCell id="a0000001780">
+</ArrayCell><ArrayCell id="a0000001781">
+<par id="a0000001782">
+<le id="a0000001783"/><ensuremath id="a0000001784">
+    <plastex:arg name="self"><text id="a0000001785">
+    <plastex:arg name="self">median</plastex:arg>
+</text>(|x<active char="_" id="a0000001786">
+    <plastex:arg name="self">1</plastex:arg>
+</active>|, |x<active char="_" id="a0000001787">
+    <plastex:arg name="self">2</plastex:arg>
+</active>|, <ldots id="a0000001788"/>, |x<active char="_" id="a0000001789">
+    <plastex:arg name="self"><ell id="a0000001790"/></plastex:arg>
+</active>|)</plastex:arg>
+</ensuremath>+ <ensuremath id="a0000001791">
+    <plastex:arg name="self"><epsilon id="a0000001792"/>’</plastex:arg>
+</ensuremath></par></ArrayCell></ArrayRow><ArrayRow id="a0000001793">
+<ArrayCell id="a0000001794">
+</ArrayCell><ArrayCell id="a0000001795">
+<par id="a0000001796">
+<le id="a0000001797"/><ensuremath id="a0000001798">
+    <plastex:arg name="self">(1+<epsilon id="a0000001799"/>)</plastex:arg>
+</ensuremath><cdot id="a0000001800"/>a + <ensuremath id="a0000001801">
+    <plastex:arg name="self"><epsilon id="a0000001802"/>’</plastex:arg>
+</ensuremath></par></ArrayCell></ArrayRow></align></par><par id="a0000001803">
+ as required. </par></proof></par><par id="a0000001804">
+<thmenv style="plain" ref="3.10" id="lem:ApxSolveLoad">
+    <plastex:arg name="title"/>
+<par id="a0000001805">
+<label id="a0000001806">
+    <plastex:arg name="label">lem:ApxSolveLoad</plastex:arg>
+</label> For any approximation factor <math id="a0000001807">
+0 &lt; <ensuremath id="a0000001808">
+    <plastex:arg name="self"><epsilon id="a0000001809"/></plastex:arg>
+</ensuremath>&lt; 1</math>, and any weighted graph <math id="a0000001810">
+(G,w)</math>, let <math id="a0000001811">
+<textrm id="a0000001812">
+    <plastex:arg name="self">load</plastex:arg>
+</textrm><active char="_" id="a0000001813">
+    <plastex:arg name="self">w</plastex:arg>
+</active>= <left id="a0000001814">
+    <plastex:arg name="char">(</plastex:arg>
+</left> w<active char="_" id="a0000001815">
+    <plastex:arg name="self">e</plastex:arg>
+</active> <sum id="a0000001816"/><active char="_" id="a0000001817">
+    <plastex:arg name="self">f</plastex:arg>
+</active> <ensuremath id="a0000001818">
+    <plastex:arg name="self">|<ensuremath id="a0000001819">
+    <plastex:arg name="self">b<active char="_" id="a0000001820">
+    <plastex:arg name="self">e</plastex:arg>
+</active> L<active char="^" id="a0000001821">
+    <plastex:arg name="self"><dagger id="a0000001822"/></plastex:arg>
+</active>b<active char="_" id="a0000001823">
+    <plastex:arg name="self">f</plastex:arg>
+</active><active char="^" id="a0000001824">
+    <plastex:arg name="self"><mkern id="a0000001825"/>-1.5mu<mathsf id="a0000001826">
+    <plastex:arg name="self">T</plastex:arg>
+</mathsf></plastex:arg>
+</active></plastex:arg>
+</ensuremath>|</plastex:arg>
+</ensuremath><right id="a0000001827">
+    <plastex:arg name="char">)</plastex:arg>
+</right><active char="_" id="a0000001828">
+    <plastex:arg name="self">e <in id="a0000001829"/>E</plastex:arg>
+</active> </math> be the true loads, and <math id="a0000001830">
+<textrm id="a0000001831">
+    <plastex:arg name="self">aload</plastex:arg>
+</textrm><active char="_" id="a0000001832">
+    <plastex:arg name="self">w</plastex:arg>
+</active>= <text id="a0000001833">
+    <plastex:arg name="self">GetApproxLoad</plastex:arg>
+</text>(G, w, <ensuremath id="a0000001834">
+    <plastex:arg name="self"><epsilon id="a0000001835"/></plastex:arg>
+</ensuremath>)</math> be the approximate loads computed by the algorithm when using an approximate Laplacian solver. Then with probability <math id="a0000001836">
+<ge id="a0000001837"/>1-<frac id="a0000001838">
+    <plastex:arg name="numer">1</plastex:arg>
+    <plastex:arg name="denom">poly(n)</plastex:arg>
+</frac></math>, </par><par id="a0000001839">
+<displaymath id="a0000001840">
+ (1 - <ensuremath id="a0000001841">
+    <plastex:arg name="self"><epsilon id="a0000001842"/></plastex:arg>
+</ensuremath>) <cdot id="a0000001843"/><textrm id="a0000001844">
+    <plastex:arg name="self">load</plastex:arg>
+</textrm><active char="_" id="a0000001845">
+    <plastex:arg name="self">w</plastex:arg>
+</active>(e) <le id="a0000001846"/><textrm id="a0000001847">
+    <plastex:arg name="self">aload</plastex:arg>
+</textrm><active char="_" id="a0000001848">
+    <plastex:arg name="self">w</plastex:arg>
+</active>(e) <le id="a0000001849"/>(1 + <ensuremath id="a0000001850">
+    <plastex:arg name="self"><epsilon id="a0000001851"/></plastex:arg>
+</ensuremath>) <cdot id="a0000001852"/><textrm id="a0000001853">
+    <plastex:arg name="self">load</plastex:arg>
+</textrm><active char="_" id="a0000001854">
+    <plastex:arg name="self">w</plastex:arg>
+</active>(e) <qquad id="a0000001855"/><text id="a0000001856">
+    <plastex:arg name="self">for all <math id="a0000001857">
+e <in id="a0000001858"/>E</math></plastex:arg>
+</text> </displaymath></par></thmenv> </par><par id="a0000001859">
+<proof id="a0000001860">
+    <plastex:arg name="caption"/>
+<par id="a0000001861">
+Let <math id="a0000001862">
+U = L<active char="^" id="a0000001863">
+    <plastex:arg name="self"><dagger id="a0000001864"/></plastex:arg>
+</active>B<active char="^" id="a0000001865">
+    <plastex:arg name="self"><mkern id="a0000001866"/>-1.5mu<mathsf id="a0000001867">
+    <plastex:arg name="self">T</plastex:arg>
+</mathsf></plastex:arg>
+</active>C<active char="^" id="a0000001868">
+    <plastex:arg name="self"><mkern id="a0000001869"/>-1.5mu<mathsf id="a0000001870">
+    <plastex:arg name="self">T</plastex:arg>
+</mathsf></plastex:arg>
+</active></math>, and <math id="a0000001871">
+<ensuremath id="a0000001872">
+    <plastex:arg name="self"><widetilde id="a0000001873">
+    <plastex:arg name="self">U</plastex:arg>
+</widetilde></plastex:arg>
+</ensuremath>= <text id="a0000001874">
+    <plastex:arg name="self">ApproxLapSolve</plastex:arg>
+</text>(L, B<active char="^" id="a0000001875">
+    <plastex:arg name="self"><mkern id="a0000001876"/>-1.5mu<mathsf id="a0000001877">
+    <plastex:arg name="self">T</plastex:arg>
+</mathsf></plastex:arg>
+</active>C<active char="^" id="a0000001878">
+    <plastex:arg name="self"><mkern id="a0000001879"/>-1.5mu<mathsf id="a0000001880">
+    <plastex:arg name="self">T</plastex:arg>
+</mathsf></plastex:arg>
+</active>, <ensuremath id="a0000001881">
+    <plastex:arg name="self"><delta id="a0000001882"/></plastex:arg>
+</ensuremath>, <ensuremath id="a0000001883">
+    <plastex:arg name="self"><epsilon id="a0000001884"/><active char="_" id="a0000001885">
+    <plastex:arg name="self">L</plastex:arg>
+</active></plastex:arg>
+</ensuremath>)</math> where we abuse notation to mean that <math id="a0000001886">
+<text id="a0000001887">
+    <plastex:arg name="self">ApproxLapSolve</plastex:arg>
+</text></math> runs on each column of <math id="a0000001888">
+B<active char="^" id="a0000001889">
+    <plastex:arg name="self"><mkern id="a0000001890"/>-1.5mu<mathsf id="a0000001891">
+    <plastex:arg name="self">T</plastex:arg>
+</mathsf></plastex:arg>
+</active>C<active char="^" id="a0000001892">
+    <plastex:arg name="self"><mkern id="a0000001893"/>-1.5mu<mathsf id="a0000001894">
+    <plastex:arg name="self">T</plastex:arg>
+</mathsf></plastex:arg>
+</active></math> and returns a column vector. Let <math id="a0000001895">
+R<active char="_" id="a0000001896">
+    <plastex:arg name="self">i</plastex:arg>
+</active></math> and <math id="a0000001897">
+<ensuremath id="a0000001898">
+    <plastex:arg name="self"><widetilde id="a0000001899">
+    <plastex:arg name="self">R</plastex:arg>
+</widetilde></plastex:arg>
+</ensuremath><active char="_" id="a0000001900">
+    <plastex:arg name="self">i</plastex:arg>
+</active></math> denote the rows, and <math id="a0000001901">
+C<active char="_" id="a0000001902">
+    <plastex:arg name="self">j</plastex:arg>
+</active></math> and <math id="a0000001903">
+<ensuremath id="a0000001904">
+    <plastex:arg name="self"><widetilde id="a0000001905">
+    <plastex:arg name="self">C</plastex:arg>
+</widetilde></plastex:arg>
+</ensuremath><active char="_" id="a0000001906">
+    <plastex:arg name="self">j</plastex:arg>
+</active></math> denote the columns of <math id="a0000001907">
+U</math> and <math id="a0000001908">
+<ensuremath id="a0000001909">
+    <plastex:arg name="self"><widetilde id="a0000001910">
+    <plastex:arg name="self">U</plastex:arg>
+</widetilde></plastex:arg>
+</ensuremath></math> respectively. By guarantees of the approximate Laplacian solver, we have </par><par id="a0000001911">
+<displaymath id="a0000001912">
+ <unknown modifier="|" id="a0000001913"/><ensuremath id="a0000001914">
+    <plastex:arg name="self"><widetilde id="a0000001915">
+    <plastex:arg name="self">C</plastex:arg>
+</widetilde></plastex:arg>
+</ensuremath><active char="_" id="a0000001916">
+    <plastex:arg name="self">j</plastex:arg>
+</active> - C<active char="_" id="a0000001917">
+    <plastex:arg name="self">j</plastex:arg>
+</active><unknown modifier="|" id="a0000001918"/><active char="_" id="a0000001919">
+    <plastex:arg name="self">L</plastex:arg>
+</active> <le id="a0000001920"/><ensuremath id="a0000001921">
+    <plastex:arg name="self"><epsilon id="a0000001922"/><active char="_" id="a0000001923">
+    <plastex:arg name="self">L</plastex:arg>
+</active></plastex:arg>
+</ensuremath><unknown modifier="|" id="a0000001924"/>C<active char="_" id="a0000001925">
+    <plastex:arg name="self">j</plastex:arg>
+</active><unknown modifier="|" id="a0000001926"/><active char="_" id="a0000001927">
+    <plastex:arg name="self">L</plastex:arg>
+</active> </displaymath></par><par id="a0000001928">
+ Lemma <ref id="a0000001929">
+    <plastex:arg name="label">lem:InftyClose</plastex:arg>
+</ref> tells us that </par><par id="a0000001930">
+<displaymath id="a0000001931">
+ <unknown modifier="|" id="a0000001932"/><ensuremath id="a0000001933">
+    <plastex:arg name="self"><widetilde id="a0000001934">
+    <plastex:arg name="self">C</plastex:arg>
+</widetilde></plastex:arg>
+</ensuremath><active char="_" id="a0000001935">
+    <plastex:arg name="self">j</plastex:arg>
+</active> - C<active char="_" id="a0000001936">
+    <plastex:arg name="self">j</plastex:arg>
+</active><unknown modifier="|" id="a0000001937"/><active char="_" id="a0000001938">
+    <plastex:arg name="self"><infty id="a0000001939"/></plastex:arg>
+</active> <le id="a0000001940"/><ensuremath id="a0000001941">
+    <plastex:arg name="self"><epsilon id="a0000001942"/><active char="_" id="a0000001943">
+    <plastex:arg name="self">L</plastex:arg>
+</active></plastex:arg>
+</ensuremath><cdot id="a0000001944"/><ensuremath id="a0000001945">
+    <plastex:arg name="self">2n<active char="^" id="a0000001946">
+    <plastex:arg name="self">3</plastex:arg>
+</active></plastex:arg>
+</ensuremath><cdot id="a0000001947"/><unknown modifier="|" id="a0000001948"/>C<active char="_" id="a0000001949">
+    <plastex:arg name="self">j</plastex:arg>
+</active><unknown modifier="|" id="a0000001950"/><active char="_" id="a0000001951">
+    <plastex:arg name="self"><infty id="a0000001952"/></plastex:arg>
+</active> </displaymath></par><par id="a0000001953">
+ With <math id="a0000001954">
+K</math> as an upper bound on the maximum entry in <math id="a0000001955">
+CBL<active char="^" id="a0000001956">
+    <plastex:arg name="self"><dagger id="a0000001957"/></plastex:arg>
+</active></math>, and using the above inequality in Lemma <ref id="a0000001958">
+    <plastex:arg name="label">lem:RowtoColumnInfty</plastex:arg>
+</ref>, we get that </par><par id="a0000001959">
+<displaymath id="a0000001960">
+ <unknown modifier="|" id="a0000001961"/><ensuremath id="a0000001962">
+    <plastex:arg name="self"><widetilde id="a0000001963">
+    <plastex:arg name="self">R</plastex:arg>
+</widetilde></plastex:arg>
+</ensuremath><active char="_" id="a0000001964">
+    <plastex:arg name="self">i</plastex:arg>
+</active> - R<active char="_" id="a0000001965">
+    <plastex:arg name="self">i</plastex:arg>
+</active><unknown modifier="|" id="a0000001966"/><active char="_" id="a0000001967">
+    <plastex:arg name="self"><infty id="a0000001968"/></plastex:arg>
+</active> <le id="a0000001969"/><ensuremath id="a0000001970">
+    <plastex:arg name="self"><epsilon id="a0000001971"/><active char="_" id="a0000001972">
+    <plastex:arg name="self">L</plastex:arg>
+</active></plastex:arg>
+</ensuremath><cdot id="a0000001973"/><ensuremath id="a0000001974">
+    <plastex:arg name="self">2n<active char="^" id="a0000001975">
+    <plastex:arg name="self">3</plastex:arg>
+</active></plastex:arg>
+</ensuremath><cdot id="a0000001976"/><ensuremath id="a0000001977">
+    <plastex:arg name="self">K</plastex:arg>
+</ensuremath></displaymath></par><par id="a0000001978">
+ Note that for any <math id="a0000001979">
+e = (u, v)</math>, <math id="a0000001980">
+(U<active char="^" id="a0000001981">
+    <plastex:arg name="self"><mkern id="a0000001982"/>-1.5mu<mathsf id="a0000001983">
+    <plastex:arg name="self">T</plastex:arg>
+</mathsf></plastex:arg>
+</active>b<active char="_" id="a0000001984">
+    <plastex:arg name="self">e</plastex:arg>
+</active>)<active char="^" id="a0000001985">
+    <plastex:arg name="self"><mkern id="a0000001986"/>-1.5mu<mathsf id="a0000001987">
+    <plastex:arg name="self">T</plastex:arg>
+</mathsf></plastex:arg>
+</active>= R<active char="_" id="a0000001988">
+    <plastex:arg name="self">u</plastex:arg>
+</active> - R<active char="_" id="a0000001989">
+    <plastex:arg name="self">v</plastex:arg>
+</active></math>, and <math id="a0000001990">
+(<ensuremath id="a0000001991">
+    <plastex:arg name="self"><widetilde id="a0000001992">
+    <plastex:arg name="self">U</plastex:arg>
+</widetilde></plastex:arg>
+</ensuremath><active char="^" id="a0000001993">
+    <plastex:arg name="self"><mkern id="a0000001994"/>-1.5mu<mathsf id="a0000001995">
+    <plastex:arg name="self">T</plastex:arg>
+</mathsf></plastex:arg>
+</active>b<active char="_" id="a0000001996">
+    <plastex:arg name="self">e</plastex:arg>
+</active>)<active char="^" id="a0000001997">
+    <plastex:arg name="self"><mkern id="a0000001998"/>-1.5mu<mathsf id="a0000001999">
+    <plastex:arg name="self">T</plastex:arg>
+</mathsf></plastex:arg>
+</active>= <ensuremath id="a0000002000">
+    <plastex:arg name="self"><widetilde id="a0000002001">
+    <plastex:arg name="self">R</plastex:arg>
+</widetilde></plastex:arg>
+</ensuremath><active char="_" id="a0000002002">
+    <plastex:arg name="self">u</plastex:arg>
+</active> - <ensuremath id="a0000002003">
+    <plastex:arg name="self"><widetilde id="a0000002004">
+    <plastex:arg name="self">R</plastex:arg>
+</widetilde></plastex:arg>
+</ensuremath><active char="_" id="a0000002005">
+    <plastex:arg name="self">v</plastex:arg>
+</active></math>. Thus </par><par id="a0000002006">
+<align modifier="*" id="a0000002007">
+<ArrayRow id="a0000002008">
+<ArrayCell id="a0000002009">
+<par id="a0000002010">
+ <unknown modifier="|" id="a0000002011"/>(U<active char="^" id="a0000002012">
+    <plastex:arg name="self"><mkern id="a0000002013"/>-1.5mu<mathsf id="a0000002014">
+    <plastex:arg name="self">T</plastex:arg>
+</mathsf></plastex:arg>
+</active>b<active char="_" id="a0000002015">
+    <plastex:arg name="self">e</plastex:arg>
+</active>) - (<ensuremath id="a0000002016">
+    <plastex:arg name="self"><widetilde id="a0000002017">
+    <plastex:arg name="self">U</plastex:arg>
+</widetilde></plastex:arg>
+</ensuremath><active char="^" id="a0000002018">
+    <plastex:arg name="self"><mkern id="a0000002019"/>-1.5mu<mathsf id="a0000002020">
+    <plastex:arg name="self">T</plastex:arg>
+</mathsf></plastex:arg>
+</active>b<active char="_" id="a0000002021">
+    <plastex:arg name="self">e</plastex:arg>
+</active>)<unknown modifier="|" id="a0000002022"/><active char="_" id="a0000002023">
+    <plastex:arg name="self"><infty id="a0000002024"/></plastex:arg>
+</active> </par></ArrayCell><ArrayCell id="a0000002025">
+<par id="a0000002026">
+= <unknown modifier="|" id="a0000002027"/>(R<active char="_" id="a0000002028">
+    <plastex:arg name="self">u</plastex:arg>
+</active> - R<active char="_" id="a0000002029">
+    <plastex:arg name="self">v</plastex:arg>
+</active>) - (<ensuremath id="a0000002030">
+    <plastex:arg name="self"><widetilde id="a0000002031">
+    <plastex:arg name="self">R</plastex:arg>
+</widetilde></plastex:arg>
+</ensuremath><active char="_" id="a0000002032">
+    <plastex:arg name="self">u</plastex:arg>
+</active> - <ensuremath id="a0000002033">
+    <plastex:arg name="self"><widetilde id="a0000002034">
+    <plastex:arg name="self">R</plastex:arg>
+</widetilde></plastex:arg>
+</ensuremath><active char="_" id="a0000002035">
+    <plastex:arg name="self">v</plastex:arg>
+</active>)<unknown modifier="|" id="a0000002036"/><active char="_" id="a0000002037">
+    <plastex:arg name="self"><infty id="a0000002038"/></plastex:arg>
+</active> </par></ArrayCell></ArrayRow><ArrayRow id="a0000002039">
+<ArrayCell id="a0000002040">
+</ArrayCell><ArrayCell id="a0000002041">
+<par id="a0000002042">
+<le id="a0000002043"/><unknown modifier="|" id="a0000002044"/>R<active char="_" id="a0000002045">
+    <plastex:arg name="self">u</plastex:arg>
+</active> - <ensuremath id="a0000002046">
+    <plastex:arg name="self"><widetilde id="a0000002047">
+    <plastex:arg name="self">R</plastex:arg>
+</widetilde></plastex:arg>
+</ensuremath><active char="_" id="a0000002048">
+    <plastex:arg name="self">u</plastex:arg>
+</active><unknown modifier="|" id="a0000002049"/><active char="_" id="a0000002050">
+    <plastex:arg name="self"><infty id="a0000002051"/></plastex:arg>
+</active> + <unknown modifier="|" id="a0000002052"/>R<active char="_" id="a0000002053">
+    <plastex:arg name="self">v</plastex:arg>
+</active> - <ensuremath id="a0000002054">
+    <plastex:arg name="self"><widetilde id="a0000002055">
+    <plastex:arg name="self">R</plastex:arg>
+</widetilde></plastex:arg>
+</ensuremath><active char="_" id="a0000002056">
+    <plastex:arg name="self">v</plastex:arg>
+</active><unknown modifier="|" id="a0000002057"/><active char="_" id="a0000002058">
+    <plastex:arg name="self"><infty id="a0000002059"/></plastex:arg>
+</active> </par></ArrayCell></ArrayRow><ArrayRow id="a0000002060">
+<ArrayCell id="a0000002061">
+</ArrayCell><ArrayCell id="a0000002062">
+<par id="a0000002063">
+<le id="a0000002064"/><ensuremath id="a0000002065">
+    <plastex:arg name="self">4<ensuremath id="a0000002066">
+    <plastex:arg name="self"><epsilon id="a0000002067"/></plastex:arg>
+</ensuremath>n<active char="^" id="a0000002068">
+    <plastex:arg name="self">3</plastex:arg>
+</active> K</plastex:arg>
+</ensuremath></par></ArrayCell></ArrayRow></align></par><par id="a0000002069">
+ By choice of <math id="a0000002070">
+<ensuremath id="a0000002071">
+    <plastex:arg name="self"><epsilon id="a0000002072"/><active char="_" id="a0000002073">
+    <plastex:arg name="self">L</plastex:arg>
+</active></plastex:arg>
+</ensuremath>= <ensuremath id="a0000002074">
+    <plastex:arg name="self"><frac id="a0000002075">
+    <plastex:arg name="numer"><epsilon id="a0000002076" xmlns:plastex="http://plastex.sf.net/"/></plastex:arg>
+    <plastex:arg name="denom">( 8m n<active char="^" id="a0000002077" xmlns:plastex="http://plastex.sf.net/">
+    <plastex:arg name="self">4</plastex:arg>
+</active> K)</plastex:arg>
+</frac></plastex:arg>
+</ensuremath></math>, the final expression is <math id="a0000002078">
+<ensuremath id="a0000002079">
+    <plastex:arg name="self"><frac id="a0000002080">
+    <plastex:arg name="numer"><epsilon id="a0000002081" xmlns:plastex="http://plastex.sf.net/"/></plastex:arg>
+    <plastex:arg name="denom">2 mn</plastex:arg>
+</frac></plastex:arg>
+</ensuremath></math>. Since <math id="a0000002082">
+<text id="a0000002083">
+    <plastex:arg name="self">RecoverNorm</plastex:arg>
+</text>(x<active char="_" id="a0000002084">
+    <plastex:arg name="self">1</plastex:arg>
+</active>, x<active char="_" id="a0000002085">
+    <plastex:arg name="self">2</plastex:arg>
+</active>, <ldots id="a0000002086"/>, x<active char="_" id="a0000002087">
+    <plastex:arg name="self"><ell id="a0000002088"/></plastex:arg>
+</active>) = <ensuremath id="a0000002089">
+    <plastex:arg name="self"><text id="a0000002090">
+    <plastex:arg name="self">median</plastex:arg>
+</text>(|x<active char="_" id="a0000002091">
+    <plastex:arg name="self">1</plastex:arg>
+</active>|, |x<active char="_" id="a0000002092">
+    <plastex:arg name="self">2</plastex:arg>
+</active>|, <ldots id="a0000002093"/>, |x<active char="_" id="a0000002094">
+    <plastex:arg name="self"><ell id="a0000002095"/></plastex:arg>
+</active>|)</plastex:arg>
+</ensuremath></math>, and since the guarantees of <math id="a0000002096">
+<text id="a0000002097">
+    <plastex:arg name="self">RecoverNorm</plastex:arg>
+</text></math> from Theorem <ref id="a0000002098">
+    <plastex:arg name="label">thm:SketchApprox</plastex:arg>
+</ref> gives us </par><par id="a0000002099">
+<displaymath id="a0000002100">
+ <ensuremath id="a0000002101">
+    <plastex:arg name="self"><left id="a0000002102">
+    <plastex:arg name="char">(</plastex:arg>
+</left>1-<frac id="a0000002103">
+    <plastex:arg name="numer"><epsilon id="a0000002104" xmlns:plastex="http://plastex.sf.net/"/></plastex:arg>
+    <plastex:arg name="denom">2</plastex:arg>
+</frac><right id="a0000002105">
+    <plastex:arg name="char">)</plastex:arg>
+</right></plastex:arg>
+</ensuremath><cdot id="a0000002106"/><sum id="a0000002107"/><active char="_" id="a0000002108">
+    <plastex:arg name="self">f</plastex:arg>
+</active> <ensuremath id="a0000002109">
+    <plastex:arg name="self">|<ensuremath id="a0000002110">
+    <plastex:arg name="self">b<active char="_" id="a0000002111">
+    <plastex:arg name="self">e</plastex:arg>
+</active> L<active char="^" id="a0000002112">
+    <plastex:arg name="self"><dagger id="a0000002113"/></plastex:arg>
+</active>b<active char="_" id="a0000002114">
+    <plastex:arg name="self">f</plastex:arg>
+</active><active char="^" id="a0000002115">
+    <plastex:arg name="self"><mkern id="a0000002116"/>-1.5mu<mathsf id="a0000002117">
+    <plastex:arg name="self">T</plastex:arg>
+</mathsf></plastex:arg>
+</active></plastex:arg>
+</ensuremath>|</plastex:arg>
+</ensuremath><le id="a0000002118"/><text id="a0000002119">
+    <plastex:arg name="self">RecoverNorm</plastex:arg>
+</text>(U<active char="^" id="a0000002120">
+    <plastex:arg name="self"><mkern id="a0000002121"/>-1.5mu<mathsf id="a0000002122">
+    <plastex:arg name="self">T</plastex:arg>
+</mathsf></plastex:arg>
+</active>b<active char="_" id="a0000002123">
+    <plastex:arg name="self">e</plastex:arg>
+</active>) <le id="a0000002124"/><ensuremath id="a0000002125">
+    <plastex:arg name="self"><left id="a0000002126">
+    <plastex:arg name="char">(</plastex:arg>
+</left>1+<frac id="a0000002127">
+    <plastex:arg name="numer"><epsilon id="a0000002128" xmlns:plastex="http://plastex.sf.net/"/></plastex:arg>
+    <plastex:arg name="denom">2</plastex:arg>
+</frac><right id="a0000002129">
+    <plastex:arg name="char">)</plastex:arg>
+</right></plastex:arg>
+</ensuremath><cdot id="a0000002130"/><sum id="a0000002131"/><active char="_" id="a0000002132">
+    <plastex:arg name="self">f</plastex:arg>
+</active> <ensuremath id="a0000002133">
+    <plastex:arg name="self">|<ensuremath id="a0000002134">
+    <plastex:arg name="self">b<active char="_" id="a0000002135">
+    <plastex:arg name="self">e</plastex:arg>
+</active> L<active char="^" id="a0000002136">
+    <plastex:arg name="self"><dagger id="a0000002137"/></plastex:arg>
+</active>b<active char="_" id="a0000002138">
+    <plastex:arg name="self">f</plastex:arg>
+</active><active char="^" id="a0000002139">
+    <plastex:arg name="self"><mkern id="a0000002140"/>-1.5mu<mathsf id="a0000002141">
+    <plastex:arg name="self">T</plastex:arg>
+</mathsf></plastex:arg>
+</active></plastex:arg>
+</ensuremath>|</plastex:arg>
+</ensuremath>, </displaymath></par><par id="a0000002142">
+ using Lemma <ref id="a0000002143">
+    <plastex:arg name="label">lem:CombinedApx</plastex:arg>
+</ref> on <math id="a0000002144">
+U<active char="^" id="a0000002145">
+    <plastex:arg name="self"><mkern id="a0000002146"/>-1.5mu<mathsf id="a0000002147">
+    <plastex:arg name="self">T</plastex:arg>
+</mathsf></plastex:arg>
+</active>b<active char="_" id="a0000002148">
+    <plastex:arg name="self">e</plastex:arg>
+</active></math> and <math id="a0000002149">
+<ensuremath id="a0000002150">
+    <plastex:arg name="self"><widetilde id="a0000002151">
+    <plastex:arg name="self">U</plastex:arg>
+</widetilde></plastex:arg>
+</ensuremath><active char="^" id="a0000002152">
+    <plastex:arg name="self"><mkern id="a0000002153"/>-1.5mu<mathsf id="a0000002154">
+    <plastex:arg name="self">T</plastex:arg>
+</mathsf></plastex:arg>
+</active>b<active char="_" id="a0000002155">
+    <plastex:arg name="self">e</plastex:arg>
+</active></math>, we get </par><par id="a0000002156">
+<displaymath id="a0000002157">
+ <ensuremath id="a0000002158">
+    <plastex:arg name="self"><left id="a0000002159">
+    <plastex:arg name="char">(</plastex:arg>
+</left>1-<frac id="a0000002160">
+    <plastex:arg name="numer"><epsilon id="a0000002161" xmlns:plastex="http://plastex.sf.net/"/></plastex:arg>
+    <plastex:arg name="denom">2</plastex:arg>
+</frac><right id="a0000002162">
+    <plastex:arg name="char">)</plastex:arg>
+</right></plastex:arg>
+</ensuremath><cdot id="a0000002163"/><sum id="a0000002164"/><active char="_" id="a0000002165">
+    <plastex:arg name="self">f</plastex:arg>
+</active> <ensuremath id="a0000002166">
+    <plastex:arg name="self">|<ensuremath id="a0000002167">
+    <plastex:arg name="self">b<active char="_" id="a0000002168">
+    <plastex:arg name="self">e</plastex:arg>
+</active> L<active char="^" id="a0000002169">
+    <plastex:arg name="self"><dagger id="a0000002170"/></plastex:arg>
+</active>b<active char="_" id="a0000002171">
+    <plastex:arg name="self">f</plastex:arg>
+</active><active char="^" id="a0000002172">
+    <plastex:arg name="self"><mkern id="a0000002173"/>-1.5mu<mathsf id="a0000002174">
+    <plastex:arg name="self">T</plastex:arg>
+</mathsf></plastex:arg>
+</active></plastex:arg>
+</ensuremath>|</plastex:arg>
+</ensuremath>- <ensuremath id="a0000002175">
+    <plastex:arg name="self"><frac id="a0000002176">
+    <plastex:arg name="numer"><epsilon id="a0000002177" xmlns:plastex="http://plastex.sf.net/"/></plastex:arg>
+    <plastex:arg name="denom">2 mn</plastex:arg>
+</frac></plastex:arg>
+</ensuremath><le id="a0000002178"/><text id="a0000002179">
+    <plastex:arg name="self">RecoverNorm</plastex:arg>
+</text>(<ensuremath id="a0000002180">
+    <plastex:arg name="self"><widetilde id="a0000002181">
+    <plastex:arg name="self">U</plastex:arg>
+</widetilde></plastex:arg>
+</ensuremath><active char="^" id="a0000002182">
+    <plastex:arg name="self"><mkern id="a0000002183"/>-1.5mu<mathsf id="a0000002184">
+    <plastex:arg name="self">T</plastex:arg>
+</mathsf></plastex:arg>
+</active>b<active char="_" id="a0000002185">
+    <plastex:arg name="self">e</plastex:arg>
+</active>) <le id="a0000002186"/><ensuremath id="a0000002187">
+    <plastex:arg name="self"><left id="a0000002188">
+    <plastex:arg name="char">(</plastex:arg>
+</left>1+<frac id="a0000002189">
+    <plastex:arg name="numer"><epsilon id="a0000002190" xmlns:plastex="http://plastex.sf.net/"/></plastex:arg>
+    <plastex:arg name="denom">2</plastex:arg>
+</frac><right id="a0000002191">
+    <plastex:arg name="char">)</plastex:arg>
+</right></plastex:arg>
+</ensuremath><cdot id="a0000002192"/><sum id="a0000002193"/><active char="_" id="a0000002194">
+    <plastex:arg name="self">f</plastex:arg>
+</active> <ensuremath id="a0000002195">
+    <plastex:arg name="self">|<ensuremath id="a0000002196">
+    <plastex:arg name="self">b<active char="_" id="a0000002197">
+    <plastex:arg name="self">e</plastex:arg>
+</active> L<active char="^" id="a0000002198">
+    <plastex:arg name="self"><dagger id="a0000002199"/></plastex:arg>
+</active>b<active char="_" id="a0000002200">
+    <plastex:arg name="self">f</plastex:arg>
+</active><active char="^" id="a0000002201">
+    <plastex:arg name="self"><mkern id="a0000002202"/>-1.5mu<mathsf id="a0000002203">
+    <plastex:arg name="self">T</plastex:arg>
+</mathsf></plastex:arg>
+</active></plastex:arg>
+</ensuremath>|</plastex:arg>
+</ensuremath>+ <ensuremath id="a0000002204">
+    <plastex:arg name="self"><frac id="a0000002205">
+    <plastex:arg name="numer"><epsilon id="a0000002206" xmlns:plastex="http://plastex.sf.net/"/></plastex:arg>
+    <plastex:arg name="denom">2 mn</plastex:arg>
+</frac></plastex:arg>
+</ensuremath>. </displaymath></par><par id="a0000002207">
+ Thus, </par><par id="a0000002208">
+<displaymath id="a0000002209">
+ <ensuremath id="a0000002210">
+    <plastex:arg name="self"><left id="a0000002211">
+    <plastex:arg name="char">(</plastex:arg>
+</left>1-<frac id="a0000002212">
+    <plastex:arg name="numer"><epsilon id="a0000002213" xmlns:plastex="http://plastex.sf.net/"/></plastex:arg>
+    <plastex:arg name="denom">2</plastex:arg>
+</frac><right id="a0000002214">
+    <plastex:arg name="char">)</plastex:arg>
+</right></plastex:arg>
+</ensuremath><cdot id="a0000002215"/><textrm id="a0000002216">
+    <plastex:arg name="self">load</plastex:arg>
+</textrm><active char="_" id="a0000002217">
+    <plastex:arg name="self">w</plastex:arg>
+</active>(e) - <frac id="a0000002218">
+    <plastex:arg name="numer"><epsilon id="a0000002219" xmlns:plastex="http://plastex.sf.net/"/>w<active char="_" id="a0000002220" xmlns:plastex="http://plastex.sf.net/">
+    <plastex:arg name="self">e</plastex:arg>
+</active></plastex:arg>
+    <plastex:arg name="denom">2mn</plastex:arg>
+</frac> <le id="a0000002221"/><text id="a0000002222">
+    <plastex:arg name="self">GetApproxLoad</plastex:arg>
+</text>(G, w) <le id="a0000002223"/><ensuremath id="a0000002224">
+    <plastex:arg name="self"><left id="a0000002225">
+    <plastex:arg name="char">(</plastex:arg>
+</left>1+<frac id="a0000002226">
+    <plastex:arg name="numer"><epsilon id="a0000002227" xmlns:plastex="http://plastex.sf.net/"/></plastex:arg>
+    <plastex:arg name="denom">2</plastex:arg>
+</frac><right id="a0000002228">
+    <plastex:arg name="char">)</plastex:arg>
+</right></plastex:arg>
+</ensuremath><cdot id="a0000002229"/><textrm id="a0000002230">
+    <plastex:arg name="self">load</plastex:arg>
+</textrm><active char="_" id="a0000002231">
+    <plastex:arg name="self">w</plastex:arg>
+</active>(e) + <frac id="a0000002232">
+    <plastex:arg name="numer"><epsilon id="a0000002233" xmlns:plastex="http://plastex.sf.net/"/>w<active char="_" id="a0000002234" xmlns:plastex="http://plastex.sf.net/">
+    <plastex:arg name="self">e</plastex:arg>
+</active></plastex:arg>
+    <plastex:arg name="denom">2mn</plastex:arg>
+</frac> </displaymath></par><par id="a0000002235">
+ Since for any edge <math id="a0000002236">
+f <in id="a0000002237"/>E,</math> we have <math id="a0000002238">
+w<active char="_" id="a0000002239">
+    <plastex:arg name="self">f</plastex:arg>
+</active> = <left id="a0000002240">
+    <plastex:arg name="char">(</plastex:arg>
+</left> p<active char="_" id="a0000002241">
+    <plastex:arg name="self">f</plastex:arg>
+</active> + <frac id="a0000002242">
+    <plastex:arg name="numer">1</plastex:arg>
+    <plastex:arg name="denom">m</plastex:arg>
+</frac> <right id="a0000002243">
+    <plastex:arg name="char">)</plastex:arg>
+</right><active char="^" id="a0000002244">
+    <plastex:arg name="self">-1</plastex:arg>
+</active> <le id="a0000002245"/>m</math>, we get <math id="a0000002246">
+w<active char="_" id="a0000002247">
+    <plastex:arg name="self"><max id="a0000002248"/></plastex:arg>
+</active> <le id="a0000002249"/>m.</math> Thus, Lemma <ref id="a0000002250">
+    <plastex:arg name="label">lem:LoadLB</plastex:arg>
+</ref> gives us that <math id="a0000002251">
+<textrm id="a0000002252">
+    <plastex:arg name="self">load</plastex:arg>
+</textrm><active char="_" id="a0000002253">
+    <plastex:arg name="self">w</plastex:arg>
+</active>(e) <ge id="a0000002254"/><frac id="a0000002255">
+    <plastex:arg name="numer">w<active char="_" id="a0000002256" xmlns:plastex="http://plastex.sf.net/">
+    <plastex:arg name="self">e</plastex:arg>
+</active></plastex:arg>
+    <plastex:arg name="denom">mn</plastex:arg>
+</frac>,</math> which proves our lemma. </par></proof></par><section ref="3.1" id="sec:changes">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="toc"/>
+    <plastex:arg name="title"><texorpdfstring id="a0000002257">
+    <plastex:arg name="tex">Changes in the algorithm</plastex:arg>
+    <plastex:arg name="pdf">Changes in the algorithm</plastex:arg>
+</texorpdfstring></plastex:arg>
+<par id="a0000002258">
+ <label id="a0000002259">
+    <plastex:arg name="label">sec:changes</plastex:arg>
+</label> </par><par id="a0000002260">
+The algorithm is very similar to the case with an exact Laplacian solver, with minor changes. We detail them for completeness. Since the maximum entry in <math id="a0000002261">
+C</math> is upper bounded by <math id="a0000002262">
+poly(n, m)</math>, the maximum entry in <math id="a0000002263">
+CBL<active char="^" id="a0000002264">
+    <plastex:arg name="self"><dagger id="a0000002265"/></plastex:arg>
+</active></math> is upper bounded by some <math id="a0000002266">
+poly(n,m)</math> as well. We call this value as <math id="a0000002267">
+K = <max id="a0000002268"/><active char="_" id="a0000002269">
+    <plastex:arg name="self">i,j</plastex:arg>
+</active> (CBL<active char="^" id="a0000002270">
+    <plastex:arg name="self"><dagger id="a0000002271"/></plastex:arg>
+</active>)<active char="_" id="a0000002272">
+    <plastex:arg name="self">ij</plastex:arg>
+</active></math>. We use <math id="a0000002273">
+<ensuremath id="a0000002274">
+    <plastex:arg name="self"><epsilon id="a0000002275"/><active char="_" id="a0000002276">
+    <plastex:arg name="self">L</plastex:arg>
+</active></plastex:arg>
+</ensuremath>= <ensuremath id="a0000002277">
+    <plastex:arg name="self"><frac id="a0000002278">
+    <plastex:arg name="numer"><epsilon id="a0000002279" xmlns:plastex="http://plastex.sf.net/"/></plastex:arg>
+    <plastex:arg name="denom">( 8m n<active char="^" id="a0000002280" xmlns:plastex="http://plastex.sf.net/">
+    <plastex:arg name="self">4</plastex:arg>
+</active> K)</plastex:arg>
+</frac></plastex:arg>
+</ensuremath></math>. </par><par id="a0000002281">
+The only change in the running time from the earlier algorithm is the time taken by the approximate Laplacian solver. Recall that the running time of the approximate Laplacian solver is <math id="a0000002282">
+<ensuremath id="a0000002283">
+    <plastex:arg name="self"><widetilde id="a0000002284">
+    <plastex:arg name="self">O</plastex:arg>
+</widetilde></plastex:arg>
+</ensuremath>(m <log id="a0000002285"/>(1/<ensuremath id="a0000002286">
+    <plastex:arg name="self"><epsilon id="a0000002287"/><active char="_" id="a0000002288">
+    <plastex:arg name="self">L</plastex:arg>
+</active></plastex:arg>
+</ensuremath>))</math>. Since the maximum entry in <math id="a0000002289">
+C</math> is bounded by <math id="a0000002290">
+poly(m)</math>, the maximum entry in <math id="a0000002291">
+CBL<active char="^" id="a0000002292">
+    <plastex:arg name="self"><dagger id="a0000002293"/></plastex:arg>
+</active></math> is bounded by <math id="a0000002294">
+poly(n,m)</math> as well. We denote this upper bound as <math id="a0000002295">
+K</math>. Thus <math id="a0000002296">
+<ensuremath id="a0000002297">
+    <plastex:arg name="self"><epsilon id="a0000002298"/><active char="_" id="a0000002299">
+    <plastex:arg name="self">L</plastex:arg>
+</active></plastex:arg>
+</ensuremath><ge id="a0000002300"/>1/poly(n)</math>, and the approximate Laplacian solver runs in time <math id="a0000002301">
+<ensuremath id="a0000002302">
+    <plastex:arg name="self"><widetilde id="a0000002303">
+    <plastex:arg name="self">O</plastex:arg>
+</widetilde></plastex:arg>
+</ensuremath>(m)</math>. </par></section></chapter><chapter ref="4" id="sec:lsolvex">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="toc"/>
+    <plastex:arg name="title">Proof of correctness</plastex:arg>
+<par id="a0000002304">
+ <label id="a0000002305">
+    <plastex:arg name="label">sec:lsolvex</plastex:arg>
+</label> </par><par id="a0000002306">
+The proof is an adaptation of the multiplicative weight update proof to our setting. </par><par id="a0000002307">
+We first track the potential function <math id="a0000002308">
+<unknown modifier="|" id="a0000002309"/> <ensuremath id="a0000002310">
+    <plastex:arg name="self">x<active char="^" id="a0000002311">
+    <plastex:arg name="self">(t)</plastex:arg>
+</active></plastex:arg>
+</ensuremath> <unknown modifier="|" id="a0000002312"/><active char="_" id="a0000002313">
+    <plastex:arg name="self">1</plastex:arg>
+</active></math>, and upper bound the increase in <math id="a0000002314">
+ <unknown modifier="|" id="a0000002315"/> <ensuremath id="a0000002316">
+    <plastex:arg name="self">x<active char="^" id="a0000002317">
+    <plastex:arg name="self">(t)</plastex:arg>
+</active></plastex:arg>
+</ensuremath> <unknown modifier="|" id="a0000002318"/><active char="_" id="a0000002319">
+    <plastex:arg name="self">1</plastex:arg>
+</active></math> through the algorithm. </par><par id="a0000002320">
+<thmenv style="plain" ref="4.1" id="lem:xnormub">
+    <plastex:arg name="title"/>
+<par id="a0000002321">
+<label id="a0000002322">
+    <plastex:arg name="label">lem:xnormub</plastex:arg>
+</label> For any <math id="a0000002323">
+t <ge id="a0000002324"/>1</math>, <math id="a0000002325">
+<ensuremath id="a0000002326">
+    <plastex:arg name="self"><unknown modifier="|" id="a0000002327"/> <ensuremath id="a0000002328">
+    <plastex:arg name="self">x<active char="^" id="a0000002329">
+    <plastex:arg name="self">(t)</plastex:arg>
+</active></plastex:arg>
+</ensuremath> <unknown modifier="|" id="a0000002330"/><active char="_" id="a0000002331">
+    <plastex:arg name="self">1</plastex:arg>
+</active></plastex:arg>
+</ensuremath> <le id="a0000002332"/><ensuremath id="a0000002333">
+    <plastex:arg name="self"><unknown modifier="|" id="a0000002334"/> <ensuremath id="a0000002335">
+    <plastex:arg name="self">x<active char="^" id="a0000002336">
+    <plastex:arg name="self">(t-1)</plastex:arg>
+</active></plastex:arg>
+</ensuremath> <unknown modifier="|" id="a0000002337"/><active char="_" id="a0000002338">
+    <plastex:arg name="self">1</plastex:arg>
+</active></plastex:arg>
+</ensuremath> <cdot id="a0000002339"/><exp id="a0000002340"/>(2 <ensuremath id="a0000002341">
+    <plastex:arg name="self"><alpha id="a0000002342"/><active char="_" id="a0000002343">
+    <plastex:arg name="self"><text id="a0000002344">
+    <plastex:arg name="self">local</plastex:arg>
+</text></plastex:arg>
+</active></plastex:arg>
+</ensuremath>/<rho id="a0000002345"/>)</math>. At the end of the algorithm, <math id="a0000002346">
+<ensuremath id="a0000002347">
+    <plastex:arg name="self"><unknown modifier="|" id="a0000002348"/> <ensuremath id="a0000002349">
+    <plastex:arg name="self">x<active char="^" id="a0000002350">
+    <plastex:arg name="self">(T)</plastex:arg>
+</active></plastex:arg>
+</ensuremath> <unknown modifier="|" id="a0000002351"/><active char="_" id="a0000002352">
+    <plastex:arg name="self">1</plastex:arg>
+</active></plastex:arg>
+</ensuremath> <le id="a0000002353"/>m <cdot id="a0000002354"/><exp id="a0000002355"/>(2<ensuremath id="a0000002356">
+    <plastex:arg name="self"><alpha id="a0000002357"/><active char="_" id="a0000002358">
+    <plastex:arg name="self"><text id="a0000002359">
+    <plastex:arg name="self">local</plastex:arg>
+</text></plastex:arg>
+</active></plastex:arg>
+</ensuremath>T/<rho id="a0000002360"/>)</math>. </par></thmenv> </par><par id="a0000002361">
+<proof id="a0000002362">
+    <plastex:arg name="caption"/>
+<par id="a0000002363">
+The implication for <math id="a0000002364">
+<ensuremath id="a0000002365">
+    <plastex:arg name="self"><unknown modifier="|" id="a0000002366"/> <ensuremath id="a0000002367">
+    <plastex:arg name="self">x<active char="^" id="a0000002368">
+    <plastex:arg name="self">(T)</plastex:arg>
+</active></plastex:arg>
+</ensuremath> <unknown modifier="|" id="a0000002369"/><active char="_" id="a0000002370">
+    <plastex:arg name="self">1</plastex:arg>
+</active></plastex:arg>
+</ensuremath></math> follows from the former statement and noting that <math id="a0000002371">
+<ensuremath id="a0000002372">
+    <plastex:arg name="self"><unknown modifier="|" id="a0000002373"/> <ensuremath id="a0000002374">
+    <plastex:arg name="self">x<active char="^" id="a0000002375">
+    <plastex:arg name="self">(0)</plastex:arg>
+</active></plastex:arg>
+</ensuremath> <unknown modifier="|" id="a0000002376"/><active char="_" id="a0000002377">
+    <plastex:arg name="self">1</plastex:arg>
+</active></plastex:arg>
+</ensuremath> = m</math>. For any <math id="a0000002378">
+t<ge id="a0000002379"/>1</math>, we have </par><par id="a0000002380">
+<align modifier="*" id="a0000002381">
+<ArrayRow id="a0000002382">
+<ArrayCell id="a0000002383">
+<par id="a0000002384">
+ <ensuremath id="a0000002385">
+    <plastex:arg name="self"><unknown modifier="|" id="a0000002386"/> <ensuremath id="a0000002387">
+    <plastex:arg name="self">x<active char="^" id="a0000002388">
+    <plastex:arg name="self">(t)</plastex:arg>
+</active></plastex:arg>
+</ensuremath> <unknown modifier="|" id="a0000002389"/><active char="_" id="a0000002390">
+    <plastex:arg name="self">1</plastex:arg>
+</active></plastex:arg>
+</ensuremath> </par></ArrayCell><ArrayCell id="a0000002391">
+<par id="a0000002392">
+= <sum id="a0000002393"/><active char="_" id="a0000002394">
+    <plastex:arg name="self">e</plastex:arg>
+</active> <ensuremath id="a0000002395">
+    <plastex:arg name="self">x<active char="_" id="a0000002396">
+    <plastex:arg name="self">e</plastex:arg>
+</active><active char="^" id="a0000002397">
+    <plastex:arg name="self">(t)</plastex:arg>
+</active></plastex:arg>
+</ensuremath> = <sum id="a0000002398"/><active char="_" id="a0000002399">
+    <plastex:arg name="self">e</plastex:arg>
+</active> <ensuremath id="a0000002400">
+    <plastex:arg name="self">x<active char="_" id="a0000002401">
+    <plastex:arg name="self">e</plastex:arg>
+</active><active char="^" id="a0000002402">
+    <plastex:arg name="self">(t-1)</plastex:arg>
+</active></plastex:arg>
+</ensuremath> <cdot id="a0000002403"/><left id="a0000002404">
+    <plastex:arg name="char">(</plastex:arg>
+</left> 1 + <frac id="a0000002405">
+    <plastex:arg name="numer">1</plastex:arg>
+    <plastex:arg name="denom">2<rho id="a0000002406" xmlns:plastex="http://plastex.sf.net/"/></plastex:arg>
+</frac> <cdot id="a0000002407"/><ensuremath id="a0000002408">
+    <plastex:arg name="self"><textrm id="a0000002409">
+    <plastex:arg name="self">aload</plastex:arg>
+</textrm><active char="_" id="a0000002410">
+    <plastex:arg name="self">w<active char="^" id="a0000002411">
+    <plastex:arg name="self">(t)</plastex:arg>
+</active></plastex:arg>
+</active></plastex:arg>
+</ensuremath>(e) <right id="a0000002412">
+    <plastex:arg name="char">)</plastex:arg>
+</right> </par></ArrayCell></ArrayRow><ArrayRow id="a0000002413">
+<ArrayCell id="a0000002414">
+</ArrayCell><ArrayCell id="a0000002415">
+<par id="a0000002416">
+= <sum id="a0000002417"/><active char="_" id="a0000002418">
+    <plastex:arg name="self">e</plastex:arg>
+</active> <ensuremath id="a0000002419">
+    <plastex:arg name="self">x<active char="_" id="a0000002420">
+    <plastex:arg name="self">e</plastex:arg>
+</active><active char="^" id="a0000002421">
+    <plastex:arg name="self">(t-1)</plastex:arg>
+</active></plastex:arg>
+</ensuremath> + <frac id="a0000002422">
+    <plastex:arg name="numer">1</plastex:arg>
+    <plastex:arg name="denom">2<rho id="a0000002423" xmlns:plastex="http://plastex.sf.net/"/></plastex:arg>
+</frac> <cdot id="a0000002424"/><sum id="a0000002425"/><active char="_" id="a0000002426">
+    <plastex:arg name="self">e</plastex:arg>
+</active> <ensuremath id="a0000002427">
+    <plastex:arg name="self">x<active char="_" id="a0000002428">
+    <plastex:arg name="self">e</plastex:arg>
+</active><active char="^" id="a0000002429">
+    <plastex:arg name="self">(t-1)</plastex:arg>
+</active></plastex:arg>
+</ensuremath> <cdot id="a0000002430"/><ensuremath id="a0000002431">
+    <plastex:arg name="self"><textrm id="a0000002432">
+    <plastex:arg name="self">aload</plastex:arg>
+</textrm><active char="_" id="a0000002433">
+    <plastex:arg name="self">w<active char="^" id="a0000002434">
+    <plastex:arg name="self">(t)</plastex:arg>
+</active></plastex:arg>
+</active></plastex:arg>
+</ensuremath>(e) </par></ArrayCell></ArrayRow><ArrayRow id="a0000002435">
+<ArrayCell id="a0000002436">
+</ArrayCell><ArrayCell id="a0000002437">
+<par id="a0000002438">
+<le id="a0000002439"/><sum id="a0000002440"/><active char="_" id="a0000002441">
+    <plastex:arg name="self">e</plastex:arg>
+</active> <ensuremath id="a0000002442">
+    <plastex:arg name="self">x<active char="_" id="a0000002443">
+    <plastex:arg name="self">e</plastex:arg>
+</active><active char="^" id="a0000002444">
+    <plastex:arg name="self">(t-1)</plastex:arg>
+</active></plastex:arg>
+</ensuremath> + <frac id="a0000002445">
+    <plastex:arg name="numer"><ensuremath id="a0000002446" xmlns:plastex="http://plastex.sf.net/">
+    <plastex:arg name="self"><unknown modifier="|" id="a0000002447"/> <ensuremath id="a0000002448">
+    <plastex:arg name="self">x<active char="^" id="a0000002449">
+    <plastex:arg name="self">(t-1)</plastex:arg>
+</active></plastex:arg>
+</ensuremath> <unknown modifier="|" id="a0000002450"/><active char="_" id="a0000002451">
+    <plastex:arg name="self">1</plastex:arg>
+</active></plastex:arg>
+</ensuremath></plastex:arg>
+    <plastex:arg name="denom"><rho id="a0000002452" xmlns:plastex="http://plastex.sf.net/"/></plastex:arg>
+</frac> <cdot id="a0000002453"/><sum id="a0000002454"/><active char="_" id="a0000002455">
+    <plastex:arg name="self">e</plastex:arg>
+</active> <frac id="a0000002456">
+    <plastex:arg name="numer"><ensuremath id="a0000002457" xmlns:plastex="http://plastex.sf.net/">
+    <plastex:arg name="self">x<active char="_" id="a0000002458">
+    <plastex:arg name="self">e</plastex:arg>
+</active><active char="^" id="a0000002459">
+    <plastex:arg name="self">(t-1)</plastex:arg>
+</active></plastex:arg>
+</ensuremath></plastex:arg>
+    <plastex:arg name="denom"><ensuremath id="a0000002460" xmlns:plastex="http://plastex.sf.net/">
+    <plastex:arg name="self"><unknown modifier="|" id="a0000002461"/> <ensuremath id="a0000002462">
+    <plastex:arg name="self">x<active char="^" id="a0000002463">
+    <plastex:arg name="self">(t-1)</plastex:arg>
+</active></plastex:arg>
+</ensuremath> <unknown modifier="|" id="a0000002464"/><active char="_" id="a0000002465">
+    <plastex:arg name="self">1</plastex:arg>
+</active></plastex:arg>
+</ensuremath></plastex:arg>
+</frac> <cdot id="a0000002466"/><ensuremath id="a0000002467">
+    <plastex:arg name="self"><textrm id="a0000002468">
+    <plastex:arg name="self">load</plastex:arg>
+</textrm><active char="_" id="a0000002469">
+    <plastex:arg name="self">w<active char="^" id="a0000002470">
+    <plastex:arg name="self">(t)</plastex:arg>
+</active></plastex:arg>
+</active></plastex:arg>
+</ensuremath>(e) <tag id="a0000002471"/>*<bgroup id="a0000002472">
+(by Lemma <ref id="a0000002473">
+    <plastex:arg name="label">lem:ApxSolveLoad</plastex:arg>
+</ref>)</bgroup> </par></ArrayCell></ArrayRow><ArrayRow id="a0000002474">
+<ArrayCell id="a0000002475">
+</ArrayCell><ArrayCell id="a0000002476">
+<par id="a0000002477">
+<le id="a0000002478"/><ensuremath id="a0000002479">
+    <plastex:arg name="self"><unknown modifier="|" id="a0000002480"/> <ensuremath id="a0000002481">
+    <plastex:arg name="self">x<active char="^" id="a0000002482">
+    <plastex:arg name="self">(t-1)</plastex:arg>
+</active></plastex:arg>
+</ensuremath> <unknown modifier="|" id="a0000002483"/><active char="_" id="a0000002484">
+    <plastex:arg name="self">1</plastex:arg>
+</active></plastex:arg>
+</ensuremath> + <frac id="a0000002485">
+    <plastex:arg name="numer"><ensuremath id="a0000002486" xmlns:plastex="http://plastex.sf.net/">
+    <plastex:arg name="self"><unknown modifier="|" id="a0000002487"/> <ensuremath id="a0000002488">
+    <plastex:arg name="self">x<active char="^" id="a0000002489">
+    <plastex:arg name="self">(t-1)</plastex:arg>
+</active></plastex:arg>
+</ensuremath> <unknown modifier="|" id="a0000002490"/><active char="_" id="a0000002491">
+    <plastex:arg name="self">1</plastex:arg>
+</active></plastex:arg>
+</ensuremath></plastex:arg>
+    <plastex:arg name="denom"><rho id="a0000002492" xmlns:plastex="http://plastex.sf.net/"/></plastex:arg>
+</frac> <cdot id="a0000002493"/>2 <ensuremath id="a0000002494">
+    <plastex:arg name="self"><alpha id="a0000002495"/><active char="_" id="a0000002496">
+    <plastex:arg name="self"><text id="a0000002497">
+    <plastex:arg name="self">local</plastex:arg>
+</text></plastex:arg>
+</active></plastex:arg>
+</ensuremath><tag id="a0000002498"/>*<bgroup id="a0000002499">
+(by Lemma <ref id="a0000002500">
+    <plastex:arg name="label">lem:OracleReturn</plastex:arg>
+</ref>)</bgroup></par></ArrayCell></ArrayRow><ArrayRow id="a0000002501">
+<ArrayCell id="a0000002502">
+</ArrayCell><ArrayCell id="a0000002503">
+<par id="a0000002504">
+<le id="a0000002505"/><ensuremath id="a0000002506">
+    <plastex:arg name="self"><unknown modifier="|" id="a0000002507"/> <ensuremath id="a0000002508">
+    <plastex:arg name="self">x<active char="^" id="a0000002509">
+    <plastex:arg name="self">(t-1)</plastex:arg>
+</active></plastex:arg>
+</ensuremath> <unknown modifier="|" id="a0000002510"/><active char="_" id="a0000002511">
+    <plastex:arg name="self">1</plastex:arg>
+</active></plastex:arg>
+</ensuremath> <cdot id="a0000002512"/><exp id="a0000002513"/><left id="a0000002514">
+    <plastex:arg name="char">(</plastex:arg>
+</left> <frac id="a0000002515">
+    <plastex:arg name="numer">2 <ensuremath id="a0000002516" xmlns:plastex="http://plastex.sf.net/">
+    <plastex:arg name="self"><alpha id="a0000002517"/><active char="_" id="a0000002518">
+    <plastex:arg name="self"><text id="a0000002519">
+    <plastex:arg name="self">local</plastex:arg>
+</text></plastex:arg>
+</active></plastex:arg>
+</ensuremath></plastex:arg>
+    <plastex:arg name="denom"><rho id="a0000002520" xmlns:plastex="http://plastex.sf.net/"/></plastex:arg>
+</frac> <right id="a0000002521">
+    <plastex:arg name="char">)</plastex:arg>
+</right> </par></ArrayCell></ArrayRow></align></par></proof></par><par id="a0000002522">
+Next, we lower bound the weight <math id="a0000002523">
+<ensuremath id="a0000002524">
+    <plastex:arg name="self">x<active char="_" id="a0000002525">
+    <plastex:arg name="self">e</plastex:arg>
+</active><active char="^" id="a0000002526">
+    <plastex:arg name="self">(t)</plastex:arg>
+</active></plastex:arg>
+</ensuremath></math> in terms of the load on each edge. </par><par id="a0000002527">
+<thmenv style="plain" ref="4.2" id="lem:xelb">
+    <plastex:arg name="title"/>
+<par id="a0000002528">
+<label id="a0000002529">
+    <plastex:arg name="label">lem:xelb</plastex:arg>
+</label> Let <math id="a0000002530">
+M<active char="^" id="a0000002531">
+    <plastex:arg name="self">*</plastex:arg>
+</active></math> be the routing returned by the algorithm. For any edge <math id="a0000002532">
+e</math>, </par><par id="a0000002533">
+<displaymath id="a0000002534">
+ <ensuremath id="a0000002535">
+    <plastex:arg name="self">x<active char="_" id="a0000002536">
+    <plastex:arg name="self">e</plastex:arg>
+</active><active char="^" id="a0000002537">
+    <plastex:arg name="self">(T)</plastex:arg>
+</active></plastex:arg>
+</ensuremath> <ge id="a0000002538"/><exp id="a0000002539"/><left id="a0000002540">
+    <plastex:arg name="char">(</plastex:arg>
+</left> <frac id="a0000002541">
+    <plastex:arg name="numer">T</plastex:arg>
+    <plastex:arg name="denom">8<rho id="a0000002542" xmlns:plastex="http://plastex.sf.net/"/></plastex:arg>
+</frac> <cdot id="a0000002543"/><textrm id="a0000002544">
+    <plastex:arg name="self">load</plastex:arg>
+</textrm><active char="_" id="a0000002545">
+    <plastex:arg name="self">M<active char="^" id="a0000002546">
+    <plastex:arg name="self">*</plastex:arg>
+</active></plastex:arg>
+</active>(e) <right id="a0000002547">
+    <plastex:arg name="char">)</plastex:arg>
+</right>. </displaymath></par></thmenv> </par><par id="a0000002548">
+<proof id="a0000002549">
+    <plastex:arg name="caption"/>
+<par id="a0000002550">
+For any edge <math id="a0000002551">
+e</math> and <math id="a0000002552">
+t <ge id="a0000002553"/>1</math>, we have </par><par id="a0000002554">
+<align modifier="*" id="a0000002555">
+<ArrayRow id="a0000002556">
+<ArrayCell id="a0000002557">
+<par id="a0000002558">
+ <ensuremath id="a0000002559">
+    <plastex:arg name="self">x<active char="_" id="a0000002560">
+    <plastex:arg name="self">e</plastex:arg>
+</active><active char="^" id="a0000002561">
+    <plastex:arg name="self">(t)</plastex:arg>
+</active></plastex:arg>
+</ensuremath> </par></ArrayCell><ArrayCell id="a0000002562">
+<par id="a0000002563">
+= <prod id="a0000002564"/><active char="_" id="a0000002565">
+    <plastex:arg name="self">t’ = 1</plastex:arg>
+</active><active char="^" id="a0000002566">
+    <plastex:arg name="self">t</plastex:arg>
+</active> <left id="a0000002567">
+    <plastex:arg name="char">(</plastex:arg>
+</left> 1 + <frac id="a0000002568">
+    <plastex:arg name="numer">1</plastex:arg>
+    <plastex:arg name="denom">2<rho id="a0000002569" xmlns:plastex="http://plastex.sf.net/"/></plastex:arg>
+</frac> <cdot id="a0000002570"/><textrm id="a0000002571">
+    <plastex:arg name="self">aload</plastex:arg>
+</textrm><active char="_" id="a0000002572">
+    <plastex:arg name="self">w<active char="^" id="a0000002573">
+    <plastex:arg name="self">(t’)</plastex:arg>
+</active></plastex:arg>
+</active>(e) <right id="a0000002574">
+    <plastex:arg name="char">)</plastex:arg>
+</right> </par></ArrayCell></ArrayRow><ArrayRow id="a0000002575">
+<ArrayCell id="a0000002576">
+</ArrayCell><ArrayCell id="a0000002577">
+<par id="a0000002578">
+<ge id="a0000002579"/><prod id="a0000002580"/><active char="_" id="a0000002581">
+    <plastex:arg name="self">t’ = 1</plastex:arg>
+</active><active char="^" id="a0000002582">
+    <plastex:arg name="self">t</plastex:arg>
+</active> <left id="a0000002583">
+    <plastex:arg name="char">(</plastex:arg>
+</left> 1 + <frac id="a0000002584">
+    <plastex:arg name="numer">1</plastex:arg>
+    <plastex:arg name="denom">4<rho id="a0000002585" xmlns:plastex="http://plastex.sf.net/"/></plastex:arg>
+</frac> <cdot id="a0000002586"/><textrm id="a0000002587">
+    <plastex:arg name="self">load</plastex:arg>
+</textrm><active char="_" id="a0000002588">
+    <plastex:arg name="self">w<active char="^" id="a0000002589">
+    <plastex:arg name="self">(t’)</plastex:arg>
+</active></plastex:arg>
+</active>(e) <right id="a0000002590">
+    <plastex:arg name="char">)</plastex:arg>
+</right> <tag id="a0000002591"/>*<bgroup id="a0000002592">
+(by Lemma <ref id="a0000002593">
+    <plastex:arg name="label">lem:ApxSolveLoad</plastex:arg>
+</ref>)</bgroup> </par></ArrayCell></ArrayRow><ArrayRow id="a0000002594">
+<ArrayCell id="a0000002595">
+</ArrayCell><ArrayCell id="a0000002596">
+<par id="a0000002597">
+<ge id="a0000002598"/><prod id="a0000002599"/><active char="_" id="a0000002600">
+    <plastex:arg name="self">t’ = 1</plastex:arg>
+</active><active char="^" id="a0000002601">
+    <plastex:arg name="self">t</plastex:arg>
+</active> <exp id="a0000002602"/><left id="a0000002603">
+    <plastex:arg name="char">(</plastex:arg>
+</left> <frac id="a0000002604">
+    <plastex:arg name="numer">1</plastex:arg>
+    <plastex:arg name="denom">8<rho id="a0000002605" xmlns:plastex="http://plastex.sf.net/"/></plastex:arg>
+</frac> <cdot id="a0000002606"/><textrm id="a0000002607">
+    <plastex:arg name="self">load</plastex:arg>
+</textrm><active char="_" id="a0000002608">
+    <plastex:arg name="self">w<active char="^" id="a0000002609">
+    <plastex:arg name="self">(t’)</plastex:arg>
+</active></plastex:arg>
+</active>(e) <right id="a0000002610">
+    <plastex:arg name="char">)</plastex:arg>
+</right> <tag id="a0000002611"/>*<bgroup id="a0000002612">
+(since <math id="a0000002613">
+e<active char="^" id="a0000002614">
+    <plastex:arg name="self">x</plastex:arg>
+</active> <le id="a0000002615"/>1 + 2x</math> for <math id="a0000002616">
+0 &lt; x &lt; 1</math>, and Lemma <ref id="a0000002617">
+    <plastex:arg name="label">lem:WidthBound</plastex:arg>
+</ref>)</bgroup> </par></ArrayCell></ArrayRow><ArrayRow id="a0000002618">
+<ArrayCell id="a0000002619">
+</ArrayCell><ArrayCell id="a0000002620">
+<par id="a0000002621">
+= <exp id="a0000002622"/><left id="a0000002623">
+    <plastex:arg name="char">(</plastex:arg>
+</left> <frac id="a0000002624">
+    <plastex:arg name="numer">1</plastex:arg>
+    <plastex:arg name="denom">8<rho id="a0000002625" xmlns:plastex="http://plastex.sf.net/"/></plastex:arg>
+</frac> <cdot id="a0000002626"/><sum id="a0000002627"/><active char="_" id="a0000002628">
+    <plastex:arg name="self">t’ = 1</plastex:arg>
+</active><active char="^" id="a0000002629">
+    <plastex:arg name="self">t</plastex:arg>
+</active> <textrm id="a0000002630">
+    <plastex:arg name="self">load</plastex:arg>
+</textrm><active char="_" id="a0000002631">
+    <plastex:arg name="self">w<active char="^" id="a0000002632">
+    <plastex:arg name="self">(t’)</plastex:arg>
+</active></plastex:arg>
+</active>(e) <right id="a0000002633">
+    <plastex:arg name="char">)</plastex:arg>
+</right> </par></ArrayCell></ArrayRow></align></par><par id="a0000002634">
+ In particular, for <math id="a0000002635">
+t = T</math>, we have </par><par id="a0000002636">
+<align modifier="*" id="a0000002637">
+<ArrayRow id="a0000002638">
+<ArrayCell id="a0000002639">
+<par id="a0000002640">
+ <ensuremath id="a0000002641">
+    <plastex:arg name="self">x<active char="_" id="a0000002642">
+    <plastex:arg name="self">e</plastex:arg>
+</active><active char="^" id="a0000002643">
+    <plastex:arg name="self">(T)</plastex:arg>
+</active></plastex:arg>
+</ensuremath> </par></ArrayCell><ArrayCell id="a0000002644">
+<par id="a0000002645">
+<ge id="a0000002646"/><exp id="a0000002647"/><left id="a0000002648">
+    <plastex:arg name="char">(</plastex:arg>
+</left> <frac id="a0000002649">
+    <plastex:arg name="numer">1</plastex:arg>
+    <plastex:arg name="denom">8<rho id="a0000002650" xmlns:plastex="http://plastex.sf.net/"/></plastex:arg>
+</frac> <cdot id="a0000002651"/><sum id="a0000002652"/><active char="_" id="a0000002653">
+    <plastex:arg name="self">t’ = 1</plastex:arg>
+</active><active char="^" id="a0000002654">
+    <plastex:arg name="self">T</plastex:arg>
+</active> <textrm id="a0000002655">
+    <plastex:arg name="self">load</plastex:arg>
+</textrm><active char="_" id="a0000002656">
+    <plastex:arg name="self">w<active char="^" id="a0000002657">
+    <plastex:arg name="self">(t’)</plastex:arg>
+</active></plastex:arg>
+</active>(e) <right id="a0000002658">
+    <plastex:arg name="char">)</plastex:arg>
+</right> </par></ArrayCell></ArrayRow><ArrayRow id="a0000002659">
+<ArrayCell id="a0000002660">
+</ArrayCell><ArrayCell id="a0000002661">
+<par id="a0000002662">
+<ge id="a0000002663"/><exp id="a0000002664"/><left id="a0000002665">
+    <plastex:arg name="char">(</plastex:arg>
+</left> <frac id="a0000002666">
+    <plastex:arg name="numer">T</plastex:arg>
+    <plastex:arg name="denom">8<rho id="a0000002667" xmlns:plastex="http://plastex.sf.net/"/></plastex:arg>
+</frac> <cdot id="a0000002668"/><textrm id="a0000002669">
+    <plastex:arg name="self">load</plastex:arg>
+</textrm><active char="_" id="a0000002670">
+    <plastex:arg name="self">M<active char="^" id="a0000002671">
+    <plastex:arg name="self">*</plastex:arg>
+</active></plastex:arg>
+</active>(e) <right id="a0000002672">
+    <plastex:arg name="char">)</plastex:arg>
+</right> <tag id="a0000002673"/>*<bgroup id="a0000002674">
+(by convexity of load)</bgroup> </par></ArrayCell></ArrayRow></align></par></proof></par><par id="a0000002675">
+<thmenv style="plain" ref="4.3" id="thm:CompRatio">
+    <plastex:arg name="title"/>
+<par id="a0000002676">
+<label id="a0000002677">
+    <plastex:arg name="label">thm:CompRatio</plastex:arg>
+</label> The routing returned by the algorithm has competitive ratio <math id="a0000002678">
+<ensuremath id="a0000002679">
+    <plastex:arg name="self">O(<ensuremath id="a0000002680">
+    <plastex:arg name="self"><ensuremath id="a0000002681">
+    <plastex:arg name="self"><alpha id="a0000002682"/><active char="_" id="a0000002683">
+    <plastex:arg name="self"><text id="a0000002684">
+    <plastex:arg name="self">local</plastex:arg>
+</text></plastex:arg>
+</active></plastex:arg>
+</ensuremath></plastex:arg>
+</ensuremath>)</plastex:arg>
+</ensuremath></math>. </par></thmenv> </par><par id="a0000002685">
+<proof id="a0000002686">
+    <plastex:arg name="caption"/>
+<par id="a0000002687">
+Combining Lemmas <ref id="a0000002688">
+    <plastex:arg name="label">lem:xnormub</plastex:arg>
+</ref> and <ref id="a0000002689">
+    <plastex:arg name="label">lem:xelb</plastex:arg>
+</ref>, for any edge <math id="a0000002690">
+e</math>, </par><par id="a0000002691">
+<align modifier="*" id="a0000002692">
+<ArrayRow id="a0000002693">
+<ArrayCell id="a0000002694">
+<par id="a0000002695">
+ m <exp id="a0000002696"/><left id="a0000002697">
+    <plastex:arg name="char">(</plastex:arg>
+</left> <frac id="a0000002698">
+    <plastex:arg name="numer">2 <ensuremath id="a0000002699" xmlns:plastex="http://plastex.sf.net/">
+    <plastex:arg name="self"><alpha id="a0000002700"/><active char="_" id="a0000002701">
+    <plastex:arg name="self"><text id="a0000002702">
+    <plastex:arg name="self">local</plastex:arg>
+</text></plastex:arg>
+</active></plastex:arg>
+</ensuremath>T</plastex:arg>
+    <plastex:arg name="denom"><rho id="a0000002703" xmlns:plastex="http://plastex.sf.net/"/></plastex:arg>
+</frac> <right id="a0000002704">
+    <plastex:arg name="char">)</plastex:arg>
+</right> </par></ArrayCell><ArrayCell id="a0000002705">
+<par id="a0000002706">
+<ge id="a0000002707"/><ensuremath id="a0000002708">
+    <plastex:arg name="self"><unknown modifier="|" id="a0000002709"/> <ensuremath id="a0000002710">
+    <plastex:arg name="self">x<active char="^" id="a0000002711">
+    <plastex:arg name="self">(T)</plastex:arg>
+</active></plastex:arg>
+</ensuremath> <unknown modifier="|" id="a0000002712"/><active char="_" id="a0000002713">
+    <plastex:arg name="self">1</plastex:arg>
+</active></plastex:arg>
+</ensuremath> <ge id="a0000002714"/><ensuremath id="a0000002715">
+    <plastex:arg name="self">x<active char="_" id="a0000002716">
+    <plastex:arg name="self">e</plastex:arg>
+</active><active char="^" id="a0000002717">
+    <plastex:arg name="self">(T)</plastex:arg>
+</active></plastex:arg>
+</ensuremath> <ge id="a0000002718"/><exp id="a0000002719"/><left id="a0000002720">
+    <plastex:arg name="char">(</plastex:arg>
+</left> <frac id="a0000002721">
+    <plastex:arg name="numer">T</plastex:arg>
+    <plastex:arg name="denom">8 <rho id="a0000002722" xmlns:plastex="http://plastex.sf.net/"/></plastex:arg>
+</frac> <cdot id="a0000002723"/><textrm id="a0000002724">
+    <plastex:arg name="self">load</plastex:arg>
+</textrm><active char="_" id="a0000002725">
+    <plastex:arg name="self">M<active char="^" id="a0000002726">
+    <plastex:arg name="self">*</plastex:arg>
+</active></plastex:arg>
+</active>(e) <right id="a0000002727">
+    <plastex:arg name="char">)</plastex:arg>
+</right> </par></ArrayCell></ArrayRow></align></par><par id="a0000002728">
+which in particular gives the required upper bound on <math id="a0000002729">
+<textrm id="a0000002730">
+    <plastex:arg name="self">load</plastex:arg>
+</textrm><active char="_" id="a0000002731">
+    <plastex:arg name="self">M<active char="^" id="a0000002732">
+    <plastex:arg name="self">*</plastex:arg>
+</active></plastex:arg>
+</active>(e)</math> for any edge <math id="a0000002733">
+e</math>, since </par><par id="a0000002734">
+<align modifier="*" id="a0000002735">
+<ArrayRow id="a0000002736">
+<ArrayCell id="a0000002737">
+<par id="a0000002738">
+ <textrm id="a0000002739">
+    <plastex:arg name="self">load</plastex:arg>
+</textrm><active char="_" id="a0000002740">
+    <plastex:arg name="self">M<active char="^" id="a0000002741">
+    <plastex:arg name="self">*</plastex:arg>
+</active></plastex:arg>
+</active>(e) </par></ArrayCell><ArrayCell id="a0000002742">
+<par id="a0000002743">
+<le id="a0000002744"/>16 <ensuremath id="a0000002745">
+    <plastex:arg name="self"><alpha id="a0000002746"/><active char="_" id="a0000002747">
+    <plastex:arg name="self"><text id="a0000002748">
+    <plastex:arg name="self">local</plastex:arg>
+</text></plastex:arg>
+</active></plastex:arg>
+</ensuremath>+ <frac id="a0000002749">
+    <plastex:arg name="numer">8 <rho id="a0000002750" xmlns:plastex="http://plastex.sf.net/"/><log id="a0000002751" xmlns:plastex="http://plastex.sf.net/"/>m</plastex:arg>
+    <plastex:arg name="denom">T</plastex:arg>
+</frac> </par></ArrayCell></ArrayRow><ArrayRow id="a0000002752">
+<ArrayCell id="a0000002753">
+</ArrayCell><ArrayCell id="a0000002754">
+<par id="a0000002755">
+= O(<ensuremath id="a0000002756">
+    <plastex:arg name="self"><alpha id="a0000002757"/><active char="_" id="a0000002758">
+    <plastex:arg name="self"><text id="a0000002759">
+    <plastex:arg name="self">local</plastex:arg>
+</text></plastex:arg>
+</active></plastex:arg>
+</ensuremath>) </par></ArrayCell></ArrayRow></align></par></proof></par></chapter></document> </dom-document>
