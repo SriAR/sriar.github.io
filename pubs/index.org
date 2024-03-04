@@ -1,7 +1,7 @@
 #+HTML_HEAD_EXTRA: <style>p {margin:0;} h2 {font-size: 1rem; margin-top: 1.8rem; margin-bottom: 0.02rem; line-height: 1.625rem;} </style>
 #+title: Pubs
 
-@@html:<label for="sn-1" class="sidenote-toggle">⊕</label><input type="checkbox" id="sn-1" class="sidenote-toggle" /><span class="sidenote">author orderings on all my papers were revealed to me in a dream.</span>@@
+@@html:<label for="sn-1" class="sidenote-toggle">⊕</label><input type="checkbox" id="sn-1" class="sidenote-toggle" /><span class="sidenote">all author orderings were once revealed to me in a dream.</span>@@
 
 *** Tighter Bounds for Local Differentially Private Core Decomposition and Densest Subgraph
 with Monika Henzinger and Leqi Zhu
