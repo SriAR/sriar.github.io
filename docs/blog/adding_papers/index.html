@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2024-03-04 -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Workflow I: Adding papers</title>
+<meta name="generator" content="Org Mode" />
+<link rel="icon" type="image/x-icon" href="/favicon.ico"> <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+<div id="preamble" class="status">
+<div id="navbar">
+    <a href="/"><div class="navitem home">&heartsuit;</div></a>
+    <a href="/pubs"><div class="navitem">pubs</div></a>
+    <a href="/blog"><div class="navitem">blog</div></a>
+    <a href="/meta"><div class="navitem">meta</div></a>
+    <a href="/files/Sricharan_AR_CV.pdf"><div class="navitem">cv</div></a>
+</div> <hr>
+</div>
+<div id="content" class="content">
+<p>
+<b>The problem</b>: I am reading a paper, I see a citation which I want to read/add to my library.
+</p>
+
+<p>
+<b>Non-script solution</b>:
+</p>
+<ul class="org-ul">
+<li>Copy the title and search for it on dblp</li>
+<li>Download the bibtex file for the conference/journal version</li>
+<li>Download the arxiv pdf if available, else search for the conference version and download that</li>
+<li>Create a citekey and add tags and add it to library</li>
+<li>Update local paper database and push to server.</li>
+</ul>
+
+<p>
+<b>Problem with this solution</b>: I do not like the amount of time I spend on dblp/internet. I want to script it so that, most of the time, I don&rsquo;t need to even alt-tab to add papers.
+</p>
+
+<p>
+<b>Step 1: Downloading everything relevant</b>:
+I use <a href="https://github.com/SriAR/biblio-baggins">my bib manager</a> with <code>bb --paper-add</code>. It does the following.
+</p>
+
+
+<div id="org43d0a71" class="figure">
+<p><img src="../../files/downloading.gif" alt="downloading.gif">
+</p>
+</div>
+
+<ul class="org-ul">
+<li>Assumes the title of the paper is in the clipboard</li>
+<li>Gives a list of papers to choose where to download the bib file from</li>
+<li>Gives a list of papers to choose where to download the pdf file from</li>
+<li>If the pdf is on arxiv, downloads it automatically and open the pdf, else opens the paper&rsquo;s url in firefox and simultaneously the paper title on google scholar.</li>
+</ul>
+
+<p>
+<b>Step 2: Add citekey and tags</b>: Once a bib file and pdf file are downloaded, I use <a href="https://github.com/SriAR/dotfiles/blob/master/bin/paperadd">a bash script</a> which does
+</p>
+
+
+<div id="orgf463949" class="figure">
+<p><img src="../../files/add_citekey.gif" alt="add_citekey.gif">
+</p>
+</div>
+
+<ul class="org-ul">
+<li>Run <code>alpha.bst</code> on the bib file to create a alpha-style citekey. If you don&rsquo;t recall, this is the <code>BSS14</code> or <code>She17</code> style citekeys.</li>
+<li>Ask for a keyword to add to the citekey, which would be appended to the above citekey. For example, <code>BSS14sparse</code> or <code>She17areaconvex</code>.</li>
+<li>Give a list of existing tags to choose from, where you can add new tags if needed. All these tags are linked to the paper. For example, <code>laplacian</code>, <code>sparsification</code>, <code>convexopt</code>. This is available when searching for papers to open.</li>
+</ul>
+
+<p>
+<b>Step 3: Sync</b>: Once I&rsquo;ve added the paper to my library, I use <a href="https://github.com/SriAR/dotfiles/blob/master/bin/pe">a short bash script</a> which runs
+</p>
+<ul class="org-ul">
+<li>Add this paper to the list I search from when I open papers, and to <code>$HOME/texmf/bibtex/bib/GlobalRef.bib</code>. This is useful (I think).</li>
+<li>Push it to server so I can access it on other devices.</li>
+</ul>
+
+<p>
+<b>Me-specific details</b>:
+</p>
+<ul class="org-ul">
+<li>I use <a href="https://pwmt.org/projects/zathura/">zathura</a> for viewing pdfs, so I select the title of the paper and it automatically gets copied to clipboard. Maybe this is easier with <a href="https://github.com/ahrm/sioyek">sioyek</a> since it has similar features already. You might only need to override one function.</li>
+<li>I use <a href="https://github.com/pubs/pubs">pubs</a> for library management. Maybe you don&rsquo;t need to do anything like the above if you use this-century software like <a href="https://www.zotero.org/">zotero</a>.</li>
+</ul>
+
+<p>
+I might do some QoL upgrades later, but I think I&rsquo;m pretty happy with the general setup now :)
+</p>
+</div>
+</body>
+</html>

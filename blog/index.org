@@ -3,6 +3,7 @@
 
 # * [[./citekey][Citekeys: what format do I choose?@@html:!&#8253;@@]]
 
+* [[./adding_papers][Workflow I: Adding papers]]
 
 * [[./bst][Bibliographies and BSTs]]
 
