@@ -1,7 +1,0 @@
-#+title: MWU
-
-The Multiplicative Weights Update algorithm! It's extremely useful, I've used it, and I don't "get" it. If I see one more writeup that motivates the algorithm using expert predictions I'm gonna flip my shit. I'm not a (terminally) online person, and while I understand that it's useful in the online setting, I. Don't. Care. Writing up something about it is how I hope to finally understand this goddamn algorithm. There's way too many ways of seeing \cite{John Berger} that I have read up on, and I have too many things in my mind. I need to offload some of it.
-
-* View 1: Solve LPs approximately
-
-This is the most useful/least intuitive view for me. It's great that it solves LPs. How does it do it? You want to find an $x$ such that $Ax \le b$. What you can actually do is solve $p^t A x \le p^t b$ for any probability distribution $p$. Great, keep solving such inequalities for different $p$. This is MWU. After a while, the average of all previous solutions is an approximate solution, $A\overline x \le b + \epsilon$.

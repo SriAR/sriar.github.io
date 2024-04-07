@@ -1,7 +1,0 @@
-* Academic interests
-I am broadly interested in the intersection of mathematics and computer science, and currently work on graph algorithms. I have also worked in (algorithmic+) game theory, specifically on fair division and on completely mixed strategies.
-
-There are a few books nominally unrelated to my work that I’d like to read but haven’t had a chance to yet, so let me know if you’re interested in teaming up to read any of these:
-- ✓ +[[https://link.springer.com/book/10.1007/978-3-540-76649-0][Using the Borsuk-Ulam Theorem]] by Jiří Matoušek+
-- [[https://www-cs-faculty.stanford.edu/~knuth/abcde.html][Computers and Typesetting]] by Don Knuth
-- [[https://link.springer.com/book/10.1007/978-3-662-57265-8][Proofs from THE BOOK]] by Martin Aigner and Günter Ziegler

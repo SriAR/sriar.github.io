@@ -1,6 +1,0 @@
-* Linux
-
-I currently have an Arch Linux installation on my laptop, with [[https://github.com/SriAR/dotfiles][these dotfiles]]. Some things of interest to you might be my:
-- [[https://github.com/SriAR/dotfiles/blob/master/vim/vimrc][vimrc]] - with comments.
-- [[https://github.com/SriAR/dotfiles/blob/master/bin/zinc][zinc]] - a custom file syncer using rsync. I use my university-provided computer space as cloud space for my academic PDFs, and use *zinc* to keep them synced between my laptop, phone, iPad and the univie server.
-- I also have some tex snippets from [[https://castel.dev/post/lecture-notes-1][this amazing blog post]] adapted to my use case. Also check out [[https://www.ejmastnak.com/tutorials/vim-latex/intro.html][this tutorial series]] for a detailed view of using (neo)vim for LaTeX.
